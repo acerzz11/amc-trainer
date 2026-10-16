@@ -24,8 +24,8 @@ npm start
 
 ## Deploy to Vercel
 
-1. In Vercel, choose **Add New → Project** and import [aidencwang-cmyk/amc-trainer](https://github.com/aidencwang-cmyk/amc-trainer).
-2. Use the **Next.js** framework preset and repository root (`./`). Keep the default output directory. The included `vercel.json` uses `npm ci` and `npm run build`; `package.json` selects Node.js 24.
+1. In Vercel, choose **Add New → Project** and import [acerzz11/amc-trainer](https://github.com/acerzz11/amc-trainer).
+2. Use the **Next.js** framework preset and repository root (`./`). Keep the output-directory override disabled; do not set it to `public`, `dist`, or `out`. The included `vercel.json` uses `npm ci` and `npm run build`; `package.json` selects Node.js 24.
 3. No environment variables are needed. Configure **Deployment Protection** for the environments you want private before sharing the deployed site. The previous ChatGPT Sites access gate is not part of this source code.
 4. Deploy, then check question generation, answer checking, and solutions on the Vercel URL. Future commits to the production branch can deploy through the GitHub integration.
 
