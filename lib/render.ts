@@ -9,39 +9,72 @@ export function renderText(source:string){
  const rx=/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|(?<!\\)\$((?:\\\$|[^$])*?)(?<!\\)\$/g;
  let out='',last=0; for(const m of source.matchAll(rx)){out+=escapeHTML(source.slice(last,m.index)).replace(/\n/g,'<br>');out+=math(m[1]??m[2]??m[3]??m[4],m[1]!==undefined||m[2]!==undefined);last=m.index!+m[0].length;}out+=escapeHTML(source.slice(last)).replace(/\n/g,'<br>');return out;
 }
-const allowed=new Set(['P','DIV','SPAN','B','I','EM','STRONG','UL','OL','LI','BR','HR','H2','H3','H4','H5','DL','DT','DD','BLOCKQUOTE','TABLE','THEAD','TBODY','TR','TH','TD','SUP','SUB','A','IMG']);
-export function cleanWikiHTML(html:string){
+const allowed=new Set(['P','DIV','SPAN','B','I','EM','STRONG','UL','OL','LI','BR','HR','H2','H3','H4','H5','DL','DT','DD','BLOCKQUOTE','TABLE','THEAD','TBODY','TR','TH','TD','SUP','SUB','A','IMG','FIGURE','FIGCAPTION']);
+const imageHosts=['artofproblemsolving.com','wiki.randommath.com','live.poshenloh.com'];
+export function safeImageURL(src:string,baseURL='https://artofproblemsolving.com'){
+ if(/^\/diagrams\/[a-f0-9]+\.(?:svg|png|jpg|webp)$/.test(src))return src;
+ try{const url=new URL(src,baseURL);if(url.protocol==='https:'&&imageHosts.some(h=>url.hostname===h||h==='artofproblemsolving.com'&&url.hostname.endsWith('.'+h)))return url.href;}catch{}
+ return null;
+}
+export function cleanWikiHTML(html:string,baseURL='https://artofproblemsolving.com',renderLatex=false){
  const {document}=parseHTML('<html><body>'+html+'</body></html>');
  function clean(node:any):string {
-  if(node.nodeType===3)return escapeHTML(node.textContent||'');
+  if(node.nodeType===3)return renderLatex?renderText(node.textContent||''):escapeHTML(node.textContent||'');
   if(node.nodeType!==1)return '';
   const tag=node.tagName;
   if(['SCRIPT','STYLE','IFRAME','OBJECT','EMBED','FORM','INPUT','BUTTON','SVG'].includes(tag))return '';
-  if(node.classList.contains('mw-editsection')||node.classList.contains('toc'))return '';
+  if(node.classList.contains('mw-editsection')||node.classList.contains('toc')||node.classList.contains('toc-anchor'))return '';
+  // Re-render publisher KaTeX from its original TeX, never copy arbitrary styles/markup.
+  if(node.classList.contains('katex-display')||node.classList.contains('katex')){
+   const annotation=node.querySelector('annotation[encoding="application/x-tex"]');
+   const mathNode=node.querySelector('math');
+   const tex=annotation?.textContent||Array.from(mathNode?.childNodes||[]).filter((n:any)=>n.nodeType===3).map((n:any)=>n.textContent).join('');
+   if(tex)return math(tex,node.classList.contains('katex-display'));
+   throw new Error('Source math has no recoverable TeX');
+  }
   if(tag==='IMG'){
    const alt=node.getAttribute('alt')||'';
    if(node.classList.contains('latex')&&!alt.includes('[asy]')) return math(alt.replace(/^\$|\$$/g,'').replace(/^\\\[|\\\]$/g,''),alt.startsWith('\\['));
-   try { const url=new URL(node.getAttribute('src')||'','https://artofproblemsolving.com');if(url.protocol!=='https:'||!/(^|\.)artofproblemsolving\.com$/.test(url.hostname))return '';return `<img src="${escapeHTML(url.href)}" alt="${escapeHTML(alt.includes('[asy]')?'Contest problem diagram':alt)}" loading="lazy">`; }catch{return '';}
+   const url=safeImageURL(node.getAttribute('src')||'',baseURL);
+   if(!url)throw new Error('Source contains an unsupported diagram');
+   return `<img src="${escapeHTML(url)}" alt="${escapeHTML(!alt||alt.includes('[asy]')?'Contest problem diagram':alt)}" loading="lazy" decoding="async">`;
   }
   const content=Array.from(node.childNodes).map(clean).join('');
   if(!allowed.has(tag))return content;
-  if(tag==='A'){try{const url=new URL(node.getAttribute('href')||'','https://artofproblemsolving.com');if(url.protocol==='https:')return `<a href="${escapeHTML(url.href)}" target="_blank" rel="noopener noreferrer">${content}</a>`;}catch{}return content;}
+  if(tag==='A'){try{const url=new URL(node.getAttribute('href')||'',baseURL);if(url.protocol==='https:')return `<a href="${escapeHTML(url.href)}" target="_blank" rel="noopener noreferrer">${content}</a>`;}catch{}return content;}
+  if(tag==='BR'||tag==='HR')return `<${tag.toLowerCase()}>`;
   return `<${tag.toLowerCase()}>${content}</${tag.toLowerCase()}>`;
  }
  return Array.from(document.body.childNodes).map(clean).join('');
 }
+export const renderRich=(source:string,baseURL='https://live.poshenloh.com')=>cleanWikiHTML(source,baseURL,true);
+export type ParsedSolution={title:string;html:string};
 export function splitWiki(html:string){
  const {document}=parseHTML('<html><body>'+html+'</body></html>');
  const root=document.querySelector('.mw-parser-output')||document.body;
- let section:'ignore'|'problem'|'solution'='ignore',problem='',solution='';
+ let mode:'ignore'|'problem'|'solution'='ignore',problem='',current:{title:string;raw:string}|null=null;
+ const rawSolutions:{title:string;raw:string}[]=[];
  for(const el of Array.from(root.children)){
-  const header=/^H[1-6]$/.test(el.tagName)||el.classList.contains('mw-heading');const title=el.textContent?.trim()||'';
-  if(header){if(/^Problem(?:\s|$)/i.test(title))section='problem';else if(/Solution|Diagram/i.test(title)&&!/Video/i.test(title))section='solution';else if(!/^Solution/i.test(title))section='ignore';}
-  if(section==='problem'&&!header)problem+=el.outerHTML;
-  if(section==='solution')solution+=el.outerHTML;
+  const heading=el.classList.contains('mw-heading')?el.querySelector('h1,h2,h3,h4,h5,h6'): /^H[1-6]$/.test(el.tagName)?el:null;
+  const title=(heading?.textContent||'').replace(/\[edit\]/gi,'').trim();
+  if(heading){
+   if(/^Problem(?:\s|:|$)/i.test(title)){mode='problem';continue;}
+   if(/^(?:(?:Video|Alternate|Alternative)\s+)?Solution(?:s|\s|:|$)/i.test(title)){
+    mode='solution';current={title,raw:''};rawSolutions.push(current);continue;
+   }
+   // Subheadings such as Case 1 or Proof belong to the current solution.
+   if(/^(See Also|References|External Links|Answer Key|Navigation)/i.test(title)||/^H[12]$/.test(heading.tagName)){mode='ignore';continue;}
+  }
+  if(mode==='problem')problem+=el.outerHTML;
+  if(mode==='solution'&&current){
+   const frame=el.querySelector('iframe');
+   if(frame){const url=frame.getAttribute('src')||'';if(/^https:\/\/(?:www\.)?(?:youtube\.com|youtube-nocookie\.com)\//.test(url))current.raw+=`<p><a href="${escapeHTML(url)}">Watch video solution</a></p>`;}
+   current.raw+=el.outerHTML;
+  }
  }
- if(!problem){for(const el of Array.from(root.children)){if(/^H[1-6]$/.test(el.tagName)&&/Solution/i.test(el.textContent||''))break;if(!el.classList.contains('toc')&&!/^H[1-6]$/.test(el.tagName))problem+=el.outerHTML;}}
- return {problemHtml:cleanWikiHTML(problem),solutionHtml:cleanWikiHTML(solution)};
+ if(!problem){for(const el of Array.from(root.children)){if(/Solution/i.test(el.textContent||'')&&(/^H[1-6]$/.test(el.tagName)||el.classList.contains('mw-heading')))break;if(!el.classList.contains('toc')&&!/^H[1-6]$/.test(el.tagName))problem+=el.outerHTML;}}
+ const solutions=rawSolutions.map(s=>({title:s.title,html:cleanWikiHTML(s.raw)})).filter(s=>s.html.replace(/<[^>]*>/g,'').trim().length>0||s.html.includes('<img'));
+ return {problemHtml:cleanWikiHTML(problem),solutions,solutionHtml:solutions.map(s=>`<h3>${escapeHTML(s.title)}</h3>${s.html}`).join('')};
 }
 export function extractKey(html:string,number:number,aime:boolean):string|null{
  const {document}=parseHTML('<html><body>'+html+'</body></html>');

@@ -1,19 +1,33 @@
 import bank from '../data/problems.json';
-import type {RecordProblem,PublicProblem} from './types';
-import {renderText,math} from './render';
-import {liveProblem, wikiPage} from './aops';
-import {splitWiki} from './render';
+import type {RecordProblem,PublicProblem,SolutionItem,SolutionResponse} from './types';
+import {renderText,renderRich,math,splitWiki} from './render';
+import {liveProblem,wikiPage} from './aops';
+import {randomMathSolutions} from './randommath';
 export const problems=bank as RecordProblem[];
 export const findProblem=(id:string)=>problems.find(p=>p.id===id);
 export async function getProblem(p:RecordProblem):Promise<PublicProblem>{
- let delivery:'live'|'archive'='archive',problemHtml=renderText(p.problem);
- try{const live=await liveProblem(p.title,p.number,p.contest==='AIME');problemHtml=live.problemHtml;delivery='live';}catch{}
- const {answer,solution,problem,...safe}=p;
- return {...safe,problemHtml,choicesHtml:delivery==='archive'?p.choices.map(c=>({letter:c.letter,html:math(c.tex)})):[],delivery,sourceNote:delivery==='live'?'Fetched directly from the AoPS Wiki.':'AoPS is unavailable. Showing an archived AoPS problem.'};
+ let delivery:'live'|'archive'='archive',problemHtml=p.problemFormat==='html'?renderRich(p.problem):renderText(p.problem);
+ let sourceName=p.problemFormat==='html'?'LIVE by Po-Shen Loh':'AoPS archive',sourceUrl=p.problemFormat==='html'?p.archiveUrl!:p.sourceUrl;
+ try{const live=await liveProblem(p.title,p.number,p.contest==='AIME');problemHtml=live.problemHtml;delivery='live';sourceName='AoPS Wiki';sourceUrl=p.sourceUrl;}catch{}
+ // Explicit allowlist: supplemental solutions and publisher keys must never reach question responses.
+ const {id,title,contest,year,variant,number,topics}=p;
+ return {id,title,contest,year,variant,number,topics,sourceUrl,sourceName,problemHtml,choicesHtml:delivery==='archive'?p.choices.map(c=>({letter:c.letter,html:math(c.tex)})):[],delivery,sourceNote:delivery==='live'?'Fetched directly from AoPS.':`AoPS is unavailable. Showing saved content from ${sourceName}.`};
 }
-export async function getSolution(p:RecordProblem){
- try{const parsed=splitWiki(await wikiPage(p.title));if(parsed.solutionHtml.length>30)return {html:parsed.solutionHtml,delivery:'live',sourceUrl:p.sourceUrl};}catch{}
- return {html:renderText(p.solution),delivery:'archive',sourceUrl:p.sourceUrl};
+export async function getSolution(p:RecordProblem):Promise<SolutionResponse>{
+ const items:SolutionItem[]=[];
+ try{
+  const parsed=splitWiki(await wikiPage(p.title));
+  items.push(...parsed.solutions.map(s=>({...s,delivery:'live' as const,sourceName:'AoPS Wiki',sourceUrl:p.sourceUrl})));
+ }catch{}
+ if(!items.length){
+  // Retain the complete original archive, then include every available alternative.
+  items.push({title:'Solution',html:p.solutionFormat==='html'?renderRich(p.solution):renderText(p.solution),delivery:'archive',sourceName:p.solutionFormat==='html'?'LIVE by Po-Shen Loh':'AoPS archive',sourceUrl:p.solutionFormat==='html'?p.archiveUrl!:p.sourceUrl});
+  const alternate=await randomMathSolutions(p);
+  items.push(...alternate.items.map(s=>({...s,delivery:'live' as const,sourceName:'Random Math',sourceUrl:alternate.url})));
+ }
+ for(const s of p.extraSolutions||[])items.push({title:s.title,html:s.format==='html'?renderRich(s.content):renderText(s.content),delivery:'archive',sourceName:s.sourceName,sourceUrl:s.sourceUrl});
+ const seen=new Set<string>();
+ return {items:items.filter(s=>{const key=s.html.replace(/\s+/g,' ').trim();if(!key||seen.has(key))return false;seen.add(key);return true;})};
 }
 export function normalizeAnswer(input:string,aime:boolean):string|null{
  const value=input.trim().toUpperCase();if(aime)return /^\d{1,3}$/.test(value)?String(Number(value)):null;return /^[A-E]$/.test(value)?value:null;

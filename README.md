@@ -35,14 +35,14 @@ The original ChatGPT Sites deployment is separate and is not changed by importin
 
 ## Problem sources and coverage
 
-- Requests attempt the public AoPS MediaWiki API on the server. AoPS may block automated requests; when it is unavailable, the app clearly labels its archived problems and solutions. Live access cannot be guaranteed on Vercel.
-- The bundled archive contains **1,411 selected real contest problems from 2000–2024**, including solutions, answers, and canonical AoPS links. This is not every question from every test. No questions or solutions are AI-generated.
-- **181 problems** have topic labels supported by exact normalized statement matches against the MATH dataset. Topic filters use only these labeled questions; All topics includes the rest. Combinatorics includes probability.
-- Questions requiring unavailable diagrams, ambiguous or disputed answer keys, or invalid TeX are excluded. Source and validation records are included under `data/`.
+- Requests prioritize the public AoPS MediaWiki API. AoPS may block automated requests; when unavailable, the app shows the saved AoPS or LIVE by Po-Shen Loh question, with original diagrams. Solutions fall back to the saved archive, fetch matching Random Math solutions, and include saved publisher alternatives. Every approach is attributed. Live access cannot be guaranteed on Vercel.
+- The bundled archive contains **1,796 selected real contest problems from 2000–2024**, including solutions, answers, and canonical AoPS links. This is not every question from every test. No questions or solutions are AI-generated.
+- **189 problems** have topic labels supported by exact normalized statement matches against the MATH dataset. Topic filters use only these labeled questions; All topics includes the rest. Combinatorics includes probability.
+- The bank includes 387 restored diagram-bearing problems and 1,380 saved alternative solutions imported from LIVE by Po-Shen Loh. Original diagram assets are bundled under `public/diagrams/`. Conflicting answer keys and unsupported source formatting are excluded; `data/source-import-report.json` records provenance and exclusions. The earlier archive validation report is retained separately.
 - AMC answers accept A–E, case-insensitively. AIME answers accept integers from 0 through 999, with optional leading zeroes. Revealing a solution ends answer entry for that question.
-- Question responses omit answers and solutions. The answer bank is bundled with server functions rather than served as a public asset. AoPS HTML is sanitized before rendering, and KaTeX trust is disabled.
+- Question responses omit answers and solutions. The answer bank is bundled with server functions rather than served as a public asset. Publisher HTML and imported SVG assets are sanitized before rendering, and KaTeX trust is disabled.
 
-The archive comes from [amc2k](https://huggingface.co/datasets/zypchn/amc2k) and [Easy2Hard-Bench](https://huggingface.co/datasets/furonghuang-lab/Easy2Hard-Bench). Topic provenance comes from [competition_math](https://huggingface.co/datasets/qwedsacf/competition_math). See [NOTICE.md](NOTICE.md) for attribution.
+The original archive comes from [amc2k](https://huggingface.co/datasets/zypchn/amc2k) and [Easy2Hard-Bench](https://huggingface.co/datasets/furonghuang-lab/Easy2Hard-Bench). Topic provenance comes from [competition_math](https://huggingface.co/datasets/qwedsacf/competition_math). Additional solutions and diagrams come from [LIVE by Po-Shen Loh](https://live.poshenloh.com/past-contests); live fallback solutions come from [Random Math](https://wiki.randommath.com). See [NOTICE.md](NOTICE.md) for attribution.
 
 ## Checks
 
@@ -60,7 +60,7 @@ npm run test:smoke
 BASE_URL=https://your-project.vercel.app npm run test:smoke
 ```
 
-The eight core tests cover answer normalization, source identifiers, all twelve contest/topic combinations, HTML sanitation, question/solution separation, and rendering every archived question, solution, and choice. The HTTP smoke check exercises all twelve combinations, correct and incorrect answers, automatic solutions, invalid input, unknown IDs, and absence of answers from question responses. A protected deployment may require opening it in an authenticated browser instead of using the smoke script.
+The fourteen core tests cover answer normalization, source identifiers, all twelve contest/topic combinations, HTML sanitation, question/solution separation, and rendering every archived question, solution, and choice. The HTTP smoke check exercises all twelve combinations, correct and incorrect answers, automatic solutions, invalid input, unknown IDs, and absence of answers from question responses. A protected deployment may require opening it in an authenticated browser instead of using the smoke script.
 
 ## Project layout
 
@@ -68,6 +68,9 @@ The eight core tests cover answer normalization, source identifiers, all twelve 
 | --- | --- |
 | `app/page.tsx`, `app/globals.css` | Minimal practice interface |
 | `app/api/problem`, `check`, `solution` | Node.js API routes |
+| `lib/randommath.ts` | Exact-test fallback solution retrieval |
+| `public/diagrams/` | Imported, sanitized original diagram files |
+| `data/source-import-report.json` | Publisher and diagram provenance, import exclusions |
 | `lib/aops.ts` | Live AoPS fetches with a timeout and temporary cache |
 | `lib/render.ts` | HTML sanitation and KaTeX rendering |
 | `lib/problems.ts` | Archive fallback and grading |
@@ -87,3 +90,14 @@ npm test
 ```
 
 The input directory must contain `amc2k.json` and `e2h-amc.json` arrays in their upstream dataset schemas, plus `amc-topic-tags.json` using the structure of `data/topic-provenance.json`. The preparation script rebuilds the bank and public catalog. The validation script repairs supported source formatting, omits invalid TeX entries, and rewrites the bank, catalog, and validation report. Review these changes before committing them.
+
+### Refresh publisher alternatives and diagrams
+
+```sh
+node scripts/import-sources.mjs
+npm test
+```
+
+This optional importer discovers published 2000–2024 AMC 10/12/AIME exam pages on LIVE by Po-Shen Loh. It verifies exam identity, uses the numbered order of the displayed exam, cross-checks existing answer keys, imports the complete published solution, and downloads/sanitizes original diagram assets. It enriches existing questions and restores supported diagram-bearing problems. Responses are cached in ignored `.cache/sources/` files; remove that cache if intentionally refreshing upstream content. Conflicting keys are quarantined, not silently substituted. Do not run the older archive-rebuild command unless you intend to replace the bank; run this importer afterward to restore publisher alternatives.
+
+The solution viewer displays all solution sections returned by AoPS, including subheadings and diagrams, plus saved alternatives. If AoPS is unavailable, matching Random Math sections are included alongside the complete saved solutions. Some sources publish only one approach; the app does not invent additional solutions or claim exhaustive coverage of every solution on the internet.

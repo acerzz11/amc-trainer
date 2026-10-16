@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {renderText,math} from '../lib/render';
+import {renderText,renderRich,math} from '../lib/render';
 const data=JSON.parse(fs.readFileSync('data/problems.json','utf8'));
 const omitted:any[]=[],fixed:any[]=[];
 const out=data.filter((p:any)=>{
@@ -7,7 +7,7 @@ const out=data.filter((p:any)=>{
  delete p.originalProblem;
  // Remove a leaked section heading, not any mathematical content.
  p.problem=p.problem.replace(/\nSolution\s*$/,'').trim();
- if(renderText(p.problem).includes('katex-error')||renderText(p.solution).includes('katex-error')){omitted.push(p.id);return false;}
+ if((p.problemFormat==='html'?renderRich(p.problem):renderText(p.problem)).includes('katex-error')||(p.solutionFormat==='html'?renderRich(p.solution):renderText(p.solution)).includes('katex-error')||(p.extraSolutions||[]).some((s:any)=>(s.format==='html'?renderRich(s.content):renderText(s.content)).includes('katex-error'))){omitted.push(p.id);return false;}
  return true;
 });
 fs.writeFileSync('data/problems.json',JSON.stringify(out));

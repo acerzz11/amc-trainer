@@ -7,6 +7,8 @@ AMCtrainer is an independent practice tool. It is not affiliated with or endorse
 - Archived AMC content is sourced from [zypchn/amc2k](https://huggingface.co/datasets/zypchn/amc2k).
 - Archived AIME content is sourced from the E2H-AMC portion of [Easy2Hard-Bench](https://huggingface.co/datasets/furonghuang-lab/Easy2Hard-Bench).
 - Topic labels are supported by exact normalized statement matches against [competition_math](https://huggingface.co/datasets/qwedsacf/competition_math), with records in `data/topic-provenance.json`.
+- Additional questions, solutions, and original diagram assets are sourced from [LIVE by Po-Shen Loh](https://live.poshenloh.com/past-contests). Each item retains a source link; the asset-to-source map is in `data/source-import-report.json`.
+- When AoPS is unavailable, additional live solution sections may be fetched from [Random Math Wiki](https://wiki.randommath.com), with exact test/problem identity verification and attribution.
 - The interaction was inspired by [AMC Trivial](https://amctrivial.com). No AMC Trivial source code is incorporated.
 - Math rendering uses [KaTeX](https://katex.org/); dependency licenses remain with their respective packages.
 

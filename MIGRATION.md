@@ -7,11 +7,11 @@ The original site was inspected on October 16, 2026. Its app data and interface 
 | Feature | Original implementation | Migration action |
 | --- | --- | --- |
 | Database | No active database; Sites hosting configuration has no D1 binding | None. Unused starter database/Drizzle scaffolding is excluded. |
-| File/object storage | No uploads or R2 binding | None. The checked-in problem bank, catalog, favicon, and CSS are included. |
+| File/object storage | No uploads or R2 binding | None. The checked-in problem bank, original diagram assets, catalog, favicon, and CSS are included. |
 | Authentication | No application accounts or login code in use. ChatGPT Sites restricts access to the owner through its hosting access gate. | Configure Vercel Deployment Protection if the new deployment must remain private. There are no user accounts, passwords, or sessions to export. |
 | Statistics, profiles, history | Not stored | None. The in-memory set used to reduce repeated questions clears on reload. |
 | Server APIs | Problem lookup, answer checking, and solution retrieval | Converted to standard Next.js Node.js routes under `app/api`. |
-| AoPS integration | Public MediaWiki API with a sourced local fallback | Preserved. No token or connector is required; live access remains subject to AoPS availability. |
+| AoPS integration | Public MediaWiki API with sourced local fallbacks and matching Random Math solutions | Preserved. No token or connector is required; live access remains subject to AoPS availability. |
 | Cache | Best-effort, process-local cache of AoPS pages | Preserved. Vercel instances may start cold or use different caches; no correctness depends on persistence. |
 | Environment variables/secrets | None used by the trainer | None required. No Sites tokens or hosting credentials are included. |
 | Scheduled tasks | No configured automations | None. |
@@ -23,7 +23,7 @@ The original site was inspected on October 16, 2026. Its app data and interface 
 - The AMCtrainer name and current simple responsive interface.
 - One random problem at a time, with AMC 10 / AMC 12 / AIME and topic filters.
 - Answer checking, optional solution reveal, and automatic solutions after incorrect answers.
-- The complete existing 1,411-question archive and verified topic metadata.
+- The original archive and verified topic metadata; the later diagram/alternative-solution import is documented in `data/source-import-report.json`.
 - Live AoPS requests, source links, and clear archive labels when AoPS cannot be fetched.
 - No profiles, persistent history, saved statistics, or analytics.
 
