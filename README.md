@@ -2,7 +2,7 @@
 
 A simple AMC 10, AMC 12, and AIME practice app, exported from ChatGPT Sites as a self-contained Next.js project for Vercel.
 
-Choose a contest and topic, generate one real test problem, and check your answer. Incorrect answers open the solution automatically. You can also reveal a solution yourself. The existing minimal layout is preserved, without accounts, saved history, statistics, or analytics.
+Choose a contest, topic, inclusive year range, and difficulty by problem-number range, then generate one real test problem and check your answer. AMC problem numbers range from 1–25; AIME ranges from 1–15. Ranges combine with the other filters, and the matching-problem count updates immediately. Incorrect answers open the solution automatically. You can also reveal a solution yourself. The existing minimal layout is preserved, without accounts, saved history, statistics, or analytics.
 
 ## Run locally
 
@@ -60,7 +60,7 @@ npm run test:smoke
 BASE_URL=https://your-project.vercel.app npm run test:smoke
 ```
 
-The fourteen core tests cover answer normalization, source identifiers, all twelve contest/topic combinations, HTML sanitation, question/solution separation, and rendering every archived question, solution, and choice. The HTTP smoke check exercises all twelve combinations, correct and incorrect answers, automatic solutions, invalid input, unknown IDs, and absence of answers from question responses. A protected deployment may require opening it in an authenticated browser instead of using the smoke script.
+The sixteen core tests cover answer normalization, source identifiers, all twelve contest/topic combinations, HTML sanitation, question/solution separation, and rendering every archived question, solution, and choice. The HTTP smoke check exercises all twelve combinations, correct and incorrect answers, automatic solutions, invalid input, unknown IDs, and absence of answers from question responses. A protected deployment may require opening it in an authenticated browser instead of using the smoke script.
 
 ## Project layout
 

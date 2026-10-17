@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useMemo,useRef,useState} from 'react';
+import {matchesFilters,maxProblemNumber} from '../lib/filters';
 import type {Contest,Topic,PublicProblem,SolutionResponse} from '../lib/types';
 type Entry=Pick<PublicProblem,'id'|'title'|'contest'|'year'|'variant'|'number'|'topics'|'sourceUrl'>;
 type Solution=SolutionResponse;
@@ -8,11 +9,18 @@ function randomPick<T>(list:T[]):T{const r=new Uint32Array(1);crypto.getRandomVa
 export default function Home(){
  const [catalog,setCatalog]=useState<Entry[]>([]),[catalogReady,setCatalogReady]=useState(false);
  const [contest,setContest]=useState<Contest>('AMC 10'),[topic,setTopic]=useState<Topic|'All topics'>('All topics');
+ const [yearFrom,setYearFrom]=useState<number|null>(null),[yearTo,setYearTo]=useState<number|null>(null);
+ const [numberFrom,setNumberFrom]=useState(1),[numberTo,setNumberTo]=useState<number|null>(null);
  const [problem,setProblem]=useState<PublicProblem|null>(null),[busy,setBusy]=useState(false),[checking,setChecking]=useState(false),[answer,setAnswer]=useState(''),[error,setError]=useState('');
  const [result,setResult]=useState<{correct:boolean;answer:string}|null>(null),[solution,setSolution]=useState<Solution|null>(null),[solutionOpen,setSolutionOpen]=useState(false),[solutionBusy,setSolutionBusy]=useState(false);
  const seen=useRef<Set<string>>(new Set()),request=useRef(0),lock=useRef(false),initial=useRef(false),input=useRef<HTMLInputElement>(null);
  useEffect(()=>{fetch('/catalog.json').then(r=>{if(!r.ok)throw Error();return r.json() as Promise<Entry[]>}).then(data=>{setCatalog(data);setCatalogReady(true)}).catch(()=>setError('The problem library could not load. Refresh to try again.'));},[]);
- const eligible=useMemo(()=>catalog.filter(p=>p.contest===contest&&(topic==='All topics'||p.topics.includes(topic))),[catalog,contest,topic]);
+ const years=useMemo(()=>[...new Set(catalog.map(p=>p.year))].sort((a,b)=>a-b),[catalog]);
+ const maxNumber=maxProblemNumber(contest);
+ const numbers=Array.from({length:maxNumber},(_,i)=>i+1);
+ const filters=useMemo(()=>({contest,topic,yearFrom,yearTo,numberFrom,numberTo}),[contest,topic,yearFrom,yearTo,numberFrom,numberTo]);
+ const eligible=useMemo(()=>catalog.filter(p=>matchesFilters(p,filters)),[catalog,filters]);
+ function changeContest(value:Contest){setContest(value);const max=maxProblemNumber(value);setNumberFrom(n=>Math.min(n,max));setNumberTo(n=>n===null||n>=max?null:n);}
  async function load(id:string){
   const seq=++request.current;setBusy(true);setError('');
   try{const response=await fetch('/api/problem?id='+encodeURIComponent(id));const data=await response.json() as PublicProblem & {error?:string};if(!response.ok)throw Error(data.error||'Unable to load this problem.');if(seq!==request.current)return;
@@ -29,16 +37,28 @@ export default function Home(){
   catch(e){setError(e instanceof Error?e.message:'Unable to check your answer. Try again.');}finally{lock.current=false;setChecking(false);}
  }
  async function reveal(){if(!problem||busy||checking)return;if(solution){setSolutionOpen(v=>!v);return;}setSolutionBusy(true);setError('');try{const response=await fetch('/api/solution?id='+encodeURIComponent(problem.id));const data=await response.json() as Solution & {error?:string};if(!response.ok)throw Error(data.error);setSolution(data);setSolutionOpen(true);}catch{setError('The solution could not load. Please try again or open the AoPS source.');}finally{setSolutionBusy(false);}}
- const sameFilters=problem&&problem.contest===contest&&(topic==='All topics'||problem.topics.includes(topic));
+ const sameFilters=problem&&matchesFilters(problem,filters);
  const loading=busy||checking||solutionBusy;
  return <main className="trainer">
   <header className="site-header"><a href="/" className="site-name">AMCtrainer</a><a href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions" target="_blank" rel="noopener noreferrer">AoPS Wiki ↗</a></header>
   <section className="filters" aria-label="Problem filters">
-   <div className="filter"><label htmlFor="contest">Contest</label><select id="contest" value={contest} onChange={e=>setContest(e.target.value as Contest)}><option>AMC 10</option><option>AMC 12</option><option>AIME</option></select></div>
-   <div className="filter"><label htmlFor="topic">Topic</label><select id="topic" value={topic} onChange={e=>setTopic(e.target.value as Topic|'All topics')}><option>All topics</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>
+   <div className="filter"><label htmlFor="contest">Contest</label><select id="contest" value={contest} disabled={!catalogReady} onChange={e=>changeContest(e.target.value as Contest)}><option>AMC 10</option><option>AMC 12</option><option>AIME</option></select></div>
+   <div className="filter"><label htmlFor="topic">Topic</label><select id="topic" value={topic} disabled={!catalogReady} onChange={e=>setTopic(e.target.value as Topic|'All topics')}><option>All topics</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>
    <button className="button primary generate" onClick={generate} disabled={loading||!eligible.length}>{busy?'Loading…':'New problem'}</button>
+   <div className="range-filters">
+    <fieldset className="filter range-filter" disabled={!catalogReady}><legend>Year range</legend><div className="range-inputs">
+     <select aria-label="From year" value={yearFrom??''} onChange={e=>{const value=e.target.value?Number(e.target.value):null;setYearFrom(value);if(value!==null&&yearTo!==null&&value>yearTo)setYearTo(value);}}><option value="">Any year</option>{years.map(y=><option key={y} value={y}>{y}</option>)}</select>
+     <span aria-hidden="true">–</span>
+     <select aria-label="To year" value={yearTo??''} onChange={e=>{const value=e.target.value?Number(e.target.value):null;setYearTo(value);if(value!==null&&yearFrom!==null&&value<yearFrom)setYearFrom(value);}}><option value="">Any year</option>{years.map(y=><option key={y} value={y}>{y}</option>)}</select>
+    </div></fieldset>
+    <fieldset className="filter range-filter" disabled={!catalogReady}><legend>Difficulty (problem #)</legend><div className="range-inputs">
+     <select aria-label="From problem number" value={numberFrom} onChange={e=>{const value=Number(e.target.value);setNumberFrom(value);if(numberTo!==null&&value>numberTo)setNumberTo(value===maxNumber?null:value);}}>{numbers.map(n=><option key={n} value={n}>{n}</option>)}</select>
+     <span aria-hidden="true">–</span>
+     <select aria-label="To problem number" value={numberTo??''} onChange={e=>{const value=e.target.value?Number(e.target.value):null;setNumberTo(value);if(value!==null&&value<numberFrom)setNumberFrom(value);}}><option value="">{maxNumber}</option>{numbers.filter(n=>n<maxNumber).map(n=><option key={n} value={n}>{n}</option>)}</select>
+    </div></fieldset>
+   </div>
   </section>
-  <p className="filter-note" aria-live="polite">{catalogReady?`${eligible.length.toLocaleString()} matching problems`:'Loading problem library…'}{problem&&!sameFilters?' · Select New problem to apply these filters.':''}</p>
+  <p className="filter-note" aria-live="polite">{catalogReady?(eligible.length?`${eligible.length.toLocaleString()} matching problems`:'No matching problems. Widen the ranges or choose another topic.'):'Loading problem library…'}{eligible.length>0&&problem&&!sameFilters?' · Select New problem to apply these filters.':''}</p>
   {error&&<p className="error" role="alert">{error}</p>}
   <article className={`problem ${busy?'loading':''}`} aria-busy={busy}>
    {problem?<>

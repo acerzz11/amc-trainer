@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {matchesFilters,maxProblemNumber,type ProblemFilters} from '../lib/filters';
 import fs from 'node:fs';
 import {parseHTML} from 'linkedom';
 import {parseRandomMath} from '../lib/randommath';
@@ -54,4 +55,23 @@ test('offline fallback keeps alternatives private until solutions are requested'
 test('live AoPS solutions have priority and all approaches are returned',async()=>{
  const oldFetch=globalThis.fetch;globalThis.fetch=async()=>Response.json({parse:{text:{'*':'<div class="mw-parser-output"><h2>Problem</h2><p>A complete question here.</p><h2>Solution 1</h2><p>The first complete approach.</p><h2>Solution 2</h2><p>The second complete approach.</p></div>'}}});
  try{const p={...problems[0],title:'2099 AMC 10A Problems/Problem 1',extraSolutions:[]};const solutions=await getSolution(p);assert.equal(solutions.items.length,2);assert.ok(solutions.items.every(s=>s.sourceName==='AoPS Wiki'&&s.delivery==='live'));}finally{globalThis.fetch=oldFetch;}
+});
+
+
+test('year and problem-number ranges are inclusive and combine with contest/topic',()=>{
+ const filters:ProblemFilters={contest:'AMC 10',topic:'Geometry',yearFrom:2015,yearTo:2020,numberFrom:10,numberTo:15};
+ const p={contest:'AMC 10' as const,topics:['Geometry' as const],year:2015,number:10};
+ assert.equal(matchesFilters(p,filters),true);
+ assert.equal(matchesFilters({...p,year:2020,number:15},filters),true);
+ for(const other of [{...p,year:2014},{...p,year:2021},{...p,number:9},{...p,number:16},{...p,contest:'AMC 12' as const},{...p,topics:['Algebra' as const]}])assert.equal(matchesFilters(other,filters),false);
+ assert.equal(matchesFilters(p,{...filters,yearFrom:2015,yearTo:2015,numberFrom:10,numberTo:10}),true);
+ assert.equal(matchesFilters({...p,number:11},{...filters,numberFrom:10,numberTo:10}),false);
+});
+test('open ranges use the contest limits and empty combinations stay empty',()=>{
+ const filters:ProblemFilters={contest:'AIME',topic:'All topics',yearFrom:null,yearTo:null,numberFrom:1,numberTo:null};
+ assert.equal(maxProblemNumber('AMC 10'),25);assert.equal(maxProblemNumber('AMC 12'),25);assert.equal(maxProblemNumber('AIME'),15);
+ assert.equal(matchesFilters({contest:'AIME',topics:[],year:2000,number:15},filters),true);
+ assert.equal(matchesFilters({contest:'AIME',topics:[],year:2024,number:16},filters),false);
+ assert.equal(problems.filter(p=>matchesFilters(p,{...filters,yearFrom:1999,yearTo:1999})).length,0);
+ const selected=problems.filter(p=>matchesFilters(p,{...filters,yearFrom:2020,yearTo:2024,numberFrom:10,numberTo:15}));assert.ok(selected.length>0);
 });
