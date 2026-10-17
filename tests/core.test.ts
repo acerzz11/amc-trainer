@@ -1,3 +1,5 @@
+import {chooseSet,matchesSetFilters,mapLimit,MAX_SET_SIZE} from '../lib/sets';
+import {POST as checkSet} from '../app/api/check-set/route';
 import {test} from 'node:test';
 import {matchesFilters,maxProblemNumber,type ProblemFilters} from '../lib/filters';
 import fs from 'node:fs';
@@ -72,6 +74,44 @@ test('open ranges use the contest limits and empty combinations stay empty',()=>
  assert.equal(maxProblemNumber('AMC 10'),25);assert.equal(maxProblemNumber('AMC 12'),25);assert.equal(maxProblemNumber('AIME'),15);
  assert.equal(matchesFilters({contest:'AIME',topics:[],year:2000,number:15},filters),true);
  assert.equal(matchesFilters({contest:'AIME',topics:[],year:2024,number:16},filters),false);
- assert.equal(problems.filter(p=>matchesFilters(p,{...filters,yearFrom:1999,yearTo:1999})).length,0);
+ assert.equal(problems.filter(p=>matchesFilters(p,{...filters,yearFrom:1900,yearTo:1900})).length,0);
  const selected=problems.filter(p=>matchesFilters(p,{...filters,yearFrom:2020,yearTo:2024,numberFrom:10,numberTo:15}));assert.ok(selected.length>0);
+});
+
+test('expanded bank substantially increases AMC 12, AIME, and source-backed topic coverage',()=>{
+ assert.ok(problems.filter(p=>p.contest==='AMC 12').length>=1200);
+ assert.ok(problems.filter(p=>p.contest==='AIME').length>=1000);
+ assert.ok(problems.filter(p=>p.topics.length).length/problems.length>0.95);
+ const provenance=JSON.parse(fs.readFileSync('data/publisher-topics.json','utf8'));
+ for(const [id,record] of Object.entries(provenance.records) as [string,{sourceUrl:string;concepts:string[];topics:string[]}][]){assert.ok(record.sourceUrl.startsWith('https://live.poshenloh.com/past-contests/'));assert.ok(record.concepts.length||!record.topics.length,id);const p=problems.find(p=>p.id===id);assert.ok(p,id);assert.ok(record.topics.every(t=>p.topics.includes(t as any)),id);}
+});
+test('mixed sets honor all filters, balance contests, and never repeat IDs',()=>{
+ const filters={contests:['AMC 12','AIME'] as const,topics:['Geometry','Algebra'] as const,yearFrom:2010,yearTo:2020,numberFrom:5,numberTo:12};
+ const pool=problems.filter(p=>matchesSetFilters(p,{...filters,contests:[...filters.contests],topics:[...filters.topics]}));
+ const set=chooseSet([...pool,...pool],10,()=>0.5);
+ assert.equal(set.length,10);assert.equal(new Set(set.map(p=>p.id)).size,10);
+ assert.equal(set.filter(p=>p.contest==='AIME').length,5);
+ for(const p of set){assert.ok(p.year>=2010&&p.year<=2020&&p.number>=5&&p.number<=12);assert.ok(p.topics.includes('Geometry')||p.topics.includes('Algebra'));}
+ assert.deepEqual(problems.filter(p=>matchesSetFilters(p,{...filters,contests:[],topics:[]})),[]);
+ for(const count of [0,1.5,MAX_SET_SIZE+1])assert.throws(()=>chooseSet(pool,count));
+ assert.throws(()=>chooseSet(pool.slice(0,2),3));
+ assert.equal(chooseSet(pool,1).length,1);
+});
+test('bounded parallel operations preserve question order and cap concurrency',async()=>{
+ let active=0,maxActive=0;
+ const result=await mapLimit([1,2,3,4,5],2,async n=>{active++;maxActive=Math.max(active,maxActive);await new Promise(resolve=>setTimeout(resolve,6-n));active--;return n*2;});
+ assert.deepEqual(result,[2,4,6,8,10]);assert.equal(maxActive,2);
+});
+test('set submission grades mixed formats and blanks, without returning solution bodies',async()=>{
+ const oldFetch=globalThis.fetch;globalThis.fetch=async()=>new Response('',{status:503});
+ try{
+  const amc=problems.find(p=>p.contest==='AMC 12')!,aime=problems.find(p=>p.contest==='AIME')!,blank=problems.find(p=>p.contest==='AMC 10')!;
+  const res=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:JSON.stringify({answers:[{id:amc.id,answer:amc.answer.toLowerCase()},{id:aime.id,answer:aime.answer.padStart(3,'0')},{id:blank.id,answer:''}]})}));
+  assert.equal(res.status,200);const data=await res.json();assert.equal(data.correct,2);assert.equal(data.total,3);assert.equal(data.unanswered,1);assert.equal(data.results[2].correct,false);assert.deepEqual(data.results.map((r:any)=>r.id),[amc.id,aime.id,blank.id]);assert.ok(data.results.every((r:any)=>!('solution' in r)));
+ }finally{globalThis.fetch=oldFetch;}
+});
+test('set API rejects malformed, repeated, unknown, oversized, and invalid answers before grading',async()=>{
+ const p=problems.find(p=>p.contest==='AIME')!;
+ for(const [body,status] of [[null,400],[{answers:[]},400],[{answers:Array(51).fill({id:p.id,answer:'1'})},400],[{answers:[{id:p.id,answer:'1'},{id:p.id,answer:'2'}]},400],[{answers:[{id:'missing',answer:'A'}]},404],[{answers:[{id:p.id,answer:'1000'}]},400],[{answers:[{id:p.id,answer:1}]},400],[{answers:[null]},400]] as const){const r=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:JSON.stringify(body)}));assert.equal(r.status,status);}
+ const badJSON=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:'{'}));assert.equal(badJSON.status,400);
 });

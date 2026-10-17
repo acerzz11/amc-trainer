@@ -15,3 +15,8 @@ const diagramResponse=await fetch(base+'/api/problem?id='+diagramProblem.id);con
 for(const [,src] of diagramQuestion.problemHtml.matchAll(/<img[^>]*src="([^" ]+)"/g)){const image=await fetch(src.startsWith('/')?base+src:src);assert.equal(image.status,200);assert.match(image.headers.get('content-type')||'',/image/);}
 const solutionsResponse=await fetch(base+'/api/solution?id='+p.id);assert.equal(solutionsResponse.status,200);assert.ok((await solutionsResponse.json()).items.length>=1);
 console.log('PASS: diagram problem, image HTTP delivery, and solutions list.');
+
+const mixed=['AMC 10','AMC 12','AIME'].map(c=>bank.find(p=>p.contest===c));
+const batch=await fetch(base+'/api/check-set',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:mixed.map((p,i)=>({id:p.id,answer:i===0?'':i===1?(p.answer==='A'?'B':'A'):p.answer.padStart(3,'0')}))})});
+assert.equal(batch.status,200);const review=await batch.json();assert.equal(review.total,3);assert.equal(review.correct,1);assert.equal(review.unanswered,1);assert.deepEqual(review.results.map(r=>r.id),mixed.map(p=>p.id));assert.ok(review.results.every(r=>!('solution' in r)));
+console.log('PASS: mixed set grading, leading zeroes, incorrect/blank answers, and lazy solutions.');

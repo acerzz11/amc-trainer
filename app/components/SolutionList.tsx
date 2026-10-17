@@ -1,0 +1,4 @@
+import type {SolutionResponse} from '../../lib/types';
+export default function SolutionList({solution}:{solution:SolutionResponse}){
+ return <section className="solution set-solution" aria-label="Solutions"><h2>Solutions <span className="solution-count">({solution.items.length})</span></h2><div className="solutions-scroll" tabIndex={0} role="region" aria-label="Scrollable solutions">{solution.items.map((item,i)=><section className="solution-entry" key={item.sourceUrl+item.title+i}><header><h3>{solution.items.length>1?`${i+1}. `:''}{item.title}</h3><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceName} ↗</a></header><p className="solution-source">{item.delivery==='live'?'Fetched from source':'Saved from source'}</p><div className="math-content solution-body" dangerouslySetInnerHTML={{__html:item.html}}/></section>)}</div></section>;
+}

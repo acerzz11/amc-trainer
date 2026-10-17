@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useMemo,useRef,useState} from 'react';
+import ProblemSet from './components/ProblemSet';
 import {matchesFilters,maxProblemNumber} from '../lib/filters';
 import type {Contest,Topic,PublicProblem,SolutionResponse} from '../lib/types';
 type Entry=Pick<PublicProblem,'id'|'title'|'contest'|'year'|'variant'|'number'|'topics'|'sourceUrl'>;
@@ -7,6 +8,7 @@ type Solution=SolutionResponse;
 const topics:Topic[]=['Algebra','Geometry','Number theory','Combinatorics'];
 function randomPick<T>(list:T[]):T{const r=new Uint32Array(1);crypto.getRandomValues(r);return list[Math.floor(r[0]/4294967296*list.length)];}
 export default function Home(){
+ const [mode,setMode]=useState<'single'|'set'>('single');
  const [catalog,setCatalog]=useState<Entry[]>([]),[catalogReady,setCatalogReady]=useState(false);
  const [contest,setContest]=useState<Contest>('AMC 10'),[topic,setTopic]=useState<Topic|'All topics'>('All topics');
  const [yearFrom,setYearFrom]=useState<number|null>(null),[yearTo,setYearTo]=useState<number|null>(null);
@@ -41,6 +43,8 @@ export default function Home(){
  const loading=busy||checking||solutionBusy;
  return <main className="trainer">
   <header className="site-header"><a href="/" className="site-name">AMCtrainer</a><a href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions" target="_blank" rel="noopener noreferrer">AoPS Wiki ↗</a></header>
+  <nav className="mode-switch" aria-label="Practice mode"><button type="button" aria-pressed={mode==='single'} onClick={()=>setMode('single')}>One problem</button><button type="button" aria-pressed={mode==='set'} onClick={()=>setMode('set')}>Problem set</button></nav>
+  <div hidden={mode!=='single'}>
   <section className="filters" aria-label="Problem filters">
    <div className="filter"><label htmlFor="contest">Contest</label><select id="contest" value={contest} disabled={!catalogReady} onChange={e=>changeContest(e.target.value as Contest)}><option>AMC 10</option><option>AMC 12</option><option>AIME</option></select></div>
    <div className="filter"><label htmlFor="topic">Topic</label><select id="topic" value={topic} disabled={!catalogReady} onChange={e=>setTopic(e.target.value as Topic|'All topics')}><option>All topics</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>
@@ -72,6 +76,8 @@ export default function Home(){
    </>:<div className="empty"><p>{error?'Choose New problem to try again.':'Loading your first problem…'}</p></div>}
   </article>
   {solutionOpen&&solution&&<section className="solution" aria-label="Solutions"><header><h2>Solutions <span className="solution-count">({solution.items.length})</span></h2></header><p className="solution-source">All available solutions are below. Scroll to read each approach.</p><div className="solutions-scroll" tabIndex={0} role="region" aria-label="Scrollable solutions">{solution.items.map((item,i)=><section className="solution-entry" key={item.sourceUrl+item.title+i}><header><h3>{solution.items.length>1?`${i+1}. `:''}{item.title}</h3><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceName} ↗</a></header><p className="solution-source">{item.delivery==='live'?'Fetched from source':'Saved from source'}</p><div className="math-content solution-body" dangerouslySetInnerHTML={{__html:item.html}}/></section>)}</div><button className="button" onClick={generate} disabled={loading||!eligible.length}>Next problem →</button></section>}
-  <footer className="site-footer"><details><summary>Sources & coverage</summary><div><p>Real AMC 10, AMC 12, and AIME problems. AoPS is the first source. If it is unavailable, we use attributed content from <a href="https://live.poshenloh.com/past-contests" target="_blank" rel="noopener noreferrer">LIVE by Po-Shen Loh</a>, <a href="https://wiki.randommath.com" target="_blank" rel="noopener noreferrer">Random Math</a>, and the existing AoPS archive.</p><p>The collection contains {catalog.length.toLocaleString()} selected problems from 2000–2024. Original diagrams are bundled when available. {catalog.filter(p=>p.topics.length).length} problems have verified topic labels; topic filters use these labeled problems. Combinatorics includes probability.</p><p>We show all solutions returned by the available sources, including saved alternatives. The number of published approaches varies by problem. Conflicting answer keys and unsupported source formatting are excluded.</p><p>Contest problems © MAA. Solutions and diagrams belong to their credited publishers and contributors. Independent practice tool, inspired by <a href="https://amctrivial.com" target="_blank" rel="noopener noreferrer">AMC Trivial</a>.</p></div></details></footer>
+  </div>
+  <div hidden={mode!=='set'}><ProblemSet catalog={catalog} ready={catalogReady}/></div>
+  <footer className="site-footer"><details><summary>Sources & coverage</summary><div><p>Real AMC 10, AMC 12, and AIME problems. AoPS is the first source. If it is unavailable, we use attributed content from <a href="https://live.poshenloh.com/past-contests" target="_blank" rel="noopener noreferrer">LIVE by Po-Shen Loh</a>, <a href="https://wiki.randommath.com" target="_blank" rel="noopener noreferrer">Random Math</a>, and the existing AoPS archive.</p><p>The collection contains {catalog.length.toLocaleString()} selected problems from {years[0]}–{years.at(-1)}. Original diagrams are bundled when available. {catalog.filter(p=>p.topics.length).length} problems have source-backed topic labels from published concepts or exact statement matches. A problem may belong to several topics. Arithmetic and averages are included in Algebra; probability is included in Combinatorics.</p><p>We show all solutions returned by the available sources, including saved alternatives. The number of published approaches varies by problem. Conflicting answer keys and unsupported source formatting are excluded.</p><p>Contest problems © MAA. Solutions and diagrams belong to their credited publishers and contributors. Independent practice tool, inspired by <a href="https://amctrivial.com" target="_blank" rel="noopener noreferrer">AMC Trivial</a>.</p></div></details></footer>
  </main>
 }
