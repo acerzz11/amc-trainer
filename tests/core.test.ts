@@ -1,3 +1,5 @@
+import {isProofContest,CONTESTS} from '../lib/contests';
+import {POST as checkSingle} from '../app/api/check/route';
 import {chooseSet,matchesSetFilters,mapLimit,MAX_SET_SIZE} from '../lib/sets';
 import {POST as checkSet} from '../app/api/check-set/route';
 import {test} from 'node:test';
@@ -15,7 +17,7 @@ test('AMC and AIME grading has strict format and canonical leading zero handling
 });
 test('bank consists of unique real-test identifiers, sourced answers, and complete choices',()=>{
  assert.ok(problems.length>1000);assert.equal(new Set(problems.map(p=>p.id)).size,problems.length);
- for(const p of problems){assert.ok(p.sourceUrl.endsWith(p.title.replace(/ /g,'_')),p.id);assert.match(p.sourceUrl,/^https:\/\/artofproblemsolving.com\/wiki\/index.php\//);assert.ok(p.problem.length>10&&p.solution.length>10,p.id);assert.ok(!p.problem.includes('[asy]')&&!p.solution.includes('[asy]'));if(p.contest==='AIME'){assert.match(p.answer,/^\d{1,3}$/);assert.ok(+p.answer<=999);assert.ok(p.number<=15);}else{assert.match(p.answer,/^[A-E]$/);if(p.choices.length)assert.deepEqual(p.choices.map(c=>c.letter),['A','B','C','D','E']);assert.ok(p.choices.every(c=>c.tex.length>0),p.id);}}
+ for(const p of problems){assert.ok(p.sourceUrl.endsWith(p.title.replace(/ /g,'_')),p.id);assert.match(p.sourceUrl,/^https:\/\/artofproblemsolving.com\/wiki\/index.php\//);assert.ok(p.problem.length>10&&p.solution.length>10,p.id);assert.ok(!p.problem.includes('[asy]')&&!p.solution.includes('[asy]'));if(isProofContest(p.contest)){assert.equal(p.answer,'');assert.deepEqual(p.choices,[]);assert.ok(p.number>=1&&p.number<=6);assert.ok(p.archiveName&&p.archiveUrl&&p.topicSource,p.id);}else if(p.contest==='AIME'){assert.match(p.answer,/^\d{1,3}$/);assert.ok(+p.answer<=999);assert.ok(p.number<=15);}else{assert.match(p.answer,/^[A-E]$/);if(p.choices.length)assert.deepEqual(p.choices.map(c=>c.letter),['A','B','C','D','E']);assert.ok(p.choices.every(c=>c.tex.length>0),p.id);}}
 });
 test('all twelve contest/topic combinations contain eligible problems',()=>{for(const contest of ['AMC 10','AMC 12','AIME'])for(const topic of ['Algebra','Geometry','Number theory','Combinatorics'])assert.ok(problems.some(p=>p.contest===contest&&p.topics.includes(topic as any)),contest+' '+topic)});
 test('AoPS HTML is sanitized while math and diagrams survive',()=>{
@@ -114,4 +116,23 @@ test('set API rejects malformed, repeated, unknown, oversized, and invalid answe
  const p=problems.find(p=>p.contest==='AIME')!;
  for(const [body,status] of [[null,400],[{answers:[]},400],[{answers:Array(51).fill({id:p.id,answer:'1'})},400],[{answers:[{id:p.id,answer:'1'},{id:p.id,answer:'2'}]},400],[{answers:[{id:'missing',answer:'A'}]},404],[{answers:[{id:p.id,answer:'1000'}]},400],[{answers:[{id:p.id,answer:1}]},400],[{answers:[null]},400]] as const){const r=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:JSON.stringify(body)}));assert.equal(r.status,status);}
  const badJSON=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:'{'}));assert.equal(badJSON.status,400);
+});
+
+test('all six contests and every olympiad topic are backed by real archived problems',()=>{
+ for(const contest of CONTESTS)assert.ok(problems.some(p=>p.contest===contest),contest);
+ for(const contest of ['USAJMO','USAMO','IMO'] as const){assert.equal(maxProblemNumber(contest),6);for(const topic of ['Algebra','Geometry','Number theory','Combinatorics'] as const)assert.ok(problems.some(p=>p.contest===contest&&p.topics.includes(topic)),contest+' '+topic);}
+ const report=JSON.parse(fs.readFileSync('data/olympiad-import-report.json','utf8'));
+ for(const [path,record] of Object.entries(report.assets) as [string,{problem:string;sourceUrl:string;page:number}][]){assert.ok(fs.existsSync('public'+path));assert.match(record.sourceUrl,/^https:\/\/web.evanchen.cc\/exams\/IMO-20\d\d-notes.pdf$/);assert.ok(record.page>=1);assert.ok(problems.some(p=>p.id===record.problem),record.problem);}
+});
+test('proof question responses contain only statements and published proof solutions stay available offline',async()=>{
+ const oldFetch=globalThis.fetch;globalThis.fetch=async()=>new Response('',{status:503});
+ try{for(const contest of ['USAJMO','USAMO','IMO'] as const){const p=problems.find(p=>p.contest===contest)!;const question=await getProblem(p);assert.equal(question.contest,contest);assert.deepEqual(question.choicesHtml,[]);for(const field of ['answer','solution','extraSolutions','solutionFormat','topicSource'])assert.equal(field in question,false);const solutions=await getSolution(p);assert.ok(solutions.items.length>=1);assert.ok(solutions.items.every(s=>s.html.length>20&&s.sourceUrl));if(contest==='IMO'){assert.match(solutions.items[0].html,/proof-pages/);assert.equal(solutions.items[0].sourceName,'Evan Chen');}}}finally{globalThis.fetch=oldFetch;}
+});
+test('both grading APIs reject proof problems explicitly instead of assigning a false grade',async()=>{
+ for(const contest of ['USAJMO','USAMO','IMO'] as const){const p=problems.find(p=>p.contest===contest)!;const r=await checkSingle(new Request('http://localhost/api/check',{method:'POST',body:JSON.stringify({id:p.id,answer:'A'})}));assert.equal(r.status,400);assert.match((await r.json()).error,/cannot be automatically graded/);const set=await checkSet(new Request('http://localhost/api/check-set',{method:'POST',body:JSON.stringify({answers:[{id:p.id,answer:''}]})}));assert.equal(set.status,400);assert.match((await set.json()).error,/cannot be automatically graded/);}
+});
+test('mixed olympiad sets respect number limits and preserve original diagram pages safely',()=>{
+ const pool=problems.filter(p=>matchesSetFilters(p,{contests:['AMC 12','USAJMO','USAMO','IMO'],topics:[],yearFrom:2020,yearTo:2024,numberFrom:1,numberTo:6}));const selected=chooseSet(pool,12,()=>0.4);for(const contest of ['AMC 12','USAJMO','USAMO','IMO'])assert.equal(selected.filter(p=>p.contest===contest).length,3);
+ assert.equal(safeImageURL('/proof-pages/abcdef.svg'),'/proof-pages/abcdef.svg');assert.equal(safeImageURL('/proof-pages/../../secrets.svg'),null);
+ for(const file of fs.readdirSync('public/proof-pages')){const svg=fs.readFileSync('public/proof-pages/'+file,'utf8');const root=parseHTML(svg).document.querySelector('svg');assert.ok(root,file);assert.equal(root.querySelectorAll('script,foreignObject,iframe,object,embed').length,0,file);for(const el of [root,...Array.from(root.querySelectorAll('*'))])for(const attr of Array.from(el.attributes)){assert.ok(!/^on/i.test(attr.name),file);if(/^(href|xlink:href)$/i.test(attr.name))assert.ok(attr.value.startsWith('#')||attr.value.startsWith('data:image/'),file);}}
 });

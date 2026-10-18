@@ -3,7 +3,7 @@ import {parseHTML} from 'linkedom';
 export const escapeHTML=(s:string)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 export function math(tex:string,displayMode=false){
  const normalized=tex.replace(/\\begin\{(?:align\*?|eqnarray\*?)\}/g,'\\begin{aligned}').replace(/\\end\{(?:align\*?|eqnarray\*?)\}/g,'\\end{aligned}').replace(/\\textdollar/g,'\\$').replace(/\\overarc/g,'\\overgroup');
- return katex.renderToString(normalized,{displayMode,throwOnError:false,strict:'ignore',trust:false,output:'htmlAndMathml',maxExpand:1000});
+ return katex.renderToString(normalized,{displayMode,throwOnError:false,strict:'ignore',trust:false,output:'htmlAndMathml',maxExpand:1000,macros:{'\\NN':'\\mathbb{N}','\\ZZ':'\\mathbb{Z}','\\QQ':'\\mathbb{Q}','\\RR':'\\mathbb{R}','\\CC':'\\mathbb{C}','\\ol':'\\overline{#1}','\\abs':'\\left|#1\\right|','\\eps':'\\varepsilon'}});
 }
 export function renderText(source:string){
  const rx=/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|(?<!\\)\$((?:\\\$|[^$])*?)(?<!\\)\$/g;
@@ -12,7 +12,7 @@ export function renderText(source:string){
 const allowed=new Set(['P','DIV','SPAN','B','I','EM','STRONG','UL','OL','LI','BR','HR','H2','H3','H4','H5','DL','DT','DD','BLOCKQUOTE','TABLE','THEAD','TBODY','TR','TH','TD','SUP','SUB','A','IMG','FIGURE','FIGCAPTION']);
 const imageHosts=['artofproblemsolving.com','wiki.randommath.com','live.poshenloh.com'];
 export function safeImageURL(src:string,baseURL='https://artofproblemsolving.com'){
- if(/^\/diagrams\/[a-f0-9]+\.(?:svg|png|jpg|webp)$/.test(src))return src;
+ if(/^\/(?:diagrams|proof-pages)\//.test(src))return /^\/(?:diagrams|proof-pages)\/[a-f0-9]+\.(?:svg|png|jpg|webp)$/.test(src)?src:null;
  try{const url=new URL(src,baseURL);if(url.protocol==='https:'&&imageHosts.some(h=>url.hostname===h||h==='artofproblemsolving.com'&&url.hostname.endsWith('.'+h)))return url.href;}catch{}
  return null;
 }

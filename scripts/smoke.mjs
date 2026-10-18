@@ -20,3 +20,12 @@ const mixed=['AMC 10','AMC 12','AIME'].map(c=>bank.find(p=>p.contest===c));
 const batch=await fetch(base+'/api/check-set',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:mixed.map((p,i)=>({id:p.id,answer:i===0?'':i===1?(p.answer==='A'?'B':'A'):p.answer.padStart(3,'0')}))})});
 assert.equal(batch.status,200);const review=await batch.json();assert.equal(review.total,3);assert.equal(review.correct,1);assert.equal(review.unanswered,1);assert.deepEqual(review.results.map(r=>r.id),mixed.map(p=>p.id));assert.ok(review.results.every(r=>!('solution' in r)));
 console.log('PASS: mixed set grading, leading zeroes, incorrect/blank answers, and lazy solutions.');
+
+for(const contest of ['USAJMO','USAMO','IMO']){
+ for(const topic of ['Algebra','Geometry','Number theory','Combinatorics']){
+  const p=bank.find(p=>p.contest===contest&&p.topics.includes(topic));assert.ok(p);const response=await fetch(base+'/api/problem?id='+p.id);assert.equal(response.status,200);const q=await response.json();assert.equal(q.contest,contest);assert.deepEqual(q.choicesHtml,[]);for(const field of ['answer','solution','extraSolutions'])assert.equal(field in q,false);
+ }
+ const p=bank.find(p=>p.contest===contest);const response=await fetch(base+'/api/solution?id='+p.id);assert.equal(response.status,200);const solution=await response.json();assert.ok(solution.items.length>0);if(contest==='IMO')for(const [,src] of solution.items.flatMap(s=>[...s.html.matchAll(/src="(\/proof-pages\/[^"]+)"/g)])){const image=await fetch(base+src);assert.equal(image.status,200);assert.match(image.headers.get('content-type')||'',/image\/svg/);}
+ const denied=await fetch(base+'/api/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:p.id,answer:'A'})});assert.equal(denied.status,400);
+}
+console.log('PASS: all 12 olympiad/topic combinations, published proofs, original IMO page assets, and explicit automatic-grading rejection.');

@@ -1,3 +1,4 @@
+import {isProofContest} from '../../../lib/contests';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 export const maxDuration=60;
@@ -11,6 +12,7 @@ export async function POST(req:Request){
  for(const entry of entries){
   if(!entry||typeof entry.id!=='string'||typeof entry.answer!=='string'||ids.has(entry.id))return Response.json({error:'Each problem must appear once with an answer or an empty string.'},{status:400});
   ids.add(entry.id);const problem=findProblem(entry.id);
+  if(problem&&isProofContest(problem.contest))return Response.json({error:'Proof problems are reviewed with published solutions and cannot be automatically graded.'},{status:400});
   if(!problem)return Response.json({error:'A problem in this set was not found.'},{status:404});
   if(entry.answer.trim()&&normalizeAnswer(entry.answer,problem.contest==='AIME')===null)return Response.json({error:`Invalid answer for ${problem.title}.`},{status:400});
  }

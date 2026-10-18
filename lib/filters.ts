@@ -8,7 +8,8 @@ export type ProblemFilters = {
  numberFrom:number;
  numberTo:number|null;
 };
-export const maxProblemNumber=(contest:Contest)=>contest==='AIME'?15:25;
+import {maxProblemNumber} from './contests';
+export {maxProblemNumber} from './contests';
 
 export function matchesFilters(p:Pick<PublicProblem,'contest'|'topics'|'year'|'number'>,f:ProblemFilters){
  return p.contest===f.contest

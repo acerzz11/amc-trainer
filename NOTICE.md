@@ -2,7 +2,7 @@
 
 AMCtrainer is an independent practice tool. It is not affiliated with or endorsed by the Mathematical Association of America, Art of Problem Solving, or AMC Trivial.
 
-- Contest problems are copyrighted by the **Mathematical Association of America**.
+- USA contest problems are copyrighted by the **Mathematical Association of America**. IMO problem rights remain with their credited organizers.
 - Solutions are credited to **AoPS Wiki contributors**, with a canonical source link on every problem and solution.
 - Archived AMC content is sourced from [zypchn/amc2k](https://huggingface.co/datasets/zypchn/amc2k).
 - Archived AIME content is sourced from the E2H-AMC portion of [Easy2Hard-Bench](https://huggingface.co/datasets/furonghuang-lab/Easy2Hard-Bench).
@@ -14,3 +14,6 @@ AMCtrainer is an independent practice tool. It is not affiliated with or endorse
 - Math rendering uses [KaTeX](https://katex.org/); dependency licenses remain with their respective packages.
 
 This source export does not relicense third-party contest material or solutions. Attribution and source links from the original app are preserved.
+
+- USAJMO and USAMO archived human-written AoPS solutions and subject labels come from [HARP](https://github.com/aadityasingh/HARP). Canonical AoPS links are retained for each problem and approach.
+- Recent IMO statements and exact solution-page images come from [Evan Chen’s published solution notes](https://web.evanchen.cc/problems.html), credited in each solution. The IMO topic labels come from his [MOHS table](https://web.evanchen.cc/upload/MOHS-hardness.pdf). These are his published notes, rather than an assertion of official jury solutions. The page and source mappings are in `data/olympiad-import-report.json`.

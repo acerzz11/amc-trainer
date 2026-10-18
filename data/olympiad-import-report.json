@@ -1,0 +1,1025 @@
+{
+  "sources": [
+    "https://github.com/aadityasingh/HARP",
+    "https://web.evanchen.cc/problems.html"
+  ],
+  "topicSources": [
+    "https://github.com/aadityasingh/HARP",
+    "https://web.evanchen.cc/upload/MOHS-hardness.pdf"
+  ],
+  "method": "Real exam identity and source-number checks. HARP supplies human-authored AoPS proofs. IMO solution pages are exact, self-contained SVG exports of the published PDF; page ranges come from source bookmarks. No generated solutions. Unsupported individual approaches are omitted rather than deleting diagrams.",
+  "assets": {
+    "/proof-pages/0a0d1f4fcc833f4ab44f718a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 3,
+      "problem": "2020-imo-1"
+    },
+    "/proof-pages/5289fabab3e45db22e4dd29f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 4,
+      "problem": "2020-imo-2"
+    },
+    "/proof-pages/4f98e2071e0f5bd6e9c64aef.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 5,
+      "problem": "2020-imo-2"
+    },
+    "/proof-pages/bc2b67823f5c482abc404a99.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 6,
+      "problem": "2020-imo-3"
+    },
+    "/proof-pages/33adacac7b84ed923b37902a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 7,
+      "problem": "2020-imo-3"
+    },
+    "/proof-pages/17119237af68099635966ee5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 8,
+      "problem": "2020-imo-4"
+    },
+    "/proof-pages/e8ae72d4e9327f341f34b57b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 9,
+      "problem": "2020-imo-4"
+    },
+    "/proof-pages/4b361fe108cd36b2cae1f999.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 10,
+      "problem": "2020-imo-5"
+    },
+    "/proof-pages/e28a65b37366aab505fd028d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 11,
+      "problem": "2020-imo-6"
+    },
+    "/proof-pages/9339087d4107c4ce5d0f1727.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+      "page": 12,
+      "problem": "2020-imo-6"
+    },
+    "/proof-pages/9b48dbc94729822c4c9cfb17.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 3,
+      "problem": "2021-imo-1"
+    },
+    "/proof-pages/38b3c342fe9086d856772355.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 4,
+      "problem": "2021-imo-2"
+    },
+    "/proof-pages/4f7a7de5ddd856b135815cc4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 5,
+      "problem": "2021-imo-3"
+    },
+    "/proof-pages/46f077b4537fafc27aa4a190.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 6,
+      "problem": "2021-imo-3"
+    },
+    "/proof-pages/93cd72378b1dc36172c66d62.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 7,
+      "problem": "2021-imo-4"
+    },
+    "/proof-pages/f8a2fbcd125eb4cdccdc8049.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 8,
+      "problem": "2021-imo-4"
+    },
+    "/proof-pages/1246448fb9f436dae6d557e2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 9,
+      "problem": "2021-imo-5"
+    },
+    "/proof-pages/f41f9ac03768cc41f9b59d1c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 10,
+      "problem": "2021-imo-5"
+    },
+    "/proof-pages/8e14404f6dfac8c665675f87.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+      "page": 11,
+      "problem": "2021-imo-6"
+    },
+    "/proof-pages/b6ccc163f5923be508f45529.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 3,
+      "problem": "2022-imo-1"
+    },
+    "/proof-pages/b948b240075d7c9c07276c01.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 4,
+      "problem": "2022-imo-2"
+    },
+    "/proof-pages/4ea7b7eb7fdc1410d218fbfb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 5,
+      "problem": "2022-imo-3"
+    },
+    "/proof-pages/ad78acd981693fa98b0ab52a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 6,
+      "problem": "2022-imo-4"
+    },
+    "/proof-pages/257346c4b9920fab0039cb4f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 7,
+      "problem": "2022-imo-4"
+    },
+    "/proof-pages/d8d17e4c16ca5317625e4bac.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 8,
+      "problem": "2022-imo-5"
+    },
+    "/proof-pages/03b06ae83512984ed5b84f55.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 9,
+      "problem": "2022-imo-6"
+    },
+    "/proof-pages/7014234b9fbacaea1258c175.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+      "page": 10,
+      "problem": "2022-imo-6"
+    },
+    "/proof-pages/7bb9afc6c7339b92a632119a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 4,
+      "problem": "2023-imo-1"
+    },
+    "/proof-pages/25a6aa72ae69d94354b35668.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 5,
+      "problem": "2023-imo-2"
+    },
+    "/proof-pages/8c81de29b657b70faf0bf1be.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 6,
+      "problem": "2023-imo-2"
+    },
+    "/proof-pages/4575326469d54e8a7289cf3e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 7,
+      "problem": "2023-imo-3"
+    },
+    "/proof-pages/985f096d793753a78e06de5d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 8,
+      "problem": "2023-imo-3"
+    },
+    "/proof-pages/93ee4f825de3d7d2fe8c21c7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 9,
+      "problem": "2023-imo-4"
+    },
+    "/proof-pages/59815f15940fe3cbc1517172.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 10,
+      "problem": "2023-imo-4"
+    },
+    "/proof-pages/ee4c1b4d496a44e6c452833b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 11,
+      "problem": "2023-imo-5"
+    },
+    "/proof-pages/8dce2bd1ec47e0998886a6be.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 12,
+      "problem": "2023-imo-5"
+    },
+    "/proof-pages/83ade387cbe49591e212341f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 13,
+      "problem": "2023-imo-5"
+    },
+    "/proof-pages/d5691d0ab12af121660eb565.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 14,
+      "problem": "2023-imo-6"
+    },
+    "/proof-pages/e992d7167a049ba3b4180ebe.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 15,
+      "problem": "2023-imo-6"
+    },
+    "/proof-pages/70f09f50a7d9aea0f3b89676.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 16,
+      "problem": "2023-imo-6"
+    },
+    "/proof-pages/959a5983a2b72bbe1e124faa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 3,
+      "problem": "2024-imo-1"
+    },
+    "/proof-pages/a8873d0b796897a5cc6d1b1e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 4,
+      "problem": "2024-imo-2"
+    },
+    "/proof-pages/6797f763c514abe76b36f21d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 5,
+      "problem": "2024-imo-2"
+    },
+    "/proof-pages/dfaf2764e24cf2ec47d4b5c5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 6,
+      "problem": "2024-imo-3"
+    },
+    "/proof-pages/1feb5f39850a08b43fecc6f5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 7,
+      "problem": "2024-imo-3"
+    },
+    "/proof-pages/9e47e88798b982fb68d875cd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 8,
+      "problem": "2024-imo-3"
+    },
+    "/proof-pages/24730a006dfd05ade0e60c68.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 9,
+      "problem": "2024-imo-3"
+    },
+    "/proof-pages/8b74afe73a08b3f897a4cd09.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 10,
+      "problem": "2024-imo-4"
+    },
+    "/proof-pages/a0dc3e4af3466398a58e1f61.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 11,
+      "problem": "2024-imo-4"
+    },
+    "/proof-pages/08852f600286eb2e81949c54.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 12,
+      "problem": "2024-imo-5"
+    },
+    "/proof-pages/91c3e0791b60f2f858945097.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 13,
+      "problem": "2024-imo-5"
+    },
+    "/proof-pages/d8b39e41105221aa19795230.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 14,
+      "problem": "2024-imo-5"
+    },
+    "/proof-pages/ef89db89a0e2f32452472e9c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 15,
+      "problem": "2024-imo-5"
+    },
+    "/proof-pages/89d6d0263c44e30103b8ac42.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 16,
+      "problem": "2024-imo-5"
+    },
+    "/proof-pages/1bd59598f64438fb37a2eb62.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 17,
+      "problem": "2024-imo-6"
+    },
+    "/proof-pages/cb40aaf96f4137643afe5fa5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+      "page": 18,
+      "problem": "2024-imo-6"
+    },
+    "/proof-pages/2e689dbd4621232923c89b1d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 3,
+      "problem": "2025-imo-1"
+    },
+    "/proof-pages/82f9b9744fe6b7b089bafdd1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 4,
+      "problem": "2025-imo-1"
+    },
+    "/proof-pages/baa9be6eb5a748d67b3e08fe.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 5,
+      "problem": "2025-imo-2"
+    },
+    "/proof-pages/fb1955123b269958400fc4bd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 6,
+      "problem": "2025-imo-2"
+    },
+    "/proof-pages/53e4447f82e734d50e56d863.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 7,
+      "problem": "2025-imo-2"
+    },
+    "/proof-pages/2d1701ebeddb98e4f915ea4c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 8,
+      "problem": "2025-imo-3"
+    },
+    "/proof-pages/667dd2a1435212bf7289335d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 9,
+      "problem": "2025-imo-3"
+    },
+    "/proof-pages/6157396aeed256bb974acbf5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 10,
+      "problem": "2025-imo-4"
+    },
+    "/proof-pages/0ac6351ab35704c0579d053e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 11,
+      "problem": "2025-imo-4"
+    },
+    "/proof-pages/6316e01afb82940097e8cc46.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 12,
+      "problem": "2025-imo-5"
+    },
+    "/proof-pages/52547976ef88b79cea2cb098.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 13,
+      "problem": "2025-imo-5"
+    },
+    "/proof-pages/ef6abadaca9889cd8f1259a8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 14,
+      "problem": "2025-imo-6"
+    },
+    "/proof-pages/b0b6a981e482aa4bf04a10d5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 15,
+      "problem": "2025-imo-6"
+    },
+    "/proof-pages/952e222054ba07b8e4c02a42.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+      "page": 16,
+      "problem": "2025-imo-6"
+    }
+  },
+  "skipped": [
+    {
+      "id": "1972-usamo-5",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1974-usamo-5",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1975-usamo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1975-usamo-4",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1976-usamo-1",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1976-usamo-2",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1978-usamo-2",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1979-usamo-4",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1991-usamo-1",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1991-usamo-1",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "1991-usamo-5",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "1992-usamo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1994-usamo-3",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1994-usamo-3",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "1996-usamo-5",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1997-usamo-4",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1997-usamo-4",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "1998-usamo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1998-usamo-6",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1998-usamo-6",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2000-usamo-4",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2000-usamo-4",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2000-usamo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2001-usamo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2003-usamo-4",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2003-usamo-4",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2003-usamo-4",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2005-usamo-3",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2007-usamo-6",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2007-usamo-6",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2008-usamo-2",
+      "solution": "solution_3",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2008-usamo-2",
+      "solution": "solution_6",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2008-usamo-3",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2008-usamo-3",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2008-usamo-4",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2008-usamo-4",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2009-usamo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2009-usamo-5",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2009-usamo-5",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2010-usamo-1",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2010-usamo-1",
+      "solution": "solution_3",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2010-usamo-4",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2011-usajmo-5",
+      "solution": "solution_4",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2012-usamo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2012-usajmo-1",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2013-usamo-1",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2013-usamo-1",
+      "solution": "solution_4",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2013-usamo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2014-usajmo-2",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2014-usajmo-6",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2014-usajmo-6",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2016-usajmo-1",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2016-usajmo-1",
+      "solution": "solution_3",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2016-usajmo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2017-usajmo-3",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "2017-usajmo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2017-usajmo-5",
+      "solution": "solution_2",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2017-usajmo-5",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2018-usamo-5",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2018-usamo-5",
+      "reason": "No complete supported solution"
+    },
+    {
+      "id": "2018-usajmo-3",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "2019-usajmo-4",
+      "solution": "solution_4",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2021-usajmo-3",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "2022-usamo-1",
+      "reason": "Source URL identifies a different exam; excluded"
+    },
+    {
+      "id": "2022-usamo-2",
+      "reason": "Statement requires unsupported source diagram or identity"
+    },
+    {
+      "id": "2023-usamo-6",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "2024-usajmo-1",
+      "solution": "solution_1",
+      "reason": "This approach requires unavailable source diagram"
+    },
+    {
+      "id": "1980-usamo-2",
+      "solution": "Published solution",
+      "reason": "Unsupported source solution TeX"
+    },
+    {
+      "id": "1980-usamo-2",
+      "reason": "Error: No supported complete published solution"
+    },
+    {
+      "id": "1993-usamo-1",
+      "solution": "Published solution",
+      "reason": "Unsupported source solution TeX"
+    },
+    {
+      "id": "2007-usamo-4",
+      "solution": "Solution 4",
+      "reason": "Unsupported source solution TeX"
+    }
+  ],
+  "importedAt": "2026-10-18T00:02:40.874Z",
+  "added": [
+    "1972-usamo-1",
+    "1972-usamo-2",
+    "1972-usamo-3",
+    "1972-usamo-4",
+    "1973-usamo-1",
+    "1973-usamo-2",
+    "1973-usamo-3",
+    "1973-usamo-4",
+    "1973-usamo-5",
+    "1974-usamo-1",
+    "1974-usamo-2",
+    "1974-usamo-3",
+    "1974-usamo-4",
+    "1975-usamo-2",
+    "1975-usamo-3",
+    "1975-usamo-5",
+    "1976-usamo-3",
+    "1976-usamo-4",
+    "1976-usamo-5",
+    "1977-usamo-1",
+    "1977-usamo-3",
+    "1977-usamo-4",
+    "1977-usamo-5",
+    "1978-usamo-1",
+    "1978-usamo-3",
+    "1978-usamo-4",
+    "1978-usamo-5",
+    "1979-usamo-1",
+    "1979-usamo-2",
+    "1979-usamo-3",
+    "1979-usamo-4",
+    "1979-usamo-5",
+    "1980-usamo-3",
+    "1980-usamo-4",
+    "1980-usamo-5",
+    "1981-usamo-1",
+    "1981-usamo-2",
+    "1981-usamo-3",
+    "1981-usamo-5",
+    "1982-usamo-1",
+    "1982-usamo-2",
+    "1982-usamo-3",
+    "1982-usamo-4",
+    "1982-usamo-5",
+    "1983-usamo-1",
+    "1983-usamo-2",
+    "1983-usamo-3",
+    "1983-usamo-4",
+    "1983-usamo-5",
+    "1984-usamo-1",
+    "1984-usamo-2",
+    "1984-usamo-3",
+    "1984-usamo-5",
+    "1985-usamo-1",
+    "1985-usamo-2",
+    "1985-usamo-3",
+    "1985-usamo-4",
+    "1985-usamo-5",
+    "1986-usamo-1",
+    "1986-usamo-2",
+    "1986-usamo-3",
+    "1986-usamo-5",
+    "1987-usamo-1",
+    "1987-usamo-3",
+    "1988-usamo-1",
+    "1988-usamo-2",
+    "1988-usamo-4",
+    "1988-usamo-5",
+    "1989-usamo-1",
+    "1989-usamo-2",
+    "1989-usamo-3",
+    "1989-usamo-4",
+    "1989-usamo-5",
+    "1990-usamo-1",
+    "1990-usamo-2",
+    "1990-usamo-3",
+    "1990-usamo-4",
+    "1990-usamo-5",
+    "1991-usamo-2",
+    "1991-usamo-3",
+    "1991-usamo-4",
+    "1992-usamo-1",
+    "1992-usamo-2",
+    "1992-usamo-3",
+    "1992-usamo-4",
+    "1992-usamo-5",
+    "1993-usamo-1",
+    "1993-usamo-2",
+    "1993-usamo-4",
+    "1993-usamo-5",
+    "1994-usamo-1",
+    "1994-usamo-2",
+    "1994-usamo-4",
+    "1994-usamo-5",
+    "1995-usamo-1",
+    "1995-usamo-2",
+    "1995-usamo-3",
+    "1995-usamo-4",
+    "1995-usamo-5",
+    "1996-usamo-1",
+    "1996-usamo-2",
+    "1996-usamo-3",
+    "1996-usamo-4",
+    "1996-usamo-5",
+    "1996-usamo-6",
+    "1997-usamo-1",
+    "1997-usamo-2",
+    "1997-usamo-3",
+    "1997-usamo-5",
+    "1997-usamo-6",
+    "1998-usamo-1",
+    "1998-usamo-2",
+    "1998-usamo-3",
+    "1998-usamo-4",
+    "1998-usamo-5",
+    "1999-usamo-1",
+    "1999-usamo-2",
+    "1999-usamo-3",
+    "1999-usamo-4",
+    "1999-usamo-5",
+    "1999-usamo-6",
+    "2000-usamo-1",
+    "2000-usamo-2",
+    "2000-usamo-3",
+    "2000-usamo-5",
+    "2000-usamo-6",
+    "2001-usamo-1",
+    "2001-usamo-2",
+    "2001-usamo-3",
+    "2001-usamo-4",
+    "2001-usamo-5",
+    "2001-usamo-6",
+    "2002-usamo-1",
+    "2002-usamo-2",
+    "2002-usamo-3",
+    "2002-usamo-4",
+    "2002-usamo-5",
+    "2003-usamo-1",
+    "2003-usamo-2",
+    "2003-usamo-3",
+    "2003-usamo-5",
+    "2004-usamo-1",
+    "2004-usamo-2",
+    "2004-usamo-3",
+    "2004-usamo-4",
+    "2004-usamo-5",
+    "2004-usamo-6",
+    "2005-usamo-1",
+    "2005-usamo-2",
+    "2005-usamo-3",
+    "2005-usamo-4",
+    "2005-usamo-5",
+    "2005-usamo-6",
+    "2006-usamo-1",
+    "2006-usamo-2",
+    "2006-usamo-3",
+    "2006-usamo-4",
+    "2006-usamo-5",
+    "2006-usamo-6",
+    "2007-usamo-1",
+    "2007-usamo-2",
+    "2007-usamo-3",
+    "2007-usamo-4",
+    "2007-usamo-5",
+    "2008-usamo-1",
+    "2008-usamo-2",
+    "2008-usamo-3",
+    "2008-usamo-5",
+    "2008-usamo-6",
+    "2009-usamo-1",
+    "2009-usamo-2",
+    "2009-usamo-4",
+    "2009-usamo-6",
+    "2010-usamo-1",
+    "2010-usamo-2",
+    "2010-usamo-3",
+    "2010-usamo-4",
+    "2010-usamo-5",
+    "2010-usamo-6",
+    "2010-usajmo-1",
+    "2010-usajmo-2",
+    "2010-usajmo-4",
+    "2010-usajmo-5",
+    "2011-usamo-1",
+    "2011-usamo-2",
+    "2011-usamo-4",
+    "2011-usamo-5",
+    "2011-usamo-6",
+    "2011-usajmo-1",
+    "2011-usajmo-3",
+    "2011-usajmo-4",
+    "2011-usajmo-5",
+    "2012-usamo-1",
+    "2012-usamo-2",
+    "2012-usamo-3",
+    "2012-usamo-4",
+    "2012-usamo-5",
+    "2012-usamo-6",
+    "2012-usajmo-1",
+    "2012-usajmo-3",
+    "2012-usajmo-4",
+    "2012-usajmo-5",
+    "2013-usamo-1",
+    "2013-usamo-2",
+    "2013-usamo-4",
+    "2013-usamo-5",
+    "2013-usamo-6",
+    "2013-usajmo-1",
+    "2013-usajmo-2",
+    "2013-usajmo-4",
+    "2013-usajmo-5",
+    "2014-usamo-1",
+    "2014-usamo-2",
+    "2014-usamo-3",
+    "2014-usamo-4",
+    "2014-usamo-5",
+    "2014-usamo-6",
+    "2014-usajmo-1",
+    "2014-usajmo-2",
+    "2014-usajmo-4",
+    "2015-usamo-1",
+    "2015-usamo-2",
+    "2015-usamo-3",
+    "2015-usamo-4",
+    "2015-usamo-5",
+    "2015-usamo-6",
+    "2015-usajmo-1",
+    "2015-usajmo-4",
+    "2015-usajmo-5",
+    "2016-usamo-1",
+    "2016-usamo-2",
+    "2016-usamo-3",
+    "2016-usamo-4",
+    "2016-usamo-5",
+    "2016-usamo-6",
+    "2016-usajmo-1",
+    "2016-usajmo-2",
+    "2016-usajmo-4",
+    "2016-usajmo-5",
+    "2017-usamo-1",
+    "2017-usamo-3",
+    "2017-usamo-4",
+    "2017-usamo-5",
+    "2017-usajmo-2",
+    "2017-usajmo-4",
+    "2018-usamo-1",
+    "2018-usamo-2",
+    "2018-usamo-4",
+    "2018-usamo-6",
+    "2018-usajmo-1",
+    "2018-usajmo-4",
+    "2018-usajmo-6",
+    "2019-usamo-1",
+    "2019-usamo-2",
+    "2019-usamo-3",
+    "2019-usamo-4",
+    "2019-usamo-5",
+    "2019-usamo-6",
+    "2019-usajmo-1",
+    "2019-usajmo-2",
+    "2019-usajmo-4",
+    "2020-usamo-1",
+    "2020-usamo-2",
+    "2020-usamo-4",
+    "2020-usajmo-1",
+    "2020-usajmo-2",
+    "2020-usajmo-4",
+    "2021-usamo-6",
+    "2021-usajmo-1",
+    "2021-usajmo-4",
+    "2022-usamo-4",
+    "2022-usajmo-1",
+    "2022-usajmo-4",
+    "2023-usamo-2",
+    "2023-usamo-3",
+    "2023-usamo-4",
+    "2023-usamo-6",
+    "2023-usajmo-1",
+    "2023-usajmo-2",
+    "2023-usajmo-4",
+    "2023-usajmo-6",
+    "2024-usajmo-1",
+    "2024-usajmo-2",
+    "2024-usajmo-3",
+    "2024-usajmo-4",
+    "2024-usajmo-5",
+    "2020-imo-1",
+    "2020-imo-2",
+    "2020-imo-3",
+    "2020-imo-4",
+    "2020-imo-5",
+    "2020-imo-6",
+    "2021-imo-1",
+    "2021-imo-2",
+    "2021-imo-3",
+    "2021-imo-4",
+    "2021-imo-5",
+    "2021-imo-6",
+    "2022-imo-1",
+    "2022-imo-2",
+    "2022-imo-3",
+    "2022-imo-4",
+    "2022-imo-5",
+    "2022-imo-6",
+    "2023-imo-1",
+    "2023-imo-2",
+    "2023-imo-3",
+    "2023-imo-4",
+    "2023-imo-5",
+    "2023-imo-6",
+    "2024-imo-1",
+    "2024-imo-2",
+    "2024-imo-3",
+    "2024-imo-4",
+    "2024-imo-5",
+    "2024-imo-6",
+    "2025-imo-1",
+    "2025-imo-2",
+    "2025-imo-3",
+    "2025-imo-4",
+    "2025-imo-5",
+    "2025-imo-6"
+  ],
+  "counts": {
+    "USAJMO": 50,
+    "USAMO": 236,
+    "IMO": 36
+  }
+}

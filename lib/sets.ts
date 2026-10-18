@@ -4,7 +4,7 @@ export const MAX_SET_SIZE=50;
 export type CatalogEntry=Pick<PublicProblem,'id'|'title'|'contest'|'year'|'variant'|'number'|'topics'|'sourceUrl'>;
 export type SetFilters={contests:Contest[];topics:Topic[];yearFrom:number|null;yearTo:number|null;numberFrom:number;numberTo:number|null};
 export type SetResult={id:string;correct:boolean;answer:string;submitted:string;unanswered:boolean};
-export type SetReview={results:SetResult[];correct:number;total:number;unanswered:number};
+export type SetReview={results:SetResult[];correct:number;total:number;unanswered:number;proofCount?:number};
 export function matchesSetFilters(p:CatalogEntry,f:SetFilters){
  return f.contests.includes(p.contest)&&(!f.topics.length||f.topics.some(t=>p.topics.includes(t)))
   &&matchesFilters(p,{...f,contest:p.contest,topic:'All topics'});
