@@ -1,14 +1,1046 @@
 {
   "sources": [
     "https://github.com/aadityasingh/HARP",
-    "https://web.evanchen.cc/problems.html"
+    "https://web.evanchen.cc/problems.html",
+    "https://prase.cz/kalva/imo.html",
+    "https://prase.cz/kalva/usa.html"
   ],
   "topicSources": [
     "https://github.com/aadityasingh/HARP",
     "https://web.evanchen.cc/upload/MOHS-hardness.pdf"
   ],
-  "method": "Real exam identity and source-number checks. HARP supplies human-authored AoPS proofs. IMO solution pages are exact, self-contained SVG exports of the published PDF; page ranges come from source bookmarks. No generated solutions. Unsupported individual approaches are omitted rather than deleting diagrams.",
+  "method": "Real exam identity and source-number checks. HARP supplies human-authored AoPS proofs. Publisher solution pages are exact, self-contained SVG exports of the published PDF; page ranges come from source bookmarks. No generated solutions. Unsupported individual approaches are omitted rather than deleting diagrams.",
   "assets": {
+    "/proof-pages/fa28c0db16d63daaa0416b3b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 3,
+      "problem": "1997-imo-1"
+    },
+    "/proof-pages/e661e7b82ae88b99efe8b335.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 4,
+      "problem": "1997-imo-1"
+    },
+    "/proof-pages/5318ae4dea5997db5c71b879.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 5,
+      "problem": "1997-imo-2"
+    },
+    "/proof-pages/b0db839894d49df719264e03.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 6,
+      "problem": "1997-imo-3"
+    },
+    "/proof-pages/82cf8413f388849ec370c64b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 7,
+      "problem": "1997-imo-4"
+    },
+    "/proof-pages/13eafeba2d7fc9527479d9a2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 8,
+      "problem": "1997-imo-4"
+    },
+    "/proof-pages/339154c155efe1ca777113e8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 9,
+      "problem": "1997-imo-5"
+    },
+    "/proof-pages/d24f8e303eb3fd269e779074.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+      "page": 10,
+      "problem": "1997-imo-6"
+    },
+    "/proof-pages/40946e6330ee0273369662bf.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 3,
+      "problem": "1998-imo-1"
+    },
+    "/proof-pages/bbd26d99e07b8c838d58fab5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 4,
+      "problem": "1998-imo-1"
+    },
+    "/proof-pages/0719023093b0691eb428d60e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 5,
+      "problem": "1998-imo-2"
+    },
+    "/proof-pages/f5623155ae140e8279f07fc9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 6,
+      "problem": "1998-imo-3"
+    },
+    "/proof-pages/d2f435526ba0da835cee271a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 7,
+      "problem": "1998-imo-4"
+    },
+    "/proof-pages/33cf220e0f9fdb6b68afd71a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 8,
+      "problem": "1998-imo-5"
+    },
+    "/proof-pages/d6c07242163752cf75bfff69.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 9,
+      "problem": "1998-imo-6"
+    },
+    "/proof-pages/daa8e233f3bc44a0150d1874.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+      "page": 10,
+      "problem": "1998-imo-6"
+    },
+    "/proof-pages/5397424e24518aa6e89110e7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 3,
+      "problem": "1999-imo-1"
+    },
+    "/proof-pages/87b96bf971127ee7e3e53a68.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 4,
+      "problem": "1999-imo-2"
+    },
+    "/proof-pages/18b615e5e4bfffa9e4e7c7b3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 5,
+      "problem": "1999-imo-3"
+    },
+    "/proof-pages/421f4cbd75f407eb4fbc4e2e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 6,
+      "problem": "1999-imo-4"
+    },
+    "/proof-pages/33c366e08d9e77392cd44e58.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 7,
+      "problem": "1999-imo-5"
+    },
+    "/proof-pages/37ce3a1d0b9d261f6f04a817.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 8,
+      "problem": "1999-imo-5"
+    },
+    "/proof-pages/5684a0c19dbfe2e816e94eb1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 9,
+      "problem": "1999-imo-6"
+    },
+    "/proof-pages/a95477cd15d9a0f95ec1d764.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+      "page": 10,
+      "problem": "1999-imo-6"
+    },
+    "/proof-pages/ae5abbc8e9dff757bc67264d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 3,
+      "problem": "2000-imo-1"
+    },
+    "/proof-pages/20f6ac8d2dc1f40f6ebb4aa5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 4,
+      "problem": "2000-imo-2"
+    },
+    "/proof-pages/fcdcc4572cde923be186ca7b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 5,
+      "problem": "2000-imo-3"
+    },
+    "/proof-pages/8888c09e91e918135fede4b0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 6,
+      "problem": "2000-imo-3"
+    },
+    "/proof-pages/915ed7860582c1e7a0ea027f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 7,
+      "problem": "2000-imo-4"
+    },
+    "/proof-pages/dbdb36ac0b32d16f4fb704df.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 8,
+      "problem": "2000-imo-4"
+    },
+    "/proof-pages/38c10a8383793bee7a057765.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 9,
+      "problem": "2000-imo-5"
+    },
+    "/proof-pages/d99099d1951bc65e48fa73c4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 10,
+      "problem": "2000-imo-6"
+    },
+    "/proof-pages/d324a9298c3741a9605bc0a9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+      "page": 11,
+      "problem": "2000-imo-6"
+    },
+    "/proof-pages/384c721c5a139054e3e6c1e3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 3,
+      "problem": "2001-imo-1"
+    },
+    "/proof-pages/8c7dbcd46c2b3253bce8b969.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 4,
+      "problem": "2001-imo-2"
+    },
+    "/proof-pages/3a6fcb1af2d9659689c2511d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 5,
+      "problem": "2001-imo-3"
+    },
+    "/proof-pages/1651312a92b727067923301f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 6,
+      "problem": "2001-imo-3"
+    },
+    "/proof-pages/37540d174b82fe18aa344c58.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 7,
+      "problem": "2001-imo-4"
+    },
+    "/proof-pages/65751b5ba77b98a97a83801f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 8,
+      "problem": "2001-imo-5"
+    },
+    "/proof-pages/cba80cf06824ef97bfc324f7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 9,
+      "problem": "2001-imo-5"
+    },
+    "/proof-pages/b6ea439aa6038280414d96da.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 10,
+      "problem": "2001-imo-6"
+    },
+    "/proof-pages/722ea3b8443f6edea587d431.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+      "page": 11,
+      "problem": "2001-imo-6"
+    },
+    "/proof-pages/e31331db6df8de98847f1fcb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 3,
+      "problem": "2002-imo-1"
+    },
+    "/proof-pages/4aca31ede1c73633e6352cd3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 4,
+      "problem": "2002-imo-2"
+    },
+    "/proof-pages/8567e5bbda11258ea7fa4948.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 5,
+      "problem": "2002-imo-3"
+    },
+    "/proof-pages/3a773b9249ea6ab59af176b3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 6,
+      "problem": "2002-imo-4"
+    },
+    "/proof-pages/881267a80f199957bb52df87.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 7,
+      "problem": "2002-imo-5"
+    },
+    "/proof-pages/cec1db801a8d467596ff16d9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 8,
+      "problem": "2002-imo-6"
+    },
+    "/proof-pages/bb73854441b78a5c240eee66.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 9,
+      "problem": "2002-imo-6"
+    },
+    "/proof-pages/00deb4e6f821652c5d8cfa30.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+      "page": 10,
+      "problem": "2002-imo-6"
+    },
+    "/proof-pages/3ced83f7f29d9c979d3601ef.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 3,
+      "problem": "2003-imo-1"
+    },
+    "/proof-pages/3b4f52ae65ef51f2c96137f5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 4,
+      "problem": "2003-imo-2"
+    },
+    "/proof-pages/eedd7a8e8fe295959c45e839.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 5,
+      "problem": "2003-imo-3"
+    },
+    "/proof-pages/afde3b80030f7b852910740a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 6,
+      "problem": "2003-imo-3"
+    },
+    "/proof-pages/79a18e79bac675c2a55c099b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 7,
+      "problem": "2003-imo-4"
+    },
+    "/proof-pages/397e4c78a5a6784923d79b53.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 8,
+      "problem": "2003-imo-5"
+    },
+    "/proof-pages/8ac08dbb8d1574f56b2c9f16.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 9,
+      "problem": "2003-imo-5"
+    },
+    "/proof-pages/d2dfc60e0f872847d7ba2895.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+      "page": 10,
+      "problem": "2003-imo-6"
+    },
+    "/proof-pages/c2aa22ef61d3d0f890a9ea02.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 3,
+      "problem": "2004-imo-1"
+    },
+    "/proof-pages/ff9c3bccbec7a01d89dac90d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 4,
+      "problem": "2004-imo-2"
+    },
+    "/proof-pages/13b1f60e04837c138e6230d3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 5,
+      "problem": "2004-imo-3"
+    },
+    "/proof-pages/b18a9e757ecbe36a3ba5441a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 6,
+      "problem": "2004-imo-3"
+    },
+    "/proof-pages/e911cfc1ad687ff7238eede5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 7,
+      "problem": "2004-imo-4"
+    },
+    "/proof-pages/a5f9d331c9075efad99663e5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 8,
+      "problem": "2004-imo-5"
+    },
+    "/proof-pages/d416f185be8d942f6fb08ede.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 9,
+      "problem": "2004-imo-5"
+    },
+    "/proof-pages/232ca044a7b49f1315346b39.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 10,
+      "problem": "2004-imo-5"
+    },
+    "/proof-pages/e33879299974634293402b58.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 11,
+      "problem": "2004-imo-5"
+    },
+    "/proof-pages/49f6e519183449fcbe456d54.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 12,
+      "problem": "2004-imo-6"
+    },
+    "/proof-pages/7b97822a3870c9deea0eabb6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 13,
+      "problem": "2004-imo-6"
+    },
+    "/proof-pages/c8a7ef53206d6d4f50548b41.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 3,
+      "problem": "2005-imo-1"
+    },
+    "/proof-pages/6b115091adbd62495b294b9e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 4,
+      "problem": "2005-imo-2"
+    },
+    "/proof-pages/08d8b8b1303d59f6242a8acc.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 5,
+      "problem": "2005-imo-2"
+    },
+    "/proof-pages/698848e029ae25d98780366d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 6,
+      "problem": "2005-imo-3"
+    },
+    "/proof-pages/2ac96aac5f7afbb234822214.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 7,
+      "problem": "2005-imo-3"
+    },
+    "/proof-pages/a4dae26cb6a71c5f9cbbc38b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 8,
+      "problem": "2005-imo-4"
+    },
+    "/proof-pages/ba2bae2f5b394cfa096a73c0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 9,
+      "problem": "2005-imo-5"
+    },
+    "/proof-pages/670b941aacbcdde2cbec71a2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 10,
+      "problem": "2005-imo-6"
+    },
+    "/proof-pages/b92b1d7295108fc6870589e2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 11,
+      "problem": "2005-imo-6"
+    },
+    "/proof-pages/d6354e6726e4823289bed1e3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+      "page": 12,
+      "problem": "2005-imo-6"
+    },
+    "/proof-pages/21729d0417656447243eaeab.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 3,
+      "problem": "2006-imo-1"
+    },
+    "/proof-pages/5b322557836a97042de90401.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 4,
+      "problem": "2006-imo-2"
+    },
+    "/proof-pages/25b27070733e65056cc8ea3f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 5,
+      "problem": "2006-imo-3"
+    },
+    "/proof-pages/5328eb20a07ffe9fdf77da3e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 6,
+      "problem": "2006-imo-4"
+    },
+    "/proof-pages/3d9a380e1dd589b351fb2051.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 7,
+      "problem": "2006-imo-5"
+    },
+    "/proof-pages/fe982626ddfd6b7b47b9a1f9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 8,
+      "problem": "2006-imo-6"
+    },
+    "/proof-pages/7e8b886b6012f67f42088aeb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+      "page": 9,
+      "problem": "2006-imo-6"
+    },
+    "/proof-pages/3170899bf5eab1a5a3f71f01.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 3,
+      "problem": "2007-imo-1"
+    },
+    "/proof-pages/c4e85c89bd10657875728904.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 4,
+      "problem": "2007-imo-2"
+    },
+    "/proof-pages/a96388325060c7d8965301f2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 5,
+      "problem": "2007-imo-3"
+    },
+    "/proof-pages/6d041197aec7c236b00a5450.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 6,
+      "problem": "2007-imo-3"
+    },
+    "/proof-pages/5caebee0d4ea476b1e0e3471.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 7,
+      "problem": "2007-imo-4"
+    },
+    "/proof-pages/9a5d17a733548b2eb2d88e0c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 8,
+      "problem": "2007-imo-5"
+    },
+    "/proof-pages/86d08026dd75a99e5ff2eca7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+      "page": 9,
+      "problem": "2007-imo-6"
+    },
+    "/proof-pages/6f79d3c601d6037bf6192d61.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 3,
+      "problem": "2008-imo-1"
+    },
+    "/proof-pages/fbf52fe4ac58ef10dc666e7a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 4,
+      "problem": "2008-imo-2"
+    },
+    "/proof-pages/7d4585b834a95a3c1ea85779.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 5,
+      "problem": "2008-imo-3"
+    },
+    "/proof-pages/2e0029552a695106d522dde1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 6,
+      "problem": "2008-imo-4"
+    },
+    "/proof-pages/d5a3a3371c6ef6ad4b7c4029.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 7,
+      "problem": "2008-imo-5"
+    },
+    "/proof-pages/394c4335ad7a15abf56b36de.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+      "page": 8,
+      "problem": "2008-imo-6"
+    },
+    "/proof-pages/94580626c19f9958a5a62d25.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 3,
+      "problem": "2009-imo-1"
+    },
+    "/proof-pages/0af4606cc690310679d4299c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 4,
+      "problem": "2009-imo-2"
+    },
+    "/proof-pages/44748a18081e26244c89dfa6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 5,
+      "problem": "2009-imo-3"
+    },
+    "/proof-pages/87b305f9cda0258528de4a94.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 6,
+      "problem": "2009-imo-3"
+    },
+    "/proof-pages/5612a122a47fa583466fbe73.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 7,
+      "problem": "2009-imo-4"
+    },
+    "/proof-pages/ccd9a2c3b284fa63c429199a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 8,
+      "problem": "2009-imo-4"
+    },
+    "/proof-pages/f936690e95efc94d4dfb03cf.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 9,
+      "problem": "2009-imo-5"
+    },
+    "/proof-pages/301409ab495245e6adc75cb3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+      "page": 10,
+      "problem": "2009-imo-6"
+    },
+    "/proof-pages/bbf2abed80e37b9ae74399d5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 3,
+      "problem": "2010-imo-1"
+    },
+    "/proof-pages/b52e8b9ccbff4c1887cc116c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 4,
+      "problem": "2010-imo-2"
+    },
+    "/proof-pages/264d44059947a2d0f7b2783e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 5,
+      "problem": "2010-imo-3"
+    },
+    "/proof-pages/f55dc7e3aa3e2f87ca9fb016.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 6,
+      "problem": "2010-imo-4"
+    },
+    "/proof-pages/b1601ac5a6c095e2ae4ecce5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 7,
+      "problem": "2010-imo-5"
+    },
+    "/proof-pages/5e3aaf27f187fb8bb77caa52.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 8,
+      "problem": "2010-imo-6"
+    },
+    "/proof-pages/83807414a2ea234d90ac1d86.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+      "page": 9,
+      "problem": "2010-imo-6"
+    },
+    "/proof-pages/03bb032489dc92ace2d9025d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 3,
+      "problem": "2011-imo-1"
+    },
+    "/proof-pages/cd6baf9509cfd7dd3d70d35d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 4,
+      "problem": "2011-imo-2"
+    },
+    "/proof-pages/a3f5121b15fda74fc34041d9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 5,
+      "problem": "2011-imo-3"
+    },
+    "/proof-pages/a86e1bbff9aeba6a31007dcc.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 6,
+      "problem": "2011-imo-4"
+    },
+    "/proof-pages/9e9e0a7bbd1758e6a6c6453a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 7,
+      "problem": "2011-imo-4"
+    },
+    "/proof-pages/878d4502c0a179fdeda550bf.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 8,
+      "problem": "2011-imo-5"
+    },
+    "/proof-pages/10e3669309c36d210238b346.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 9,
+      "problem": "2011-imo-6"
+    },
+    "/proof-pages/cad0c1f12729dcd22c619657.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+      "page": 10,
+      "problem": "2011-imo-6"
+    },
+    "/proof-pages/084dc74a8b12d0648819f571.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 3,
+      "problem": "2012-imo-1"
+    },
+    "/proof-pages/7759d592b9dc10e2b62c0304.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 4,
+      "problem": "2012-imo-2"
+    },
+    "/proof-pages/a27db8bc8485a1f5dbf714a9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 5,
+      "problem": "2012-imo-3"
+    },
+    "/proof-pages/46eef78026f38786cb2a2e30.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 6,
+      "problem": "2012-imo-3"
+    },
+    "/proof-pages/d1f12901080685380652eb4e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 7,
+      "problem": "2012-imo-4"
+    },
+    "/proof-pages/7856aea7cbec2a9c35f4377c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 8,
+      "problem": "2012-imo-5"
+    },
+    "/proof-pages/f4f9d293e46ebe99f55adeb2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+      "page": 9,
+      "problem": "2012-imo-6"
+    },
+    "/proof-pages/82fcc918a16fcff605429bd0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 3,
+      "problem": "2013-imo-1"
+    },
+    "/proof-pages/2265900015c6912305d2e2a9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 4,
+      "problem": "2013-imo-2"
+    },
+    "/proof-pages/254cdbf4bd71a005f2f37c28.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 5,
+      "problem": "2013-imo-3"
+    },
+    "/proof-pages/84ea6ad11150cdcf6efd85b8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 6,
+      "problem": "2013-imo-3"
+    },
+    "/proof-pages/4f7ef038c2ec618a7c126ac0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 7,
+      "problem": "2013-imo-4"
+    },
+    "/proof-pages/7bcf30b2b206739506b5021b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 8,
+      "problem": "2013-imo-4"
+    },
+    "/proof-pages/690f2f1c1058400be5040108.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 9,
+      "problem": "2013-imo-5"
+    },
+    "/proof-pages/022340166c33cf08164ca5f0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 10,
+      "problem": "2013-imo-6"
+    },
+    "/proof-pages/f38c7d63ac25965704351f22.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 11,
+      "problem": "2013-imo-6"
+    },
+    "/proof-pages/f3772447791cf7f370737471.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+      "page": 12,
+      "problem": "2013-imo-6"
+    },
+    "/proof-pages/01ee04ed14f15275b7011a0c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 3,
+      "problem": "2014-imo-1"
+    },
+    "/proof-pages/410e4c92e938a3ee16bc677f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 4,
+      "problem": "2014-imo-2"
+    },
+    "/proof-pages/6f0dbcc6153732b31813b077.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 5,
+      "problem": "2014-imo-2"
+    },
+    "/proof-pages/a06523a3dbbf448b0b441a43.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 6,
+      "problem": "2014-imo-3"
+    },
+    "/proof-pages/660e5614adc001d9b5c07b1f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 7,
+      "problem": "2014-imo-3"
+    },
+    "/proof-pages/883f2ec9c658699b7e6f541b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 8,
+      "problem": "2014-imo-3"
+    },
+    "/proof-pages/2b6c845884ff9fb61ba27aca.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 9,
+      "problem": "2014-imo-4"
+    },
+    "/proof-pages/128a7e5e2b820f8d8d6f8a64.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 10,
+      "problem": "2014-imo-4"
+    },
+    "/proof-pages/9df04f9ed1742a3d0606fba7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 11,
+      "problem": "2014-imo-5"
+    },
+    "/proof-pages/6d7a2506dd46775a1c420d84.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 12,
+      "problem": "2014-imo-5"
+    },
+    "/proof-pages/8f8146d5dada94389818995e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+      "page": 13,
+      "problem": "2014-imo-6"
+    },
+    "/proof-pages/aaee3f882cd9dcdd69523a26.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 3,
+      "problem": "2015-imo-1"
+    },
+    "/proof-pages/1fd875ef79a7a1f1daea8244.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 4,
+      "problem": "2015-imo-2"
+    },
+    "/proof-pages/776bb8f88547573af5543dd3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 5,
+      "problem": "2015-imo-3"
+    },
+    "/proof-pages/8daaafbf02c7ee3449744ae3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 6,
+      "problem": "2015-imo-3"
+    },
+    "/proof-pages/f3d3a4796c2c9eaa68aad105.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 7,
+      "problem": "2015-imo-4"
+    },
+    "/proof-pages/0a1de1b98733ea2eb7d90933.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 8,
+      "problem": "2015-imo-4"
+    },
+    "/proof-pages/b5f851a3171fdfd4c0eabd89.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 9,
+      "problem": "2015-imo-5"
+    },
+    "/proof-pages/d420867074c9e9e661772ff0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 10,
+      "problem": "2015-imo-6"
+    },
+    "/proof-pages/6f92ef7da954e1736dcf3492.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+      "page": 11,
+      "problem": "2015-imo-6"
+    },
+    "/proof-pages/d2293dee16eae7648c1dd34d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 3,
+      "problem": "2016-imo-1"
+    },
+    "/proof-pages/1b9a21ea7e735dbebe9de5cd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 4,
+      "problem": "2016-imo-1"
+    },
+    "/proof-pages/119bd4b7e95ba919500c7585.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 5,
+      "problem": "2016-imo-2"
+    },
+    "/proof-pages/13ec84afbd4ff1298ac777f1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 6,
+      "problem": "2016-imo-3"
+    },
+    "/proof-pages/9de46846030858cb010b929e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 7,
+      "problem": "2016-imo-4"
+    },
+    "/proof-pages/669caab37c05c070d9ab869b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 8,
+      "problem": "2016-imo-5"
+    },
+    "/proof-pages/eb314728ca57966f9123c09e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 9,
+      "problem": "2016-imo-5"
+    },
+    "/proof-pages/ee96ba0b9345748fa7db4167.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+      "page": 10,
+      "problem": "2016-imo-6"
+    },
+    "/proof-pages/30c2867667794c80f54cb957.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 3,
+      "problem": "2017-imo-1"
+    },
+    "/proof-pages/d21cc0b372e33760c283f973.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 4,
+      "problem": "2017-imo-1"
+    },
+    "/proof-pages/da9af757d3cf63552e583d59.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 5,
+      "problem": "2017-imo-2"
+    },
+    "/proof-pages/962567c94246ebfbe8c05614.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 6,
+      "problem": "2017-imo-2"
+    },
+    "/proof-pages/802fde34fbbe2ac0e62f36e1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 7,
+      "problem": "2017-imo-3"
+    },
+    "/proof-pages/86edd225f5c47f9616989c8d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 8,
+      "problem": "2017-imo-3"
+    },
+    "/proof-pages/d72c267c2d551afe54aa2996.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 9,
+      "problem": "2017-imo-4"
+    },
+    "/proof-pages/dde7a7af7ecf86b5356c67b2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 10,
+      "problem": "2017-imo-4"
+    },
+    "/proof-pages/314dfa0d46955ade1647ad06.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 11,
+      "problem": "2017-imo-5"
+    },
+    "/proof-pages/f5d258184f5568e162956e71.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 12,
+      "problem": "2017-imo-6"
+    },
+    "/proof-pages/d1f5898ae73fad16eca9c537.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+      "page": 13,
+      "problem": "2017-imo-6"
+    },
+    "/proof-pages/dd286ae5c0ebdbf71c391ed6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 3,
+      "problem": "2018-imo-1"
+    },
+    "/proof-pages/904cdccfd38c8732885487f6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 4,
+      "problem": "2018-imo-1"
+    },
+    "/proof-pages/10fd429d397b32af98dea6ea.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 5,
+      "problem": "2018-imo-1"
+    },
+    "/proof-pages/e1477ec7d654c5f7c31edbf9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 6,
+      "problem": "2018-imo-2"
+    },
+    "/proof-pages/c7daa1a684d0c64f5fff66ea.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 7,
+      "problem": "2018-imo-2"
+    },
+    "/proof-pages/6cc3816d3566f333b90d097b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 8,
+      "problem": "2018-imo-3"
+    },
+    "/proof-pages/9a910e74019fd63d5ece7fd9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 9,
+      "problem": "2018-imo-3"
+    },
+    "/proof-pages/fe3195055e7a4e0d5d946ad1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 10,
+      "problem": "2018-imo-4"
+    },
+    "/proof-pages/87a9f90838d673785376e8c9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 11,
+      "problem": "2018-imo-5"
+    },
+    "/proof-pages/03147cc1090ee11aa8ab52fd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 12,
+      "problem": "2018-imo-5"
+    },
+    "/proof-pages/0889246658a7d00bfd6aa8b0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 13,
+      "problem": "2018-imo-6"
+    },
+    "/proof-pages/cb91bc5c7f34a2e63ef94b75.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 14,
+      "problem": "2018-imo-6"
+    },
+    "/proof-pages/6d65e01ab38311f325dd49ae.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 15,
+      "problem": "2018-imo-6"
+    },
+    "/proof-pages/26ec3857be5f403d2a56acfe.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 3,
+      "problem": "2019-imo-1"
+    },
+    "/proof-pages/884be05d3e89bd03c62638db.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 4,
+      "problem": "2019-imo-2"
+    },
+    "/proof-pages/af03ab5981e838c3a8e7f958.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 5,
+      "problem": "2019-imo-2"
+    },
+    "/proof-pages/0b5f3c9e7132cd73feb510bb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 6,
+      "problem": "2019-imo-2"
+    },
+    "/proof-pages/890a9bf5d864950eb8d9dc31.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 7,
+      "problem": "2019-imo-3"
+    },
+    "/proof-pages/3247a411b088aa4a64c4a497.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 8,
+      "problem": "2019-imo-4"
+    },
+    "/proof-pages/0c2e8f5408e4317d813999ae.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 9,
+      "problem": "2019-imo-5"
+    },
+    "/proof-pages/742bdacf7449d24b83561c9d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 10,
+      "problem": "2019-imo-5"
+    },
+    "/proof-pages/58f5c466a903f76b9161de32.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 11,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/c91a43137e0c72d6ccffdb1a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 12,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/33d9ab8c3273f28015258fca.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 13,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/1295fa4fcbcac99bd73b7617.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 14,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/33ffaea854b1385529aae002.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 15,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/020b9761c11b3af80e760818.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 16,
+      "problem": "2019-imo-6"
+    },
+    "/proof-pages/0f1148884bcc40006b8cce3c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+      "page": 17,
+      "problem": "2019-imo-6"
+    },
     "/proof-pages/0a0d1f4fcc833f4ab44f718a.svg": {
       "sourceUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
       "page": 3,
@@ -358,6 +1390,2281 @@
       "sourceUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
       "page": 16,
       "problem": "2025-imo-6"
+    },
+    "/proof-pages/0b6b59011bb573629b80bdf9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 3,
+      "problem": "2010-usajmo-1"
+    },
+    "/proof-pages/e8bf741c8bf4cc6710957410.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 4,
+      "problem": "2010-usajmo-2"
+    },
+    "/proof-pages/1db410c9a63aae9312dcdf58.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 5,
+      "problem": "2010-usajmo-3"
+    },
+    "/proof-pages/3289e0c261d65c1f39457b85.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 6,
+      "problem": "2010-usajmo-3"
+    },
+    "/proof-pages/ace6980b8e254f49e6580108.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 7,
+      "problem": "2010-usajmo-4"
+    },
+    "/proof-pages/2755ddf6c34ab6ff2c8352bb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 8,
+      "problem": "2010-usajmo-5"
+    },
+    "/proof-pages/3c5cac6a450e13e9f5c42849.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2010-notes.pdf",
+      "page": 9,
+      "problem": "2010-usajmo-6"
+    },
+    "/proof-pages/cc3bd86ce0eb9ba7938f42d9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 3,
+      "problem": "2011-usajmo-1"
+    },
+    "/proof-pages/689624307e987cf8af304b01.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 4,
+      "problem": "2011-usajmo-2"
+    },
+    "/proof-pages/64739f38a58a32069d554d26.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 5,
+      "problem": "2011-usajmo-3"
+    },
+    "/proof-pages/144b41983a7ec0c82b3c7c81.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 6,
+      "problem": "2011-usajmo-3"
+    },
+    "/proof-pages/c8d4e351153b57a9757e15e3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 7,
+      "problem": "2011-usajmo-4"
+    },
+    "/proof-pages/1ac7a7fc5c14509481aef6a7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 8,
+      "problem": "2011-usajmo-5"
+    },
+    "/proof-pages/31793f67a37e0db06caf002e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2011-notes.pdf",
+      "page": 9,
+      "problem": "2011-usajmo-6"
+    },
+    "/proof-pages/7c3329a7ebb61d6f6898a6e4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 3,
+      "problem": "2012-usajmo-1"
+    },
+    "/proof-pages/7b46e155c057d8236fe38cd5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 4,
+      "problem": "2012-usajmo-2"
+    },
+    "/proof-pages/2057335c2893ae337841827c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 5,
+      "problem": "2012-usajmo-2"
+    },
+    "/proof-pages/1288b8ae3f3df061a71a8bc5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 6,
+      "problem": "2012-usajmo-3"
+    },
+    "/proof-pages/c245ccd53cb0552985e10c0b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 7,
+      "problem": "2012-usajmo-3"
+    },
+    "/proof-pages/6202da58cafca7c6d79b94a5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 8,
+      "problem": "2012-usajmo-4"
+    },
+    "/proof-pages/7c21dd0b7afc60d09ce14245.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 9,
+      "problem": "2012-usajmo-5"
+    },
+    "/proof-pages/334266894e03419c61f60b25.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 10,
+      "problem": "2012-usajmo-6"
+    },
+    "/proof-pages/b1adb2761093e5cf652270e7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2012-notes.pdf",
+      "page": 11,
+      "problem": "2012-usajmo-6"
+    },
+    "/proof-pages/93669ccd441ed93de9552ec9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 3,
+      "problem": "2013-usajmo-1"
+    },
+    "/proof-pages/63569f8ce6607f5a50c9fc82.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 4,
+      "problem": "2013-usajmo-2"
+    },
+    "/proof-pages/3fe8b7d96b8e09f490ef72b5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 5,
+      "problem": "2013-usajmo-3"
+    },
+    "/proof-pages/314ab8ec3df35e2e62160aca.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 6,
+      "problem": "2013-usajmo-4"
+    },
+    "/proof-pages/a320bf68a93db6ab45380352.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 7,
+      "problem": "2013-usajmo-5"
+    },
+    "/proof-pages/9098d285c0390adef05c43da.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2013-notes.pdf",
+      "page": 8,
+      "problem": "2013-usajmo-6"
+    },
+    "/proof-pages/791abdfdd1a566772287a0a0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 3,
+      "problem": "2014-usajmo-1"
+    },
+    "/proof-pages/b33638c2919329b36379bece.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 4,
+      "problem": "2014-usajmo-2"
+    },
+    "/proof-pages/c3d94295d81d8f7201fc89a2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 5,
+      "problem": "2014-usajmo-2"
+    },
+    "/proof-pages/1b36f9c661fb60d836da8083.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 6,
+      "problem": "2014-usajmo-3"
+    },
+    "/proof-pages/a3db6149386a3855f2cc5fe2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 7,
+      "problem": "2014-usajmo-3"
+    },
+    "/proof-pages/03036534e21d9185451e140b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 8,
+      "problem": "2014-usajmo-4"
+    },
+    "/proof-pages/f2b097830de8d246b45eee4c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 9,
+      "problem": "2014-usajmo-5"
+    },
+    "/proof-pages/c03059575ec87b8672eec78f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 10,
+      "problem": "2014-usajmo-5"
+    },
+    "/proof-pages/992fde45c61318339f817738.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2014-notes.pdf",
+      "page": 11,
+      "problem": "2014-usajmo-6"
+    },
+    "/proof-pages/16c2346dc941fe52caf4ba76.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 3,
+      "problem": "2015-usajmo-1"
+    },
+    "/proof-pages/535991b07ed3ce6543d5209f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 4,
+      "problem": "2015-usajmo-2"
+    },
+    "/proof-pages/fb48b7483ce00edc5afc559b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 5,
+      "problem": "2015-usajmo-3"
+    },
+    "/proof-pages/0e223b0d8386f835fa864a3e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 6,
+      "problem": "2015-usajmo-3"
+    },
+    "/proof-pages/0769be68493f4132a2571080.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 7,
+      "problem": "2015-usajmo-3"
+    },
+    "/proof-pages/011b0f93dc92d05af1ecc798.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 8,
+      "problem": "2015-usajmo-4"
+    },
+    "/proof-pages/3ead79cb6f74b68037910bc4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 9,
+      "problem": "2015-usajmo-5"
+    },
+    "/proof-pages/120ac22c1f3e89773e34da74.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 10,
+      "problem": "2015-usajmo-6"
+    },
+    "/proof-pages/56733015679811c939d7af4c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2015-notes.pdf",
+      "page": 11,
+      "problem": "2015-usajmo-6"
+    },
+    "/proof-pages/7a3e28cf4436547b9afd58ac.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 3,
+      "problem": "2016-usajmo-1"
+    },
+    "/proof-pages/30603d0f0866ce0d1a15303c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 4,
+      "problem": "2016-usajmo-1"
+    },
+    "/proof-pages/b6dfbd24c1e2f84c69faf7b0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 5,
+      "problem": "2016-usajmo-2"
+    },
+    "/proof-pages/7ba4f2b6ac4e9a17b33fe4e8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 6,
+      "problem": "2016-usajmo-3"
+    },
+    "/proof-pages/731d6b1d6dd84e4734853ea0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 7,
+      "problem": "2016-usajmo-3"
+    },
+    "/proof-pages/b356f4a204c7b57111f4f01a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 8,
+      "problem": "2016-usajmo-4"
+    },
+    "/proof-pages/8d579ffa79769346da9d7497.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 9,
+      "problem": "2016-usajmo-5"
+    },
+    "/proof-pages/f8cf78d0e0dbcd903afe7093.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 10,
+      "problem": "2016-usajmo-5"
+    },
+    "/proof-pages/0b7794cb8a8a601252fea554.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 11,
+      "problem": "2016-usajmo-6"
+    },
+    "/proof-pages/d025889982b9336a4a233da0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2016-notes.pdf",
+      "page": 12,
+      "problem": "2016-usajmo-6"
+    },
+    "/proof-pages/ee34fd8ff1297cad92ed898f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 3,
+      "problem": "2017-usajmo-1"
+    },
+    "/proof-pages/22952bc13d94e680954c165b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 4,
+      "problem": "2017-usajmo-2"
+    },
+    "/proof-pages/ceae03b1095cbac9ec24a61c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 5,
+      "problem": "2017-usajmo-3"
+    },
+    "/proof-pages/baa7df73f7381d5b135a4498.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 6,
+      "problem": "2017-usajmo-4"
+    },
+    "/proof-pages/f77a5e2fdfcbe0b6dc334489.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 7,
+      "problem": "2017-usajmo-4"
+    },
+    "/proof-pages/f81365147cefe5017a59a6a4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 8,
+      "problem": "2017-usajmo-5"
+    },
+    "/proof-pages/dc19b08d7073b9e692c85ed4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 9,
+      "problem": "2017-usajmo-6"
+    },
+    "/proof-pages/9b0fb8308cf9e27145061505.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 10,
+      "problem": "2017-usajmo-6"
+    },
+    "/proof-pages/4b86988e310f1bebf72844d8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2017-notes.pdf",
+      "page": 11,
+      "problem": "2017-usajmo-6"
+    },
+    "/proof-pages/b09c9eefb5b5567c4fa6ffbd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 3,
+      "problem": "2018-usajmo-1"
+    },
+    "/proof-pages/16377ad902df1c333e4942f6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 4,
+      "problem": "2018-usajmo-2"
+    },
+    "/proof-pages/9a3c1b2a3e15975556fe840d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 5,
+      "problem": "2018-usajmo-3"
+    },
+    "/proof-pages/4eb23ae3b86c7e48029e3631.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 6,
+      "problem": "2018-usajmo-3"
+    },
+    "/proof-pages/993ce68cf772896f4750427d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 7,
+      "problem": "2018-usajmo-4"
+    },
+    "/proof-pages/7ec4cca7b4738c82dacd2ea7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 8,
+      "problem": "2018-usajmo-5"
+    },
+    "/proof-pages/d39144b672656a07fbf4fd71.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2018-notes.pdf",
+      "page": 9,
+      "problem": "2018-usajmo-6"
+    },
+    "/proof-pages/3c08228a3b349aad15cf40d0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 3,
+      "problem": "2019-usajmo-1"
+    },
+    "/proof-pages/4469e15e40890c95131f0198.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 4,
+      "problem": "2019-usajmo-2"
+    },
+    "/proof-pages/dfb0f06b1d34c3d24ee09e82.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 5,
+      "problem": "2019-usajmo-2"
+    },
+    "/proof-pages/56879523a6e6cfd2d7b76af9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 6,
+      "problem": "2019-usajmo-3"
+    },
+    "/proof-pages/e05d98ac9225579b54c3c2a6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 7,
+      "problem": "2019-usajmo-3"
+    },
+    "/proof-pages/b15644b2df13ac23787ee521.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 8,
+      "problem": "2019-usajmo-4"
+    },
+    "/proof-pages/d85d12a06f4de4e9dbaf0700.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 9,
+      "problem": "2019-usajmo-4"
+    },
+    "/proof-pages/686f66b87856209982aa064b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 10,
+      "problem": "2019-usajmo-4"
+    },
+    "/proof-pages/0badcf4d58758bb5f61f6d72.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 11,
+      "problem": "2019-usajmo-4"
+    },
+    "/proof-pages/d579eee877c4913b2e3fba52.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 12,
+      "problem": "2019-usajmo-5"
+    },
+    "/proof-pages/9625279064d957db1ca7764e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2019-notes.pdf",
+      "page": 13,
+      "problem": "2019-usajmo-6"
+    },
+    "/proof-pages/a1d75e3879162d8e4c51cba1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 3,
+      "problem": "2020-usajmo-1"
+    },
+    "/proof-pages/f998c0809842e56bc49f53c6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 4,
+      "problem": "2020-usajmo-2"
+    },
+    "/proof-pages/ebe4ebf7a2e509943ec7f0ec.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 5,
+      "problem": "2020-usajmo-3"
+    },
+    "/proof-pages/bc78d49c6eac24be50b738f7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 6,
+      "problem": "2020-usajmo-3"
+    },
+    "/proof-pages/4c171ccc4b79071807ef300e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 7,
+      "problem": "2020-usajmo-4"
+    },
+    "/proof-pages/bd6807e3e8eb35e55066f3d9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 8,
+      "problem": "2020-usajmo-4"
+    },
+    "/proof-pages/7bf134cf7ccb582a76bc57c3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 9,
+      "problem": "2020-usajmo-5"
+    },
+    "/proof-pages/86719c4ff9e7c7e483cc49bb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 10,
+      "problem": "2020-usajmo-5"
+    },
+    "/proof-pages/8dbc187e0809415402a52d48.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 11,
+      "problem": "2020-usajmo-6"
+    },
+    "/proof-pages/fc8986bc9e5a77f828d6edef.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2020-notes.pdf",
+      "page": 12,
+      "problem": "2020-usajmo-6"
+    },
+    "/proof-pages/cf5496b006862f91a55a9bdb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 3,
+      "problem": "2021-usajmo-1"
+    },
+    "/proof-pages/870d0cc2b5e0bb9ca4f0ebb1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 4,
+      "problem": "2021-usajmo-2"
+    },
+    "/proof-pages/523b012c8dc428fca7c8f69f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 5,
+      "problem": "2021-usajmo-3"
+    },
+    "/proof-pages/7301c592f3b99caeedc833a7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 6,
+      "problem": "2021-usajmo-4"
+    },
+    "/proof-pages/1ca83a10084bc7497e201f80.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 7,
+      "problem": "2021-usajmo-4"
+    },
+    "/proof-pages/4ec2a6c2e366e3faea89744b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 8,
+      "problem": "2021-usajmo-5"
+    },
+    "/proof-pages/5525e1b0c5dde47cbd0c173a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 9,
+      "problem": "2021-usajmo-6"
+    },
+    "/proof-pages/e88532a30a2c2e7fe418ba3d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2021-notes.pdf",
+      "page": 10,
+      "problem": "2021-usajmo-6"
+    },
+    "/proof-pages/116c69196753fa4202bf8169.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 3,
+      "problem": "2022-usajmo-1"
+    },
+    "/proof-pages/f4f1832f0ec7bbb689882e8e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 4,
+      "problem": "2022-usajmo-2"
+    },
+    "/proof-pages/3600212d9be5bae82f7b409c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 5,
+      "problem": "2022-usajmo-3"
+    },
+    "/proof-pages/d80a238d60cbdc5794038765.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 6,
+      "problem": "2022-usajmo-3"
+    },
+    "/proof-pages/8fe088e43ad6d3487bd6b471.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 7,
+      "problem": "2022-usajmo-4"
+    },
+    "/proof-pages/96abf31bbb9cf441ef9cd552.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 8,
+      "problem": "2022-usajmo-4"
+    },
+    "/proof-pages/c7b0e3a9e9ed2215b6d3581a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 9,
+      "problem": "2022-usajmo-5"
+    },
+    "/proof-pages/20da5d486ac0d75cfe1c4f5a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 10,
+      "problem": "2022-usajmo-6"
+    },
+    "/proof-pages/f1bd85d558dbb43e2b765433.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 11,
+      "problem": "2022-usajmo-6"
+    },
+    "/proof-pages/40bcd2d95fe2ab15fb3193a2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 3,
+      "problem": "2023-usajmo-1"
+    },
+    "/proof-pages/ede0826c64aa80dcfec1a549.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 4,
+      "problem": "2023-usajmo-2"
+    },
+    "/proof-pages/72ddc31e4559cc760ff3289e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 5,
+      "problem": "2023-usajmo-2"
+    },
+    "/proof-pages/0f6bb211ec9a080a46fecbf1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 6,
+      "problem": "2023-usajmo-2"
+    },
+    "/proof-pages/4681a7f40ab633131efadf7a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 7,
+      "problem": "2023-usajmo-2"
+    },
+    "/proof-pages/52e76039abcd0c3e0f4d7c1c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 8,
+      "problem": "2023-usajmo-3"
+    },
+    "/proof-pages/1637b35f363a0d7591af7e24.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 9,
+      "problem": "2023-usajmo-3"
+    },
+    "/proof-pages/0c61a55088089e71f7639256.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 10,
+      "problem": "2023-usajmo-4"
+    },
+    "/proof-pages/14a4594e929be79779995c84.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 11,
+      "problem": "2023-usajmo-4"
+    },
+    "/proof-pages/2ecf6ef13283451ab342b059.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 12,
+      "problem": "2023-usajmo-4"
+    },
+    "/proof-pages/a911033e78e4b68df206d073.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 13,
+      "problem": "2023-usajmo-5"
+    },
+    "/proof-pages/049552fd34d355e98480b7e7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 14,
+      "problem": "2023-usajmo-6"
+    },
+    "/proof-pages/7788c0c45de82a5c9f9cec3f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 15,
+      "problem": "2023-usajmo-6"
+    },
+    "/proof-pages/e11059d38bfa31cd3afa6a4b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2023-notes.pdf",
+      "page": 16,
+      "problem": "2023-usajmo-6"
+    },
+    "/proof-pages/19bd0f5b6dc5e4a65c761d7d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 3,
+      "problem": "2024-usajmo-1"
+    },
+    "/proof-pages/12c89eedde14841073919b3e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 4,
+      "problem": "2024-usajmo-1"
+    },
+    "/proof-pages/6bb2800d38ce7021ee53e1f2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 5,
+      "problem": "2024-usajmo-2"
+    },
+    "/proof-pages/997fd471dd897e21c6e70f63.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 6,
+      "problem": "2024-usajmo-2"
+    },
+    "/proof-pages/fcec769222f68df592467aba.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 7,
+      "problem": "2024-usajmo-2"
+    },
+    "/proof-pages/3a32fe9483aa16c584037fe1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 8,
+      "problem": "2024-usajmo-3"
+    },
+    "/proof-pages/89385613d23988838dfc9c18.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 9,
+      "problem": "2024-usajmo-3"
+    },
+    "/proof-pages/7095f2473d678cf4270ce386.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 10,
+      "problem": "2024-usajmo-4"
+    },
+    "/proof-pages/66b79b1fe3f6d6d9e52c6a9c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 11,
+      "problem": "2024-usajmo-4"
+    },
+    "/proof-pages/bf142b3bc60cc307a0ebeeaa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 12,
+      "problem": "2024-usajmo-5"
+    },
+    "/proof-pages/bb91f6ba9d7bd3f37ee6f5f5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 13,
+      "problem": "2024-usajmo-5"
+    },
+    "/proof-pages/e7036d31c5a7db266f337261.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 14,
+      "problem": "2024-usajmo-6"
+    },
+    "/proof-pages/cbd1ae80cee8667449d3efe9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 15,
+      "problem": "2024-usajmo-6"
+    },
+    "/proof-pages/d839fdd29a1081168d15bc9c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 16,
+      "problem": "2024-usajmo-6"
+    },
+    "/proof-pages/7bd7d9fb5db290916ffa4abd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 17,
+      "problem": "2024-usajmo-6"
+    },
+    "/proof-pages/dbeb5cbca447dffd7144409a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2024-notes.pdf",
+      "page": 18,
+      "problem": "2024-usajmo-6"
+    },
+    "/proof-pages/bd3e6dbbd54ad2d3db0ebfec.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 3,
+      "problem": "2025-usajmo-1"
+    },
+    "/proof-pages/003470053e647e6d5cf98cf3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 4,
+      "problem": "2025-usajmo-2"
+    },
+    "/proof-pages/39b4dde8d1f8283575b24aa1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 5,
+      "problem": "2025-usajmo-3"
+    },
+    "/proof-pages/062e7811f4dd51118ec5bcd2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 6,
+      "problem": "2025-usajmo-3"
+    },
+    "/proof-pages/f368f771263b43ce28d8549c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 7,
+      "problem": "2025-usajmo-3"
+    },
+    "/proof-pages/09ba714e75024bfe66101562.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 8,
+      "problem": "2025-usajmo-4"
+    },
+    "/proof-pages/8986342a25ddf0bed2f632b1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 9,
+      "problem": "2025-usajmo-5"
+    },
+    "/proof-pages/f747d519586b7a027d75d432.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 10,
+      "problem": "2025-usajmo-6"
+    },
+    "/proof-pages/d3f748eb7d4556ce33213666.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2025-notes.pdf",
+      "page": 11,
+      "problem": "2025-usajmo-6"
+    },
+    "/proof-pages/c8ecf74c976982a7d5cf367c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 3,
+      "problem": "2026-usajmo-1"
+    },
+    "/proof-pages/f1d938544d01222672b1a7d0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 4,
+      "problem": "2026-usajmo-2"
+    },
+    "/proof-pages/7e24a4f7be0c04a1b8fa5310.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 5,
+      "problem": "2026-usajmo-2"
+    },
+    "/proof-pages/937309d36340f3c5c473a671.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 6,
+      "problem": "2026-usajmo-3"
+    },
+    "/proof-pages/cdc84f64c0c11bf95c5ebaa3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 7,
+      "problem": "2026-usajmo-3"
+    },
+    "/proof-pages/bc3d091ffea19b5bbb4b7ec2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 8,
+      "problem": "2026-usajmo-4"
+    },
+    "/proof-pages/576a08e0e5259f8539bc46ea.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 9,
+      "problem": "2026-usajmo-4"
+    },
+    "/proof-pages/e5383733b5fbcb9160c27b13.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 10,
+      "problem": "2026-usajmo-5"
+    },
+    "/proof-pages/644d70cd60459153d3baa6ad.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 11,
+      "problem": "2026-usajmo-5"
+    },
+    "/proof-pages/7eb9dc5c8e86cbb8cb1f6a44.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2026-notes.pdf",
+      "page": 12,
+      "problem": "2026-usajmo-6"
+    },
+    "/proof-pages/15a89e9a4a49281b90833a02.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 3,
+      "problem": "1996-usamo-1"
+    },
+    "/proof-pages/66a0200dacf5e9ef0c83518b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 4,
+      "problem": "1996-usamo-2"
+    },
+    "/proof-pages/7d2b6575d3bf6b857ca73c11.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 5,
+      "problem": "1996-usamo-3"
+    },
+    "/proof-pages/0150342b0c7a4160eb7f2172.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 6,
+      "problem": "1996-usamo-4"
+    },
+    "/proof-pages/45e37762f6b2f527c3de4d54.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 7,
+      "problem": "1996-usamo-5"
+    },
+    "/proof-pages/e928412f11f80e6b82244991.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1996-notes.pdf",
+      "page": 8,
+      "problem": "1996-usamo-6"
+    },
+    "/proof-pages/6fe7e4106d82652f8e558860.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 3,
+      "problem": "1997-usamo-1"
+    },
+    "/proof-pages/27573e1e4446125193d3cdfb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 4,
+      "problem": "1997-usamo-2"
+    },
+    "/proof-pages/812ab8fff7d585f1a7a5920a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 5,
+      "problem": "1997-usamo-3"
+    },
+    "/proof-pages/77944a525d0f00190ba40ac0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 6,
+      "problem": "1997-usamo-3"
+    },
+    "/proof-pages/fa5769d0ac946a7798ffbd6b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 7,
+      "problem": "1997-usamo-4"
+    },
+    "/proof-pages/54d1494be929b0c2db8fe6f2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 8,
+      "problem": "1997-usamo-5"
+    },
+    "/proof-pages/bb00dbc1262fdbbdc0361723.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 9,
+      "problem": "1997-usamo-6"
+    },
+    "/proof-pages/24b0f4b533789b80aa547b41.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1997-notes.pdf",
+      "page": 10,
+      "problem": "1997-usamo-6"
+    },
+    "/proof-pages/22c2cb8bf6e9f90c99179ac0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 3,
+      "problem": "1998-usamo-1"
+    },
+    "/proof-pages/3481a40e6bb9e26bb67a95fa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 4,
+      "problem": "1998-usamo-2"
+    },
+    "/proof-pages/cb7b9784f64f264e37ab252f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 5,
+      "problem": "1998-usamo-3"
+    },
+    "/proof-pages/eab750e5ad1fd758e8909f7c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 6,
+      "problem": "1998-usamo-4"
+    },
+    "/proof-pages/ae23f170922025ea5ce7de64.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 7,
+      "problem": "1998-usamo-5"
+    },
+    "/proof-pages/d35fa736dcce9476c37915df.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1998-notes.pdf",
+      "page": 8,
+      "problem": "1998-usamo-6"
+    },
+    "/proof-pages/5effd6895d9219c18eeee79d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 3,
+      "problem": "1999-usamo-1"
+    },
+    "/proof-pages/b8180e0796bd5250a431fa10.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 4,
+      "problem": "1999-usamo-2"
+    },
+    "/proof-pages/27389138e71c6fc92570db93.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 5,
+      "problem": "1999-usamo-3"
+    },
+    "/proof-pages/837b5d61292351105cc89ac5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 6,
+      "problem": "1999-usamo-3"
+    },
+    "/proof-pages/03b58910ef258b7e51fedcb6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 7,
+      "problem": "1999-usamo-3"
+    },
+    "/proof-pages/d3722e5d47545eb4c662fea9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 8,
+      "problem": "1999-usamo-4"
+    },
+    "/proof-pages/113d38bd9196ccd7677be1d1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 9,
+      "problem": "1999-usamo-5"
+    },
+    "/proof-pages/f2695830acdda6474597ad4c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-1999-notes.pdf",
+      "page": 10,
+      "problem": "1999-usamo-6"
+    },
+    "/proof-pages/27a3bea72e06e37b07abba09.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 3,
+      "problem": "2000-usamo-1"
+    },
+    "/proof-pages/ed7cd89e568c83cd1229d450.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 4,
+      "problem": "2000-usamo-2"
+    },
+    "/proof-pages/bf8f85b7d1cb576df5283b2d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 5,
+      "problem": "2000-usamo-3"
+    },
+    "/proof-pages/f1f546a0c609edd3d1c670a1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 6,
+      "problem": "2000-usamo-4"
+    },
+    "/proof-pages/268355b178973508ff90ea22.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 7,
+      "problem": "2000-usamo-5"
+    },
+    "/proof-pages/ddfc12f377f77b9aa06daa11.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 8,
+      "problem": "2000-usamo-6"
+    },
+    "/proof-pages/03cc233accaa4e737c00d0de.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2000-notes.pdf",
+      "page": 9,
+      "problem": "2000-usamo-6"
+    },
+    "/proof-pages/9cae29d471eaf9d4edec4c1b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 3,
+      "problem": "2001-usamo-1"
+    },
+    "/proof-pages/e8996465070f792978fd908b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 4,
+      "problem": "2001-usamo-1"
+    },
+    "/proof-pages/d5c6e19f2878bcf69524a496.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 5,
+      "problem": "2001-usamo-2"
+    },
+    "/proof-pages/77993338d81896d4c4eb7c81.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 6,
+      "problem": "2001-usamo-3"
+    },
+    "/proof-pages/1b8f3f9b2feac4070dcde85a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 7,
+      "problem": "2001-usamo-3"
+    },
+    "/proof-pages/951deb1e591c658fe498fb4a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 8,
+      "problem": "2001-usamo-4"
+    },
+    "/proof-pages/4180dbc635d3d715de1fa645.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 9,
+      "problem": "2001-usamo-5"
+    },
+    "/proof-pages/f53c36b2aaa99fea3fd69f64.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2001-notes.pdf",
+      "page": 10,
+      "problem": "2001-usamo-6"
+    },
+    "/proof-pages/8694137dbfa05e1e1dfc3f7e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 3,
+      "problem": "2002-usamo-1"
+    },
+    "/proof-pages/8202380f41cc05c842ed9bad.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 4,
+      "problem": "2002-usamo-2"
+    },
+    "/proof-pages/1dd68d29fbac70b744b8186e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 5,
+      "problem": "2002-usamo-3"
+    },
+    "/proof-pages/2d5a2e382c422e162abe8e44.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 6,
+      "problem": "2002-usamo-4"
+    },
+    "/proof-pages/6a511c477b73b9901797389d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 7,
+      "problem": "2002-usamo-5"
+    },
+    "/proof-pages/6cbfa1f307f5a6f2d96e220e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2002-notes.pdf",
+      "page": 8,
+      "problem": "2002-usamo-6"
+    },
+    "/proof-pages/4128956803380390be173061.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 3,
+      "problem": "2003-usamo-1"
+    },
+    "/proof-pages/48fb09a243f7cdcbe6f79ff0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 4,
+      "problem": "2003-usamo-2"
+    },
+    "/proof-pages/aaa158236063fe90305e48ad.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 5,
+      "problem": "2003-usamo-2"
+    },
+    "/proof-pages/981d6c5b47f76376b6893928.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 6,
+      "problem": "2003-usamo-3"
+    },
+    "/proof-pages/c1a1f27616a0340bb16e738f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 7,
+      "problem": "2003-usamo-4"
+    },
+    "/proof-pages/4ba18aadc091195563dcd639.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 8,
+      "problem": "2003-usamo-5"
+    },
+    "/proof-pages/c034950e95e86e6d59268af4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 9,
+      "problem": "2003-usamo-6"
+    },
+    "/proof-pages/e5e3726501a2caf35cd5e25f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2003-notes.pdf",
+      "page": 10,
+      "problem": "2003-usamo-6"
+    },
+    "/proof-pages/584259e45ad53209bc2496fb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 3,
+      "problem": "2004-usamo-1"
+    },
+    "/proof-pages/31c0b42eaa09d266e1510855.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 4,
+      "problem": "2004-usamo-2"
+    },
+    "/proof-pages/7dfb3de86bca39c366667ec9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 5,
+      "problem": "2004-usamo-2"
+    },
+    "/proof-pages/ff39f5297706cfa19b184aba.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 6,
+      "problem": "2004-usamo-3"
+    },
+    "/proof-pages/dd9cf1546d0a471f3050a9f9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 7,
+      "problem": "2004-usamo-3"
+    },
+    "/proof-pages/97c34542717deeb34f43a671.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 8,
+      "problem": "2004-usamo-4"
+    },
+    "/proof-pages/7cad6e3c5db573f40ff78596.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 9,
+      "problem": "2004-usamo-5"
+    },
+    "/proof-pages/0816cbdd187e0939bfe0a9e2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 10,
+      "problem": "2004-usamo-6"
+    },
+    "/proof-pages/0679fe31aaa83cc8e3fc1440.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2004-notes.pdf",
+      "page": 11,
+      "problem": "2004-usamo-6"
+    },
+    "/proof-pages/e4453da49e19b2b50abc5a3e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 3,
+      "problem": "2005-usamo-1"
+    },
+    "/proof-pages/b7bc59e9d7cf3ba368d65b2e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 4,
+      "problem": "2005-usamo-2"
+    },
+    "/proof-pages/6eb33ceb1d267a3f8e8aebd1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 5,
+      "problem": "2005-usamo-3"
+    },
+    "/proof-pages/93c223abc8205b9480978825.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 6,
+      "problem": "2005-usamo-3"
+    },
+    "/proof-pages/800ea266318bede5b69d20df.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 7,
+      "problem": "2005-usamo-4"
+    },
+    "/proof-pages/c715acb3ccac46cee7bc43c2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 8,
+      "problem": "2005-usamo-5"
+    },
+    "/proof-pages/0f8aefda9e0644124c74839c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 9,
+      "problem": "2005-usamo-5"
+    },
+    "/proof-pages/e1ff97403d0968cccd65ce33.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 10,
+      "problem": "2005-usamo-6"
+    },
+    "/proof-pages/88f2d1c260c444a72c1710c6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2005-notes.pdf",
+      "page": 11,
+      "problem": "2005-usamo-6"
+    },
+    "/proof-pages/7b2f31aab19835e13d2790f2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 3,
+      "problem": "2006-usamo-1"
+    },
+    "/proof-pages/dacc8fdfbddc27595358255e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 4,
+      "problem": "2006-usamo-2"
+    },
+    "/proof-pages/26d79d5cc10112a72bca7c8a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 5,
+      "problem": "2006-usamo-3"
+    },
+    "/proof-pages/4bade23ad737aa8c3ab63205.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 6,
+      "problem": "2006-usamo-4"
+    },
+    "/proof-pages/5d98ceed7658b3e28814a105.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 7,
+      "problem": "2006-usamo-5"
+    },
+    "/proof-pages/55dfa19c22fc45e6a5746c69.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 8,
+      "problem": "2006-usamo-5"
+    },
+    "/proof-pages/62b97e06862ba88d7aed348e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2006-notes.pdf",
+      "page": 9,
+      "problem": "2006-usamo-6"
+    },
+    "/proof-pages/170bf9bb1fa7a6925faf29f8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 3,
+      "problem": "2007-usamo-1"
+    },
+    "/proof-pages/ea3389520cca757d700ffc32.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 4,
+      "problem": "2007-usamo-2"
+    },
+    "/proof-pages/cfde3b9c7f53325747eb24dc.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 5,
+      "problem": "2007-usamo-3"
+    },
+    "/proof-pages/f3ba2e049374c55103dbf32d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 6,
+      "problem": "2007-usamo-3"
+    },
+    "/proof-pages/575f8c04968bd78d78494e43.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 7,
+      "problem": "2007-usamo-4"
+    },
+    "/proof-pages/321dcd3c57e14a87b9d09c6e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 8,
+      "problem": "2007-usamo-5"
+    },
+    "/proof-pages/a03243c310f5b0bc6db4a76f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 9,
+      "problem": "2007-usamo-6"
+    },
+    "/proof-pages/b502ef37499a46d383c654f1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2007-notes.pdf",
+      "page": 10,
+      "problem": "2007-usamo-6"
+    },
+    "/proof-pages/fd24243dd2122804392a21af.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 3,
+      "problem": "2008-usamo-1"
+    },
+    "/proof-pages/383d170a436ba168d91c335c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 4,
+      "problem": "2008-usamo-1"
+    },
+    "/proof-pages/b662f52e300634419cdf75f1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 5,
+      "problem": "2008-usamo-2"
+    },
+    "/proof-pages/f87e89bdc8210675c09fd054.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 6,
+      "problem": "2008-usamo-2"
+    },
+    "/proof-pages/7cb369c53b6385fbbd34a807.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 7,
+      "problem": "2008-usamo-3"
+    },
+    "/proof-pages/4dec7ba45784434fd02f771c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 8,
+      "problem": "2008-usamo-3"
+    },
+    "/proof-pages/65d63ffdfc430c488de7481c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 9,
+      "problem": "2008-usamo-3"
+    },
+    "/proof-pages/9ba671ba6dac823661f5fe9a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 10,
+      "problem": "2008-usamo-4"
+    },
+    "/proof-pages/65f1e53d1b5b362157fb4ba5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 11,
+      "problem": "2008-usamo-5"
+    },
+    "/proof-pages/241fedb0a778bf7a841767f6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 12,
+      "problem": "2008-usamo-6"
+    },
+    "/proof-pages/9c7b2a57a85d1ddf9bb8b31c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2008-notes.pdf",
+      "page": 13,
+      "problem": "2008-usamo-6"
+    },
+    "/proof-pages/c501324f2457d334237f81c1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 3,
+      "problem": "2009-usamo-1"
+    },
+    "/proof-pages/ea05a28fed637e27293e4324.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 4,
+      "problem": "2009-usamo-2"
+    },
+    "/proof-pages/88fdcec138a7e1d21a8c540d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 5,
+      "problem": "2009-usamo-3"
+    },
+    "/proof-pages/ac9ab24e1051902187343e02.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 6,
+      "problem": "2009-usamo-3"
+    },
+    "/proof-pages/4208210b51b6870a64d036a8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 7,
+      "problem": "2009-usamo-4"
+    },
+    "/proof-pages/880cf439b478023b5cb9971f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 8,
+      "problem": "2009-usamo-5"
+    },
+    "/proof-pages/06a2251b040852e9816fe17e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 9,
+      "problem": "2009-usamo-6"
+    },
+    "/proof-pages/2faea81a47ab6a8a6abda461.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 3,
+      "problem": "2010-usamo-1"
+    },
+    "/proof-pages/13f9b88f5c3ef09ef0be1f20.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 4,
+      "problem": "2010-usamo-1"
+    },
+    "/proof-pages/91cd431b47c373321fca8a68.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 5,
+      "problem": "2010-usamo-2"
+    },
+    "/proof-pages/38a8fb624fb2aa986be26672.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 6,
+      "problem": "2010-usamo-3"
+    },
+    "/proof-pages/785f473efe4494136d703cf5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 7,
+      "problem": "2010-usamo-4"
+    },
+    "/proof-pages/ddbfb6b282c6dc1603c6200b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 8,
+      "problem": "2010-usamo-5"
+    },
+    "/proof-pages/3bb35df32e2f377b7054db51.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 9,
+      "problem": "2010-usamo-6"
+    },
+    "/proof-pages/69b23da4fe8bec9b1a189db1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2010-notes.pdf",
+      "page": 10,
+      "problem": "2010-usamo-6"
+    },
+    "/proof-pages/7e59e1bf9a3d1ef9fdb39c2d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 3,
+      "problem": "2011-usamo-1"
+    },
+    "/proof-pages/ee646c9fa3bc4e74d86856ac.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 4,
+      "problem": "2011-usamo-2"
+    },
+    "/proof-pages/1d53074bb109b046d6301eb5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 5,
+      "problem": "2011-usamo-2"
+    },
+    "/proof-pages/07eb55381bb64bffa0ef30c5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 6,
+      "problem": "2011-usamo-3"
+    },
+    "/proof-pages/5c32422d30ae3adcd2df98e9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 7,
+      "problem": "2011-usamo-3"
+    },
+    "/proof-pages/5f4204ae8fd9175fe90bdac2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 8,
+      "problem": "2011-usamo-4"
+    },
+    "/proof-pages/ac770250cf214825d70f05bd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 9,
+      "problem": "2011-usamo-5"
+    },
+    "/proof-pages/405b526bcda4d80168668861.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2011-notes.pdf",
+      "page": 10,
+      "problem": "2011-usamo-6"
+    },
+    "/proof-pages/51327d32cf0571ce7ec29a39.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 3,
+      "problem": "2012-usamo-1"
+    },
+    "/proof-pages/9cc8a0f40e357ef91f3b93a3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 4,
+      "problem": "2012-usamo-1"
+    },
+    "/proof-pages/8fe2904ba912c3d13e6a6d81.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 5,
+      "problem": "2012-usamo-2"
+    },
+    "/proof-pages/7b2f6629ff82ac060efb27c1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 6,
+      "problem": "2012-usamo-3"
+    },
+    "/proof-pages/d33d518592b9c8ed8fe88a6d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 7,
+      "problem": "2012-usamo-3"
+    },
+    "/proof-pages/a597df588a94bf06bd61aba0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 8,
+      "problem": "2012-usamo-4"
+    },
+    "/proof-pages/af7dec7cfda5ea4587ef0222.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 9,
+      "problem": "2012-usamo-5"
+    },
+    "/proof-pages/d265a7a28e18e6915fd45f3d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 10,
+      "problem": "2012-usamo-5"
+    },
+    "/proof-pages/f00637800701c4fe30539810.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2012-notes.pdf",
+      "page": 11,
+      "problem": "2012-usamo-6"
+    },
+    "/proof-pages/c1deadf4d8b1d7a75ce58bcd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 3,
+      "problem": "2013-usamo-1"
+    },
+    "/proof-pages/38a7496909c7545d23f08c50.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 4,
+      "problem": "2013-usamo-2"
+    },
+    "/proof-pages/7186246b4d8e7409a92b45b6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 5,
+      "problem": "2013-usamo-2"
+    },
+    "/proof-pages/c19bbedf5647114b3aca2816.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 6,
+      "problem": "2013-usamo-2"
+    },
+    "/proof-pages/c4d97786f162cb8f3fc04742.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 7,
+      "problem": "2013-usamo-3"
+    },
+    "/proof-pages/18da890977a280c4a0a5071b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 8,
+      "problem": "2013-usamo-3"
+    },
+    "/proof-pages/06f0eb9e674e59e42a2042c6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 9,
+      "problem": "2013-usamo-4"
+    },
+    "/proof-pages/6f47b7090736f2dd22916bb2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 10,
+      "problem": "2013-usamo-5"
+    },
+    "/proof-pages/0b5f9d98f16a88b16589ade5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 11,
+      "problem": "2013-usamo-5"
+    },
+    "/proof-pages/92f1302046b3f16ca9d178ae.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 12,
+      "problem": "2013-usamo-6"
+    },
+    "/proof-pages/96d8590ce0f5100a848e331f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2013-notes.pdf",
+      "page": 13,
+      "problem": "2013-usamo-6"
+    },
+    "/proof-pages/ab955531954cfeff66b3641f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 3,
+      "problem": "2014-usamo-1"
+    },
+    "/proof-pages/6f9f907967553c88094d6fe2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 4,
+      "problem": "2014-usamo-2"
+    },
+    "/proof-pages/9e443f53c288d68d19138edd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 5,
+      "problem": "2014-usamo-2"
+    },
+    "/proof-pages/4f5123a72f424911adec89e6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 6,
+      "problem": "2014-usamo-3"
+    },
+    "/proof-pages/010542b8f0ee7ef004262ed1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 7,
+      "problem": "2014-usamo-4"
+    },
+    "/proof-pages/1b4f0241b5648ab9e8794f6e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 8,
+      "problem": "2014-usamo-4"
+    },
+    "/proof-pages/33528e36b87b7a103fb7ca45.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 9,
+      "problem": "2014-usamo-5"
+    },
+    "/proof-pages/82d28165b9342801ec00c731.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 10,
+      "problem": "2014-usamo-5"
+    },
+    "/proof-pages/bdd0de5d76514ec0eccfde3d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2014-notes.pdf",
+      "page": 11,
+      "problem": "2014-usamo-6"
+    },
+    "/proof-pages/d7149c74ba3334a5cdf16e6c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 3,
+      "problem": "2015-usamo-1"
+    },
+    "/proof-pages/03186fa312acf1745e856669.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 4,
+      "problem": "2015-usamo-2"
+    },
+    "/proof-pages/5f24abff9ecf8ecabdf7aaaa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 5,
+      "problem": "2015-usamo-2"
+    },
+    "/proof-pages/9bbc911bd69a571e1fb8284d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 6,
+      "problem": "2015-usamo-2"
+    },
+    "/proof-pages/8deedee6b14b74377f0a3cd7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 7,
+      "problem": "2015-usamo-3"
+    },
+    "/proof-pages/2e4d04d2a6aac38e4ad2348c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 8,
+      "problem": "2015-usamo-3"
+    },
+    "/proof-pages/efa6026339ff017221536a78.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 9,
+      "problem": "2015-usamo-4"
+    },
+    "/proof-pages/8cf5d712e2dd786d2c7290eb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 10,
+      "problem": "2015-usamo-4"
+    },
+    "/proof-pages/9b8ec7ddfdb2582fbc5de8cc.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 11,
+      "problem": "2015-usamo-5"
+    },
+    "/proof-pages/b8abd03b62176368cdc980db.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 12,
+      "problem": "2015-usamo-6"
+    },
+    "/proof-pages/178d5f2a8272da7b7ddb3de9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2015-notes.pdf",
+      "page": 13,
+      "problem": "2015-usamo-6"
+    },
+    "/proof-pages/8cfba369944c576ac3e96379.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 3,
+      "problem": "2016-usamo-1"
+    },
+    "/proof-pages/73855f63f7fe64e887caec33.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 4,
+      "problem": "2016-usamo-1"
+    },
+    "/proof-pages/43e8c38940cfbedc5078210a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 5,
+      "problem": "2016-usamo-2"
+    },
+    "/proof-pages/60a0db4ed8246fca61092bf2.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 6,
+      "problem": "2016-usamo-3"
+    },
+    "/proof-pages/294be47cfd1c533265512981.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 7,
+      "problem": "2016-usamo-3"
+    },
+    "/proof-pages/07735653c8be55011e396ace.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 8,
+      "problem": "2016-usamo-3"
+    },
+    "/proof-pages/3161e713a55a591ad7e1ca43.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 9,
+      "problem": "2016-usamo-4"
+    },
+    "/proof-pages/f324d95450665a3361c76c01.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 10,
+      "problem": "2016-usamo-4"
+    },
+    "/proof-pages/6c65bc1ec17f38bb6b6be2cb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 11,
+      "problem": "2016-usamo-5"
+    },
+    "/proof-pages/c8cc1fcf0ebc9092a8a9664a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 12,
+      "problem": "2016-usamo-5"
+    },
+    "/proof-pages/fa7490af37ce8af7ed0df989.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2016-notes.pdf",
+      "page": 13,
+      "problem": "2016-usamo-6"
+    },
+    "/proof-pages/eb729cdeb33aadffb4941dcb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 3,
+      "problem": "2017-usamo-1"
+    },
+    "/proof-pages/2f68fd473be9e2fd32da0b17.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 4,
+      "problem": "2017-usamo-2"
+    },
+    "/proof-pages/81ad62cbe6385fc5f69b37e0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 5,
+      "problem": "2017-usamo-2"
+    },
+    "/proof-pages/a7c3f26456a3784e9477190a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 6,
+      "problem": "2017-usamo-2"
+    },
+    "/proof-pages/8ae28759b3ebf1860bb5222d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 7,
+      "problem": "2017-usamo-3"
+    },
+    "/proof-pages/b18e3aa52197747f71d92c6b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 8,
+      "problem": "2017-usamo-3"
+    },
+    "/proof-pages/105ba526bca469432130ab60.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 9,
+      "problem": "2017-usamo-4"
+    },
+    "/proof-pages/e22b7f20d971068748136dd0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 10,
+      "problem": "2017-usamo-4"
+    },
+    "/proof-pages/51aaf303569926c468ab80b7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 11,
+      "problem": "2017-usamo-4"
+    },
+    "/proof-pages/8e30f67e5ba31496116557ed.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 12,
+      "problem": "2017-usamo-5"
+    },
+    "/proof-pages/3ec485669ba8f79ab6c30576.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 13,
+      "problem": "2017-usamo-5"
+    },
+    "/proof-pages/df0dc7e2ac562b810b494ff1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2017-notes.pdf",
+      "page": 14,
+      "problem": "2017-usamo-6"
+    },
+    "/proof-pages/f6ee11aa738702d2c9064e85.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 3,
+      "problem": "2018-usamo-1"
+    },
+    "/proof-pages/2cb02d8a8e97977de43db7d6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 4,
+      "problem": "2018-usamo-2"
+    },
+    "/proof-pages/1b5f032c6e15f58d825c05e9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 5,
+      "problem": "2018-usamo-2"
+    },
+    "/proof-pages/01cdb21b0ca351d8eaca65e5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 6,
+      "problem": "2018-usamo-3"
+    },
+    "/proof-pages/7536e71a50f13c0a32e27633.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 7,
+      "problem": "2018-usamo-3"
+    },
+    "/proof-pages/90a32193d65b72739d572239.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 8,
+      "problem": "2018-usamo-4"
+    },
+    "/proof-pages/cb52b5c2fe4dcd4fb6551905.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 9,
+      "problem": "2018-usamo-5"
+    },
+    "/proof-pages/642d08a5e847856988744c79.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 10,
+      "problem": "2018-usamo-5"
+    },
+    "/proof-pages/8bf48effdcf692a1d630ea9a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 11,
+      "problem": "2018-usamo-5"
+    },
+    "/proof-pages/8815efbaffbd391f3d78217c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 12,
+      "problem": "2018-usamo-6"
+    },
+    "/proof-pages/f1abace6ddefee3a9c96f17b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2018-notes.pdf",
+      "page": 13,
+      "problem": "2018-usamo-6"
+    },
+    "/proof-pages/34b4ef02a3df217cee697604.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 3,
+      "problem": "2019-usamo-1"
+    },
+    "/proof-pages/d27ae28f60b05b6353c474b8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 4,
+      "problem": "2019-usamo-1"
+    },
+    "/proof-pages/0a16b1532b3a800fd73f4b92.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 5,
+      "problem": "2019-usamo-2"
+    },
+    "/proof-pages/038b5f2052c9e2edd4d918f9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 6,
+      "problem": "2019-usamo-2"
+    },
+    "/proof-pages/c01c2d870bc99761bc5b36ec.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 7,
+      "problem": "2019-usamo-3"
+    },
+    "/proof-pages/e0543d3cdb88856d4a6132e3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 8,
+      "problem": "2019-usamo-3"
+    },
+    "/proof-pages/9187479e5b3c8101b8f8b0f3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 9,
+      "problem": "2019-usamo-4"
+    },
+    "/proof-pages/2d86173eb9dad42895276d21.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 10,
+      "problem": "2019-usamo-5"
+    },
+    "/proof-pages/8c00052be7fdc14a58a98807.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 11,
+      "problem": "2019-usamo-6"
+    },
+    "/proof-pages/21d5e41c57d9601f356f2cd1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2019-notes.pdf",
+      "page": 12,
+      "problem": "2019-usamo-6"
+    },
+    "/proof-pages/abad9fe73abbd88232920bf5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 3,
+      "problem": "2020-usamo-1"
+    },
+    "/proof-pages/4e8296b053af039943f79eb9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 4,
+      "problem": "2020-usamo-1"
+    },
+    "/proof-pages/a72c94ce22a5d7a9e2291b3c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 5,
+      "problem": "2020-usamo-2"
+    },
+    "/proof-pages/bd0883b59067b193f32ba324.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 6,
+      "problem": "2020-usamo-2"
+    },
+    "/proof-pages/d415a42bbe51fc5e4d36119d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 7,
+      "problem": "2020-usamo-3"
+    },
+    "/proof-pages/1ee5317d8064a415208df738.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 8,
+      "problem": "2020-usamo-3"
+    },
+    "/proof-pages/739db27a5780ab5d4bc9c14f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 9,
+      "problem": "2020-usamo-4"
+    },
+    "/proof-pages/54178910f4e90757ca4673b9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 10,
+      "problem": "2020-usamo-4"
+    },
+    "/proof-pages/51b632a871dfdcedcf842222.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 11,
+      "problem": "2020-usamo-5"
+    },
+    "/proof-pages/445466398bcbfaa5bda010ef.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 12,
+      "problem": "2020-usamo-5"
+    },
+    "/proof-pages/b0dde271f637917572d79606.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 13,
+      "problem": "2020-usamo-6"
+    },
+    "/proof-pages/43e728386e612b5ad8b49a90.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2020-notes.pdf",
+      "page": 14,
+      "problem": "2020-usamo-6"
+    },
+    "/proof-pages/645ad817670af57b91e95113.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 4,
+      "problem": "2021-usamo-1"
+    },
+    "/proof-pages/732120672702263aec3a8fba.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 5,
+      "problem": "2021-usamo-2"
+    },
+    "/proof-pages/764524e08c671607664827fd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 6,
+      "problem": "2021-usamo-2"
+    },
+    "/proof-pages/c21bf82fb622acfbd07bbb65.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 7,
+      "problem": "2021-usamo-3"
+    },
+    "/proof-pages/113c9bdea0ba39330e853b27.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 8,
+      "problem": "2021-usamo-3"
+    },
+    "/proof-pages/e1ccc9ce60d392fe1febf545.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 9,
+      "problem": "2021-usamo-3"
+    },
+    "/proof-pages/12434399f8adb03fb323a5d8.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 10,
+      "problem": "2021-usamo-4"
+    },
+    "/proof-pages/644030d474f869f6684acc5c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 11,
+      "problem": "2021-usamo-5"
+    },
+    "/proof-pages/7fd7ad98dd17e9af8eac3d57.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 12,
+      "problem": "2021-usamo-5"
+    },
+    "/proof-pages/0cc1318e7a75f143fa5cc2bd.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 13,
+      "problem": "2021-usamo-6"
+    },
+    "/proof-pages/a744eb015c083dac3fe1def9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 14,
+      "problem": "2021-usamo-6"
+    },
+    "/proof-pages/f291c3d633899b409f2a12ef.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 15,
+      "problem": "2021-usamo-6"
+    },
+    "/proof-pages/30af3a04edbf8e6b95f00856.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 16,
+      "problem": "2021-usamo-6"
+    },
+    "/proof-pages/c83ab08939d065c507a577df.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 3,
+      "problem": "2022-usamo-1"
+    },
+    "/proof-pages/831c51393926787c1910eef9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 4,
+      "problem": "2022-usamo-2"
+    },
+    "/proof-pages/2951c1bbd2ad5320abcb1e3a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 5,
+      "problem": "2022-usamo-2"
+    },
+    "/proof-pages/fa43fda0c0bf5364d99a148c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 6,
+      "problem": "2022-usamo-3"
+    },
+    "/proof-pages/4802a662f918970913eef41d.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 7,
+      "problem": "2022-usamo-3"
+    },
+    "/proof-pages/c2807f251f209007a987dc62.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 8,
+      "problem": "2022-usamo-4"
+    },
+    "/proof-pages/403cddc46a116f40203347ae.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 9,
+      "problem": "2022-usamo-5"
+    },
+    "/proof-pages/61a2fd74ddaac800b9033d74.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 10,
+      "problem": "2022-usamo-6"
+    },
+    "/proof-pages/94f3134b00fc463dd74f4e03.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 11,
+      "problem": "2022-usamo-6"
+    },
+    "/proof-pages/c23d7917d9617509acf7f225.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 12,
+      "problem": "2022-usamo-6"
+    },
+    "/proof-pages/9825531e97408ce33f2da3b4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 3,
+      "problem": "2023-usamo-1"
+    },
+    "/proof-pages/484fe0506e74d986208c31b9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 4,
+      "problem": "2023-usamo-1"
+    },
+    "/proof-pages/f9a57a9bd55e1593c7f3a2d6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 5,
+      "problem": "2023-usamo-1"
+    },
+    "/proof-pages/a10cb012f77f247f589845b0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 6,
+      "problem": "2023-usamo-1"
+    },
+    "/proof-pages/c5a1d4d345e6a699176e6171.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 7,
+      "problem": "2023-usamo-2"
+    },
+    "/proof-pages/9a5f196265171b57cef73294.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 8,
+      "problem": "2023-usamo-3"
+    },
+    "/proof-pages/d6d57871b23cb7a285f3994f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 9,
+      "problem": "2023-usamo-3"
+    },
+    "/proof-pages/6bd0e67349815ad81d247e88.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 10,
+      "problem": "2023-usamo-3"
+    },
+    "/proof-pages/f599871bcd1359975eaff0d9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 11,
+      "problem": "2023-usamo-3"
+    },
+    "/proof-pages/9f6307a1a004ef370b7f0cca.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 12,
+      "problem": "2023-usamo-4"
+    },
+    "/proof-pages/cc80339cd7051fca5dd5358f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 13,
+      "problem": "2023-usamo-5"
+    },
+    "/proof-pages/ac7c35d38b44d9c500039e22.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 14,
+      "problem": "2023-usamo-5"
+    },
+    "/proof-pages/ff0169474cb1b98696975aa1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 15,
+      "problem": "2023-usamo-6"
+    },
+    "/proof-pages/0cf0da722df20fad18cb51ba.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2023-notes.pdf",
+      "page": 16,
+      "problem": "2023-usamo-6"
+    },
+    "/proof-pages/d3fca475eff2171a3cef0106.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 3,
+      "problem": "2024-usamo-1"
+    },
+    "/proof-pages/37db71ac530c393c30db5001.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 4,
+      "problem": "2024-usamo-2"
+    },
+    "/proof-pages/15d2c496a3cc5d8c41bfc3ee.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 5,
+      "problem": "2024-usamo-2"
+    },
+    "/proof-pages/bd0caffea26a62dac5151227.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 6,
+      "problem": "2024-usamo-2"
+    },
+    "/proof-pages/476a33851a7e1e58c5c09f8b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 7,
+      "problem": "2024-usamo-3"
+    },
+    "/proof-pages/ddee16543ed256468b7e8a7b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 8,
+      "problem": "2024-usamo-3"
+    },
+    "/proof-pages/f7a342720ebb355c7c1a690a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 9,
+      "problem": "2024-usamo-3"
+    },
+    "/proof-pages/fe130f26f2be53ad5f735e67.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 10,
+      "problem": "2024-usamo-4"
+    },
+    "/proof-pages/292455ba3dbaf55b3c88ca81.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 11,
+      "problem": "2024-usamo-4"
+    },
+    "/proof-pages/59c0d7229af57b8dfa60991a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 12,
+      "problem": "2024-usamo-5"
+    },
+    "/proof-pages/9f869a4994aa374942c05cf5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 13,
+      "problem": "2024-usamo-5"
+    },
+    "/proof-pages/9855a33f872b91190fc53927.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 14,
+      "problem": "2024-usamo-5"
+    },
+    "/proof-pages/6f71b12f874cd4c10e65b3db.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 15,
+      "problem": "2024-usamo-5"
+    },
+    "/proof-pages/7a297eebda13d41663359e41.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 16,
+      "problem": "2024-usamo-5"
+    },
+    "/proof-pages/f78256fe143a084ea5be07c0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 17,
+      "problem": "2024-usamo-6"
+    },
+    "/proof-pages/13783f30fa3a0833d23340aa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 18,
+      "problem": "2024-usamo-6"
+    },
+    "/proof-pages/b26eb1b034ffa80c2e729fb4.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2024-notes.pdf",
+      "page": 19,
+      "problem": "2024-usamo-6"
+    },
+    "/proof-pages/152da0d228268bf37c81a2b7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 3,
+      "problem": "2025-usamo-1"
+    },
+    "/proof-pages/6046bc9a8e78a12fcff4249c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 4,
+      "problem": "2025-usamo-2"
+    },
+    "/proof-pages/d63300ec8997165d1ab5945a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 5,
+      "problem": "2025-usamo-2"
+    },
+    "/proof-pages/643ea965f560997e6df641c1.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 6,
+      "problem": "2025-usamo-3"
+    },
+    "/proof-pages/adbed927d39f747eadf05b9f.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 7,
+      "problem": "2025-usamo-3"
+    },
+    "/proof-pages/52bfdcb119410ebb3d55057a.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 8,
+      "problem": "2025-usamo-3"
+    },
+    "/proof-pages/646253184b99503c136ad09e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 9,
+      "problem": "2025-usamo-4"
+    },
+    "/proof-pages/24f83984fcf94959de7b70eb.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 10,
+      "problem": "2025-usamo-5"
+    },
+    "/proof-pages/6391e5d74302a932a921ffaa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 11,
+      "problem": "2025-usamo-5"
+    },
+    "/proof-pages/d0c21281925b18006e1bda56.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 12,
+      "problem": "2025-usamo-6"
+    },
+    "/proof-pages/883e7b628a941f4c1509de2b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 13,
+      "problem": "2025-usamo-6"
+    },
+    "/proof-pages/889f2c3dcbdd805d71136bed.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2025-notes.pdf",
+      "page": 14,
+      "problem": "2025-usamo-6"
+    },
+    "/proof-pages/80cc1566ce802bd3204b6a06.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 3,
+      "problem": "2026-usamo-1"
+    },
+    "/proof-pages/515255e87a89b7f9f4c392dc.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 4,
+      "problem": "2026-usamo-2"
+    },
+    "/proof-pages/ddc06c8c0312c142ac9dfe6c.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 5,
+      "problem": "2026-usamo-2"
+    },
+    "/proof-pages/e6fc92a9542cc4d4dfdfa6c9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 6,
+      "problem": "2026-usamo-3"
+    },
+    "/proof-pages/1ac37d15edc973832e916de3.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 7,
+      "problem": "2026-usamo-4"
+    },
+    "/proof-pages/d244a0b21c8d5aee97d9b3fa.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 8,
+      "problem": "2026-usamo-4"
+    },
+    "/proof-pages/ac4cf080082877a6772d7173.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 9,
+      "problem": "2026-usamo-5"
+    },
+    "/proof-pages/5768c1f0e3efd0f5e0c3739e.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 10,
+      "problem": "2026-usamo-5"
+    },
+    "/proof-pages/a549317345fc16766f9f7ca6.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2026-notes.pdf",
+      "page": 11,
+      "problem": "2026-usamo-6"
     }
   },
   "skipped": [
@@ -673,6 +3980,14 @@
       "reason": "This approach requires unavailable source diagram"
     },
     {
+      "id": "1970-imo-1",
+      "reason": "Error: Missing archive image"
+    },
+    {
+      "id": "https://prase.cz/kalva/usa/usa89.html",
+      "reason": "Error: Exam identity mismatch"
+    },
+    {
       "id": "1980-usamo-2",
       "solution": "Published solution",
       "reason": "Unsupported source solution TeX"
@@ -692,149 +4007,494 @@
       "reason": "Unsupported source solution TeX"
     }
   ],
-  "importedAt": "2026-10-18T00:02:40.874Z",
-  "added": [
+  "historicalAssets": {
+    "/diagrams/c6b2f7a9baf11388784228fc.svg": "https://prase.cz/kalva/imo/isoln/diag604.jpg",
+    "/diagrams/58f5606ff364225d565570f4.svg": "https://prase.cz/kalva/imo/isoln/diag614.jpg",
+    "/diagrams/86028cb355625cc1eee821e0.svg": "https://prase.cz/kalva/imo/isoln/diag594.jpg",
+    "/diagrams/da47fb26578c8d4226253110.svg": "https://prase.cz/kalva/imo/isoln/diag615.jpg",
+    "/diagrams/b7a8515140de072970dd7a80.svg": "https://prase.cz/kalva/imo/isoln/diag605.jpg",
+    "/diagrams/481c66f92ae98f8df6fa2f12.svg": "https://prase.cz/kalva/imo/isoln/diag595.jpg",
+    "/diagrams/1066f1a1c9c5d70c82d3032a.svg": "https://prase.cz/kalva/imo/isoln/dia605a.jpg",
+    "/diagrams/7ddeacc4e6c665868caaf2e5.svg": "https://prase.cz/kalva/imo/isoln/diag596.jpg",
+    "/diagrams/42d72caf8361307a0ad73a8c.svg": "https://prase.cz/kalva/imo/isoln/diag623.jpg",
+    "/diagrams/5dd8c4634d3ab59ff079b987.svg": "https://prase.cz/kalva/imo/isoln/diag607.jpg",
+    "/diagrams/5ef7dce422b4cf8fd7727346.svg": "https://prase.cz/kalva/imo/isoln/diag625.jpg",
+    "/diagrams/9c08bcd89fe926da6dacf5ed.svg": "https://prase.cz/kalva/imo/isoln/diag643.jpg",
+    "/diagrams/98fb194326ff7fb17616bf95.svg": "https://prase.cz/kalva/imo/isoln/dia625a.jpg",
+    "/diagrams/61af4962389675c7bd1467c0.svg": "https://prase.cz/kalva/imo/isoln/diag655.jpg",
+    "/diagrams/a7dd166af9e54a3445687e1b.svg": "https://prase.cz/kalva/imo/isoln/diag666.jpg",
+    "/diagrams/3e6b9857686e0cd1b6e3348d.svg": "https://prase.cz/kalva/imo/isoln/diag626.jpg",
+    "/diagrams/c5f648ed30be13779d24e3ed.svg": "https://prase.cz/kalva/imo/isoln/diag656.jpg",
+    "/diagrams/fcb3e63ab514061d38ac20f4.svg": "https://prase.cz/kalva/imo/isoln/diag671.jpg",
+    "/diagrams/aa171521115a3fc438812073.svg": "https://prase.cz/kalva/imo/isoln/dia626a.jpg",
+    "/diagrams/6f747f88bbeeafc7b9187e39.svg": "https://prase.cz/kalva/imo/isoln/diag694.jpg",
+    "/diagrams/4f13e7157c3e14fcec2d245c.svg": "https://prase.cz/kalva/imo/isoln/diag672.jpg",
+    "/diagrams/8dbd73ee13395dd236b2ab14.svg": "https://prase.cz/kalva/imo/isoln/dia626b.jpg",
+    "/diagrams/e104e8b00d6f093f484613de.svg": "https://prase.cz/kalva/imo/isoln/diag674.jpg",
+    "/diagrams/1dcb3caba0f3e0e425fd4cc2.svg": "https://prase.cz/kalva/imo/isoln/dia626c.jpg",
+    "/diagrams/89ddd9077ccb18b569bef13b.svg": "https://prase.cz/kalva/imo/isoln/diag793.jpg",
+    "/diagrams/cf602bfa9261dda20576a444.svg": "https://prase.cz/kalva/imo/isoln/diag942.jpg",
+    "/diagrams/656154ad534883f7ef7ea312.svg": "https://prase.cz/kalva/imo/isoln/diag932.jpg",
+    "/diagrams/1e9e5c4af8c34046f4071dc6.svg": "https://prase.cz/kalva/imo/isoln/diag951.jpg",
+    "/diagrams/e57aad1aa910d0f849412f25.svg": "https://prase.cz/kalva/imo/isoln/diag962.jpg",
+    "/diagrams/59ea420af32b8968131faa3b.svg": "https://prase.cz/kalva/imo/isoln/diag981.jpg",
+    "/diagrams/d4fd0a4bdc61ed649c4c234c.svg": "https://prase.cz/kalva/imo/isoln/diag965.jpg",
+    "/diagrams/69d4297cbda113f4d5c36515.svg": "https://prase.cz/kalva/imo/isoln/diag995.jpg",
+    "/diagrams/09d5776e85596748148d09b3.svg": "https://prase.cz/kalva/imo/isoln/diag001.jpg",
+    "/diagrams/6a511bc012ed3068f75363df.svg": "https://prase.cz/kalva/imo/isoln/diag011.jpg",
+    "/diagrams/e668085fc21ad53853e38e17.svg": "https://prase.cz/kalva/imo/isoln/diag02a2.jpg",
+    "/diagrams/c8a55b492c24838d61fbe92f.svg": "https://prase.cz/kalva/imo/isoln/diag001a.jpg",
+    "/diagrams/1d1c90f39836d2ff9b4843bd.svg": "https://prase.cz/kalva/imo/isoln/diag015.jpg",
+    "/diagrams/e3bb60fa2b14037b71cc0459.svg": "https://prase.cz/kalva/imo/isoln/diag02b3.jpg",
+    "/diagrams/bb63256211fd90a68d42746d.svg": "https://prase.cz/kalva/imo/isoln/diag006a.jpg",
+    "/diagrams/6dc577f1c25492deb89ae263.svg": "https://prase.cz/kalva/imo/isoln/diag015a.jpg",
+    "/diagrams/ce9f451dfe487f0a2ca8fc88.svg": "https://prase.cz/kalva/imo/isoln/dia02b3a.jpg",
+    "/diagrams/1cc17855ab18403b7e0bfbe7.svg": "https://prase.cz/kalva/imo/isoln/diag006b.jpg",
+    "/diagrams/023a21832dad0e58956ea1c3.svg": "https://prase.cz/kalva/imo/isoln/diag033.jpg",
+    "/diagrams/ac5132d149d30c77051204b4.svg": "https://prase.cz/kalva/imo/isoln/diag033a.jpg",
+    "/diagrams/7cd9ae196ba3c96d338d9032.svg": "https://prase.cz/kalva/imo/isoln/diag033b.jpg",
+    "/diagrams/98edb1a578478144bb63e656.svg": "https://prase.cz/kalva/imo/isoln/diag033c.jpg",
+    "/diagrams/baf7bf40c09b50833099c2e6.svg": "https://prase.cz/kalva/imo/isoln/diag034.jpg",
+    "/diagrams/38d8afe182332248689bc9ee.svg": "https://prase.cz/kalva/usa/usoln/diag973.jpg",
+    "/diagrams/fc293caa7d5480b1e1cc6c91.svg": "https://prase.cz/kalva/usa/usoln/diag012.jpg",
+    "/diagrams/3a1f9311dc048bda03fb1bb4.svg": "https://prase.cz/kalva/usa/usoln/diag032.jpg",
+    "/diagrams/1f0d7e0b2682497e89f4571f.svg": "https://prase.cz/kalva/usa/usoln/diag034.jpg"
+  },
+  "importedAt": "2026-10-18T00:17:16.639Z",
+  "imported": [
+    "1959-imo-1",
+    "1961-imo-1",
+    "1960-imo-1",
+    "1959-imo-2",
+    "1961-imo-2",
+    "1960-imo-2",
+    "1959-imo-3",
+    "1961-imo-3",
+    "1960-imo-3",
+    "1960-imo-4",
+    "1961-imo-4",
+    "1959-imo-4",
+    "1961-imo-5",
+    "1961-imo-6",
+    "1959-imo-5",
+    "1962-imo-1",
+    "1962-imo-2",
+    "1960-imo-5",
+    "1960-imo-6",
+    "1959-imo-6",
+    "1963-imo-1",
+    "1963-imo-2",
+    "1963-imo-3",
+    "1963-imo-4",
+    "1962-imo-3",
+    "1963-imo-5",
+    "1962-imo-4",
+    "1963-imo-6",
+    "1964-imo-1",
+    "1964-imo-2",
+    "1960-imo-7",
+    "1965-imo-1",
+    "1965-imo-2",
+    "1965-imo-3",
+    "1965-imo-4",
+    "1964-imo-3",
+    "1964-imo-4",
+    "1964-imo-5",
+    "1964-imo-6",
+    "1966-imo-1",
+    "1966-imo-2",
+    "1966-imo-3",
+    "1966-imo-4",
+    "1966-imo-5",
+    "1962-imo-5",
+    "1965-imo-5",
+    "1966-imo-6",
+    "1965-imo-6",
+    "1968-imo-1",
+    "1968-imo-2",
+    "1968-imo-3",
+    "1968-imo-4",
+    "1968-imo-5",
+    "1968-imo-6",
+    "1969-imo-1",
+    "1969-imo-2",
+    "1969-imo-3",
+    "1967-imo-1",
+    "1969-imo-4",
+    "1969-imo-5",
+    "1969-imo-6",
+    "1967-imo-2",
+    "1967-imo-3",
+    "1970-imo-2",
+    "1970-imo-3",
+    "1970-imo-4",
+    "1970-imo-5",
+    "1970-imo-6",
+    "1971-imo-1",
+    "1971-imo-2",
+    "1971-imo-3",
+    "1971-imo-4",
+    "1971-imo-5",
+    "1971-imo-6",
+    "1972-imo-1",
+    "1972-imo-2",
+    "1972-imo-3",
+    "1972-imo-4",
+    "1972-imo-5",
+    "1972-imo-6",
+    "1973-imo-1",
+    "1973-imo-2",
+    "1973-imo-3",
+    "1973-imo-4",
+    "1973-imo-5",
+    "1973-imo-6",
+    "1974-imo-1",
+    "1974-imo-2",
+    "1974-imo-3",
+    "1974-imo-4",
+    "1974-imo-5",
+    "1974-imo-6",
+    "1975-imo-1",
+    "1975-imo-2",
+    "1975-imo-3",
+    "1975-imo-4",
+    "1967-imo-4",
+    "1975-imo-5",
+    "1967-imo-5",
+    "1975-imo-6",
+    "1967-imo-6",
+    "1976-imo-1",
+    "1977-imo-1",
+    "1976-imo-2",
+    "1977-imo-2",
+    "1976-imo-3",
+    "1977-imo-3",
+    "1976-imo-4",
+    "1977-imo-4",
+    "1976-imo-5",
+    "1977-imo-5",
+    "1976-imo-6",
+    "1977-imo-6",
+    "1978-imo-1",
+    "1979-imo-1",
+    "1978-imo-2",
+    "1979-imo-2",
+    "1978-imo-3",
+    "1978-imo-4",
+    "1978-imo-5",
+    "1978-imo-6",
+    "1981-imo-1",
+    "1981-imo-2",
+    "1981-imo-3",
+    "1981-imo-4",
+    "1981-imo-5",
+    "1981-imo-6",
+    "1982-imo-1",
+    "1982-imo-2",
+    "1982-imo-3",
+    "1982-imo-4",
+    "1982-imo-5",
+    "1982-imo-6",
+    "1983-imo-1",
+    "1983-imo-2",
+    "1983-imo-3",
+    "1983-imo-4",
+    "1983-imo-5",
+    "1983-imo-6",
+    "1984-imo-1",
+    "1984-imo-2",
+    "1984-imo-3",
+    "1984-imo-4",
+    "1984-imo-5",
+    "1984-imo-6",
+    "1985-imo-1",
+    "1985-imo-2",
+    "1985-imo-3",
+    "1985-imo-4",
+    "1985-imo-5",
+    "1985-imo-6",
+    "1986-imo-1",
+    "1986-imo-2",
+    "1986-imo-3",
+    "1986-imo-4",
+    "1986-imo-5",
+    "1986-imo-6",
+    "1987-imo-1",
+    "1987-imo-2",
+    "1987-imo-3",
+    "1987-imo-4",
+    "1987-imo-5",
+    "1987-imo-6",
+    "1988-imo-1",
+    "1988-imo-2",
+    "1988-imo-3",
+    "1988-imo-4",
+    "1988-imo-5",
+    "1988-imo-6",
+    "1989-imo-1",
+    "1989-imo-2",
+    "1989-imo-3",
+    "1989-imo-4",
+    "1989-imo-5",
+    "1989-imo-6",
+    "1990-imo-1",
+    "1990-imo-2",
+    "1990-imo-3",
+    "1990-imo-4",
+    "1990-imo-5",
+    "1990-imo-6",
+    "1991-imo-1",
+    "1991-imo-2",
+    "1991-imo-3",
+    "1991-imo-4",
+    "1991-imo-5",
+    "1991-imo-6",
+    "1992-imo-1",
+    "1992-imo-2",
+    "1992-imo-3",
+    "1992-imo-4",
+    "1992-imo-5",
+    "1992-imo-6",
+    "1993-imo-1",
+    "1962-imo-6",
+    "1962-imo-7",
+    "1994-imo-1",
+    "1979-imo-3",
+    "1979-imo-4",
+    "1979-imo-5",
+    "1979-imo-6",
+    "1994-imo-2",
+    "1994-imo-3",
+    "1994-imo-4",
+    "1994-imo-5",
+    "1994-imo-6",
+    "1996-imo-1",
+    "1993-imo-2",
+    "1993-imo-3",
+    "1993-imo-4",
+    "1993-imo-5",
+    "1993-imo-6",
+    "1997-imo-1",
+    "1997-imo-2",
+    "1997-imo-3",
+    "1997-imo-4",
+    "1997-imo-5",
+    "1997-imo-6",
+    "1995-imo-1",
+    "1995-imo-2",
+    "1995-imo-3",
+    "1995-imo-4",
+    "1995-imo-5",
+    "1995-imo-6",
+    "1999-imo-1",
+    "1999-imo-2",
+    "1999-imo-3",
+    "1999-imo-4",
+    "1996-imo-2",
+    "1996-imo-3",
+    "1996-imo-4",
+    "1998-imo-1",
+    "1998-imo-2",
+    "1998-imo-3",
+    "1998-imo-4",
+    "1998-imo-5",
+    "1998-imo-6",
+    "1996-imo-5",
+    "1999-imo-5",
+    "1996-imo-6",
+    "1999-imo-6",
+    "2002-imo-1",
+    "2001-imo-1",
+    "2001-imo-2",
+    "2001-imo-3",
+    "2001-imo-4",
+    "2002-imo-2",
+    "2002-imo-3",
+    "2002-imo-4",
+    "2002-imo-5",
+    "2000-imo-1",
+    "2000-imo-2",
+    "2000-imo-3",
+    "2000-imo-4",
+    "2000-imo-5",
+    "2001-imo-5",
+    "2001-imo-6",
+    "2003-imo-1",
+    "2003-imo-2",
+    "2002-imo-6",
+    "2000-imo-6",
     "1972-usamo-1",
-    "1972-usamo-2",
-    "1972-usamo-3",
-    "1972-usamo-4",
     "1973-usamo-1",
+    "1972-usamo-2",
     "1973-usamo-2",
+    "1972-usamo-3",
     "1973-usamo-3",
+    "2003-imo-3",
+    "1972-usamo-4",
     "1973-usamo-4",
+    "2003-imo-4",
+    "2003-imo-5",
+    "2003-imo-6",
+    "1972-usamo-5",
     "1973-usamo-5",
     "1974-usamo-1",
+    "1975-usamo-1",
+    "1976-usamo-1",
     "1974-usamo-2",
-    "1974-usamo-3",
-    "1974-usamo-4",
     "1975-usamo-2",
+    "1976-usamo-2",
+    "1974-usamo-3",
     "1975-usamo-3",
-    "1975-usamo-5",
     "1976-usamo-3",
+    "1974-usamo-4",
+    "1975-usamo-4",
     "1976-usamo-4",
+    "1974-usamo-5",
+    "1975-usamo-5",
     "1976-usamo-5",
     "1977-usamo-1",
-    "1977-usamo-3",
-    "1977-usamo-4",
-    "1977-usamo-5",
     "1978-usamo-1",
-    "1978-usamo-3",
-    "1978-usamo-4",
-    "1978-usamo-5",
     "1979-usamo-1",
+    "1978-usamo-2",
+    "1977-usamo-2",
     "1979-usamo-2",
+    "1977-usamo-3",
+    "1978-usamo-3",
     "1979-usamo-3",
+    "1977-usamo-4",
+    "1978-usamo-4",
     "1979-usamo-4",
+    "1977-usamo-5",
+    "1978-usamo-5",
     "1979-usamo-5",
-    "1980-usamo-3",
-    "1980-usamo-4",
-    "1980-usamo-5",
+    "1980-usamo-1",
     "1981-usamo-1",
-    "1981-usamo-2",
-    "1981-usamo-3",
-    "1981-usamo-5",
     "1982-usamo-1",
+    "1980-usamo-2",
+    "1981-usamo-2",
     "1982-usamo-2",
+    "1980-usamo-3",
+    "1981-usamo-3",
     "1982-usamo-3",
+    "1981-usamo-4",
+    "1980-usamo-4",
     "1982-usamo-4",
+    "1981-usamo-5",
+    "1980-usamo-5",
     "1982-usamo-5",
     "1983-usamo-1",
-    "1983-usamo-2",
-    "1983-usamo-3",
-    "1983-usamo-4",
-    "1983-usamo-5",
     "1984-usamo-1",
-    "1984-usamo-2",
-    "1984-usamo-3",
-    "1984-usamo-5",
     "1985-usamo-1",
+    "1983-usamo-2",
+    "1984-usamo-2",
     "1985-usamo-2",
+    "1983-usamo-3",
+    "1984-usamo-3",
     "1985-usamo-3",
+    "1983-usamo-4",
+    "1984-usamo-4",
     "1985-usamo-4",
-    "1985-usamo-5",
+    "1983-usamo-5",
+    "1984-usamo-5",
     "1986-usamo-1",
-    "1986-usamo-2",
-    "1986-usamo-3",
-    "1986-usamo-5",
+    "1985-usamo-5",
     "1987-usamo-1",
-    "1987-usamo-3",
+    "1986-usamo-2",
     "1988-usamo-1",
+    "1987-usamo-2",
+    "1986-usamo-3",
     "1988-usamo-2",
+    "1987-usamo-3",
+    "1986-usamo-4",
+    "1988-usamo-3",
+    "1987-usamo-4",
+    "1986-usamo-5",
     "1988-usamo-4",
+    "1987-usamo-5",
+    "1990-usamo-1",
     "1988-usamo-5",
+    "1991-usamo-1",
+    "1990-usamo-2",
+    "1992-usamo-1",
+    "1991-usamo-2",
+    "1990-usamo-3",
+    "1992-usamo-2",
+    "1991-usamo-3",
+    "1990-usamo-4",
+    "1992-usamo-3",
+    "1991-usamo-4",
+    "1990-usamo-5",
+    "1992-usamo-4",
+    "1991-usamo-5",
+    "1993-usamo-1",
+    "1992-usamo-5",
+    "1994-usamo-1",
+    "1993-usamo-2",
+    "1994-usamo-2",
+    "1995-usamo-1",
+    "1993-usamo-3",
+    "1994-usamo-3",
+    "1995-usamo-2",
+    "1993-usamo-4",
+    "1994-usamo-4",
+    "1995-usamo-3",
+    "1993-usamo-5",
+    "1994-usamo-5",
+    "1995-usamo-4",
+    "1996-usamo-1",
+    "1997-usamo-1",
+    "1995-usamo-5",
+    "1996-usamo-2",
+    "1997-usamo-2",
+    "1998-usamo-1",
+    "1996-usamo-3",
+    "1998-usamo-2",
+    "1996-usamo-4",
+    "1997-usamo-3",
+    "1998-usamo-3",
+    "1996-usamo-5",
+    "1997-usamo-4",
+    "1998-usamo-4",
+    "1996-usamo-6",
+    "1997-usamo-5",
+    "1998-usamo-5",
+    "1999-usamo-1",
+    "1997-usamo-6",
+    "1998-usamo-6",
+    "1999-usamo-2",
+    "2000-usamo-1",
+    "2001-usamo-1",
+    "1999-usamo-3",
+    "2000-usamo-2",
+    "1999-usamo-4",
+    "2000-usamo-3",
+    "2001-usamo-2",
+    "1999-usamo-5",
+    "2000-usamo-4",
+    "2001-usamo-3",
+    "1999-usamo-6",
+    "2000-usamo-5",
+    "2001-usamo-4",
+    "2002-usamo-1",
+    "2000-usamo-6",
+    "2001-usamo-5",
+    "2002-usamo-2",
+    "2003-usamo-1",
+    "2001-usamo-6",
+    "2002-usamo-3",
+    "2002-usamo-4",
+    "2003-usamo-2",
+    "2002-usamo-5",
+    "2003-usamo-3",
+    "2002-usamo-6",
+    "2003-usamo-4",
+    "2003-usamo-5",
+    "2003-usamo-6",
     "1989-usamo-1",
     "1989-usamo-2",
     "1989-usamo-3",
     "1989-usamo-4",
     "1989-usamo-5",
-    "1990-usamo-1",
-    "1990-usamo-2",
-    "1990-usamo-3",
-    "1990-usamo-4",
-    "1990-usamo-5",
-    "1991-usamo-2",
-    "1991-usamo-3",
-    "1991-usamo-4",
-    "1992-usamo-1",
-    "1992-usamo-2",
-    "1992-usamo-3",
-    "1992-usamo-4",
-    "1992-usamo-5",
-    "1993-usamo-1",
-    "1993-usamo-2",
-    "1993-usamo-4",
-    "1993-usamo-5",
-    "1994-usamo-1",
-    "1994-usamo-2",
-    "1994-usamo-4",
-    "1994-usamo-5",
-    "1995-usamo-1",
-    "1995-usamo-2",
-    "1995-usamo-3",
-    "1995-usamo-4",
-    "1995-usamo-5",
-    "1996-usamo-1",
-    "1996-usamo-2",
-    "1996-usamo-3",
-    "1996-usamo-4",
-    "1996-usamo-5",
-    "1996-usamo-6",
-    "1997-usamo-1",
-    "1997-usamo-2",
-    "1997-usamo-3",
-    "1997-usamo-5",
-    "1997-usamo-6",
-    "1998-usamo-1",
-    "1998-usamo-2",
-    "1998-usamo-3",
-    "1998-usamo-4",
-    "1998-usamo-5",
-    "1999-usamo-1",
-    "1999-usamo-2",
-    "1999-usamo-3",
-    "1999-usamo-4",
-    "1999-usamo-5",
-    "1999-usamo-6",
-    "2000-usamo-1",
-    "2000-usamo-2",
-    "2000-usamo-3",
-    "2000-usamo-5",
-    "2000-usamo-6",
-    "2001-usamo-1",
-    "2001-usamo-2",
-    "2001-usamo-3",
-    "2001-usamo-4",
-    "2001-usamo-5",
-    "2001-usamo-6",
-    "2002-usamo-1",
-    "2002-usamo-2",
-    "2002-usamo-3",
-    "2002-usamo-4",
-    "2002-usamo-5",
-    "2003-usamo-1",
-    "2003-usamo-2",
-    "2003-usamo-3",
-    "2003-usamo-5",
     "2004-usamo-1",
     "2004-usamo-2",
     "2004-usamo-3",
@@ -980,6 +4640,102 @@
     "2024-usajmo-3",
     "2024-usajmo-4",
     "2024-usajmo-5",
+    "2004-imo-1",
+    "2004-imo-2",
+    "2004-imo-3",
+    "2004-imo-4",
+    "2004-imo-5",
+    "2004-imo-6",
+    "2005-imo-1",
+    "2005-imo-2",
+    "2005-imo-3",
+    "2005-imo-4",
+    "2005-imo-5",
+    "2005-imo-6",
+    "2006-imo-1",
+    "2006-imo-2",
+    "2006-imo-3",
+    "2006-imo-4",
+    "2006-imo-5",
+    "2006-imo-6",
+    "2007-imo-1",
+    "2007-imo-2",
+    "2007-imo-3",
+    "2007-imo-4",
+    "2007-imo-5",
+    "2007-imo-6",
+    "2008-imo-1",
+    "2008-imo-2",
+    "2008-imo-3",
+    "2008-imo-4",
+    "2008-imo-5",
+    "2008-imo-6",
+    "2009-imo-1",
+    "2009-imo-2",
+    "2009-imo-3",
+    "2009-imo-4",
+    "2009-imo-5",
+    "2009-imo-6",
+    "2010-imo-1",
+    "2010-imo-2",
+    "2010-imo-3",
+    "2010-imo-4",
+    "2010-imo-5",
+    "2010-imo-6",
+    "2011-imo-1",
+    "2011-imo-2",
+    "2011-imo-3",
+    "2011-imo-4",
+    "2011-imo-5",
+    "2011-imo-6",
+    "2012-imo-1",
+    "2012-imo-2",
+    "2012-imo-3",
+    "2012-imo-4",
+    "2012-imo-5",
+    "2012-imo-6",
+    "2013-imo-1",
+    "2013-imo-2",
+    "2013-imo-3",
+    "2013-imo-4",
+    "2013-imo-5",
+    "2013-imo-6",
+    "2014-imo-1",
+    "2014-imo-2",
+    "2014-imo-3",
+    "2014-imo-4",
+    "2014-imo-5",
+    "2014-imo-6",
+    "2015-imo-1",
+    "2015-imo-2",
+    "2015-imo-3",
+    "2015-imo-4",
+    "2015-imo-5",
+    "2015-imo-6",
+    "2016-imo-1",
+    "2016-imo-2",
+    "2016-imo-3",
+    "2016-imo-4",
+    "2016-imo-5",
+    "2016-imo-6",
+    "2017-imo-1",
+    "2017-imo-2",
+    "2017-imo-3",
+    "2017-imo-4",
+    "2017-imo-5",
+    "2017-imo-6",
+    "2018-imo-1",
+    "2018-imo-2",
+    "2018-imo-3",
+    "2018-imo-4",
+    "2018-imo-5",
+    "2018-imo-6",
+    "2019-imo-1",
+    "2019-imo-2",
+    "2019-imo-3",
+    "2019-imo-4",
+    "2019-imo-5",
+    "2019-imo-6",
     "2020-imo-1",
     "2020-imo-2",
     "2020-imo-3",
@@ -1015,11 +4771,120 @@
     "2025-imo-3",
     "2025-imo-4",
     "2025-imo-5",
-    "2025-imo-6"
+    "2025-imo-6",
+    "2010-usajmo-3",
+    "2010-usajmo-6",
+    "2011-usajmo-2",
+    "2011-usajmo-6",
+    "2012-usajmo-2",
+    "2012-usajmo-6",
+    "2013-usajmo-3",
+    "2013-usajmo-6",
+    "2014-usajmo-3",
+    "2014-usajmo-5",
+    "2014-usajmo-6",
+    "2015-usajmo-2",
+    "2015-usajmo-3",
+    "2015-usajmo-6",
+    "2016-usajmo-3",
+    "2016-usajmo-6",
+    "2017-usajmo-1",
+    "2017-usajmo-3",
+    "2017-usajmo-5",
+    "2017-usajmo-6",
+    "2018-usajmo-2",
+    "2018-usajmo-3",
+    "2018-usajmo-5",
+    "2019-usajmo-3",
+    "2019-usajmo-5",
+    "2019-usajmo-6",
+    "2020-usajmo-3",
+    "2020-usajmo-5",
+    "2020-usajmo-6",
+    "2021-usajmo-2",
+    "2021-usajmo-3",
+    "2021-usajmo-5",
+    "2021-usajmo-6",
+    "2022-usajmo-2",
+    "2022-usajmo-3",
+    "2022-usajmo-5",
+    "2022-usajmo-6",
+    "2023-usajmo-3",
+    "2023-usajmo-5",
+    "2024-usajmo-6",
+    "2025-usajmo-1",
+    "2025-usajmo-2",
+    "2025-usajmo-3",
+    "2025-usajmo-4",
+    "2025-usajmo-5",
+    "2025-usajmo-6",
+    "2026-usajmo-1",
+    "2026-usajmo-2",
+    "2026-usajmo-3",
+    "2026-usajmo-4",
+    "2026-usajmo-5",
+    "2026-usajmo-6",
+    "2007-usamo-6",
+    "2008-usamo-4",
+    "2009-usamo-3",
+    "2009-usamo-5",
+    "2011-usamo-3",
+    "2013-usamo-3",
+    "2017-usamo-2",
+    "2017-usamo-6",
+    "2018-usamo-3",
+    "2018-usamo-5",
+    "2020-usamo-3",
+    "2020-usamo-5",
+    "2020-usamo-6",
+    "2021-usamo-1",
+    "2021-usamo-2",
+    "2021-usamo-3",
+    "2021-usamo-4",
+    "2021-usamo-5",
+    "2022-usamo-1",
+    "2022-usamo-2",
+    "2022-usamo-3",
+    "2022-usamo-5",
+    "2022-usamo-6",
+    "2023-usamo-1",
+    "2023-usamo-5",
+    "2024-usamo-1",
+    "2024-usamo-2",
+    "2024-usamo-3",
+    "2024-usamo-4",
+    "2024-usamo-5",
+    "2024-usamo-6",
+    "2025-usamo-1",
+    "2025-usamo-2",
+    "2025-usamo-3",
+    "2025-usamo-4",
+    "2025-usamo-5",
+    "2025-usamo-6",
+    "2026-usamo-1",
+    "2026-usamo-2",
+    "2026-usamo-3",
+    "2026-usamo-4",
+    "2026-usamo-5",
+    "2026-usamo-6"
   ],
   "counts": {
-    "USAJMO": 50,
-    "USAMO": 236,
-    "IMO": 36
+    "USAJMO": 102,
+    "USAMO": 306,
+    "IMO": 397
+  },
+  "statementAssets": {
+    "/diagrams/bfad4669ea837b8b0f64cd62.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+      "page": 8,
+      "problem": "2018-imo-3",
+      "clip": [
+        256,
+        211,
+        340,
+        289
+      ],
+      "method": "Exact raster crop of the published statement diagram at 3x resolution."
+    }
   }
 }

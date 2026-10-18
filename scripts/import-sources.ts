@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {parseHTML} from 'linkedom';
-import {renderRich,math} from '../lib/render';
+import {renderRich} from '../lib/render';
 import type {RecordProblem,Topic} from '../lib/types';
 const origin='https://live.poshenloh.com';
 await fs.mkdir('.cache/sources',{recursive:true});await fs.mkdir('public/diagrams',{recursive:true});
@@ -13,11 +13,12 @@ async function page(url:string){
  const html=await response.text();await fs.writeFile(file,html);return html;
 }
 const previousReport=JSON.parse(await fs.readFile('data/source-import-report.json','utf8'));
-const diagrams:Record<string,string>={...previousReport.diagrams};const downloads=new Map<string,Promise<string>>();
+const diagrams:Record<string,string>={...previousReport.diagrams};const existingDiagrams=new Map(Object.entries(diagrams).map(([path,url])=>[url,path]));const downloads=new Map<string,Promise<string>>();
 async function diagram(src:string){
  const url=new URL(src.startsWith('/images/')?src:'/images/past-contests'+src,origin);
  if(url.origin!==origin||!/^\/images\/past-contests\//.test(url.pathname))throw Error('Unsupported diagram origin');
  if(downloads.has(url.href))return downloads.get(url.href)!;
+ const saved=existingDiagrams.get(url.href);if(saved){try{await fs.access('public'+saved);return saved;}catch{}}
  const download=(async()=>{
   const response=await fetch(url,{signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error(`Missing diagram ${url.href}`);
   let bytes=Buffer.from(await response.arrayBuffer());let extension='';
@@ -47,7 +48,7 @@ const topics:Record<string,Topic>={'algebra':'Algebra','geometry':'Geometry','nu
 const conceptDoc=parseHTML(await page(origin+'/past-contests/concepts')).document;
 const groups=JSON.parse(conceptDoc.querySelector('#__NEXT_DATA__')?.textContent||'{}').props?.pageProps?.groups;
 if(!Array.isArray(groups))throw Error('Publisher concept taxonomy unavailable');
-const subjectMap:Record<string,Topic>={'arithmetic':'Algebra','algebra':'Algebra','number theory':'Number theory','geometry':'Geometry','combinatorics':'Combinatorics','probability and statistics':'Combinatorics'};
+const subjectMap:Record<string,Topic>={'arithmetic':'Algebra','algebra':'Algebra','number theory':'Number theory','geometry':'Geometry','combinatorics':'Combinatorics','probability and statistics':'Combinatorics','logic':'Combinatorics'};
 const normalizeConcept=(s:string)=>s.trim().toLowerCase().replace(/[’‘]/g,"'");
 const conceptMap=new Map<string,Topic>();
 for(const group of groups)for(const concept of group.concepts){const topic=subjectMap[group.subject];if(topic)conceptMap.set(normalizeConcept(concept.name),topic);}
@@ -55,7 +56,7 @@ for(const group of groups)for(const concept of group.concepts){const topic=subje
 for(const name of ['mean','median (data)','mode','range','weighted mean','harmonic mean','data and graph interpretation'])conceptMap.set(name,'Algebra');
 const topicRecords:Record<string,{sourceUrl:string;concepts:string[];topics:Topic[]}>={};
 const{document}=parseHTML(await page(origin+'/past-contests'));
-const paths=[...new Set(Array.from(document.querySelectorAll('a')).map(a=>a.getAttribute('href')||'').filter(u=>/^\/past-contests\/(?:amc10|amc12|aime)\/\d{4}(?:[A-D]|I|II)?$/.test(u)&&Number(u.match(/\/(\d{4})/)![1])<=new Date().getUTCFullYear()))];
+const paths=[...new Set(Array.from(document.querySelectorAll('a')).map(a=>a.getAttribute('href')||'').filter(u=>/^\/past-contests\/(?:amc8|amc10|amc12|aime)\/\d{4}(?:[A-D]|I|II)?$/.test(u)&&Number(u.match(/\/(\d{4})/)![1])<=new Date().getUTCFullYear()))];
 const report={importedAt:new Date().toISOString(),examPages:0,added:[] as string[],enriched:[] as string[],skipped:[] as {id:string;reason:string}[],diagrams,source:'LIVE by Po-Shen Loh'};
 const excluded=new Set(['2012-amc12b-12','2015-amc10a-20','2022-aimeii-8']);
 let next=0;
@@ -67,7 +68,7 @@ async function worker(){while(next<paths.length){const path=paths[next++];
   if(data?.contest!==kind||data?.year!==exam||!Array.isArray(data.baseQuestions))throw Error('Exam identity mismatch');
   const year=Number(exam.slice(0,4));const suffix=exam.slice(4);const fall=year===2021&&['C','D'].includes(suffix);
   const variant=fall?(suffix==='C'?'A':'B'):suffix;
-  const contest=kind==='aime'?'AIME':kind==='amc10'?'AMC 10':'AMC 12';
+  const contest=kind==='aime'?'AIME':kind==='amc8'?'AMC 8':kind==='amc10'?'AMC 10':'AMC 12';
   if(data.baseQuestions.length!==(contest==='AIME'?15:25))throw Error('Incomplete exam');
   report.examPages++;
   for(const [index,q] of data.baseQuestions.entries()){
@@ -82,10 +83,10 @@ async function worker(){while(next<paths.length){const path=paths[next++];
     if(old&&Number.isNaN(Number(answer))&&old.answer!==answer||old&&contest==='AIME'&&Number(old.answer)!==Number(answer)){bank.delete(id);throw Error('Answer disagrees with existing source; quarantined');}
     if(typeof q.question!=='string'||typeof q.solutions!=='string'||q.solutions.trim().length<30)throw Error('Missing question or solution');
     const problem=await importImages(q.question);const solution=await importImages(q.solutions);
-    const choiceLetters=['A','B','C','D','E'];const choices=contest==='AIME'?[]:choiceLetters.map(letter=>({letter,tex:String(q[letter.toLowerCase()]||'').replace(/^\\\(|\\\)$/g,'').replace(/^\$|\$$/g,'')}));
-    if(choices.some(c=>!c.tex||math(c.tex).includes('katex-error')))throw Error('Unsupported answer-choice formatting');
+    const choiceLetters=['A','B','C','D','E'];const choices=contest==='AIME'?[]:await Promise.all(choiceLetters.map(async letter=>({letter,tex:await importImages(String(q[letter.toLowerCase()]||''))})));
+    if(choices.some(c=>!c.tex||renderRich(c.tex).includes('katex-error')))throw Error('Unsupported answer-choice formatting');
     if(renderRich(problem).includes('katex-error')||renderRich(solution).includes('katex-error'))throw Error('Unsupported math formatting');
-    const title=`${year}${fall?' Fall':''} ${contest}${contest==='AIME'&&variant?' ':''}${variant} Problems/Problem ${number}`;
+    const title=`${year}${fall?' Fall':''} ${kind==='amc8'&&year<=1998?'AJHSME':contest}${contest==='AIME'&&variant?' ':''}${variant} Problems/Problem ${number}`;
     const sourceUrl='https://artofproblemsolving.com/wiki/index.php/'+title.replace(/ /g,'_');
     const archiveUrl=origin+path+'/solutions';
     const concepts=typeof q.concepts==='string'?q.concepts.split(';').map((s:string)=>s.trim()).filter(Boolean):[];
@@ -96,11 +97,11 @@ async function worker(){while(next<paths.length){const path=paths[next++];
      old.extraSolutions=(old.extraSolutions||[]).filter(s=>s.sourceName!=='LIVE by Po-Shen Loh');
      if(!(old.solutionFormat==='html'&&old.archiveUrl===archiveUrl))old.extraSolutions.push({title:'Solution',content:solution,format:'html',sourceName:'LIVE by Po-Shen Loh',sourceUrl:archiveUrl});
      // Keep original AoPS text when complete; use publisher diagrams when an old archive omitted them.
-     if(hasDiagram&&/<img\b/.test(problem)){old.problem=problem;old.problemFormat='html';old.archiveUrl=archiveUrl;old.archiveSource='LIVE by Po-Shen Loh';old.choices=choices;}
+     old.problem=problem;old.problemFormat='html';old.archiveUrl=archiveUrl;old.archiveSource='LIVE by Po-Shen Loh';old.choices=choices;old.choiceFormat='html';
      report.enriched.push(id);
     }else{
      const tag=provenance.tags?.[sourceUrl]?.topic;
-     bank.set(id,{id,title,contest,year,variant:(fall?'Fall ':'')+variant,number,topics:[...new Set([...(tag&&topics[tag]?[topics[tag]]:[]),...publishedTopics])],problem,problemFormat:'html',solution,solutionFormat:'html',answer:contest==='AIME'?String(Number(answer)):answer,sourceUrl,archiveSource:'LIVE by Po-Shen Loh',archiveUrl,choices});report.added.push(id);
+     bank.set(id,{id,title,contest,year,variant:(fall?'Fall ':'')+variant,number,topics:[...new Set([...(tag&&topics[tag]?[topics[tag]]:[]),...publishedTopics])],problem,problemFormat:'html',solution,solutionFormat:'html',answer:contest==='AIME'?String(Number(answer)):answer,sourceUrl,archiveSource:'LIVE by Po-Shen Loh',archiveUrl,choices,choiceFormat:'html'});report.added.push(id);
     }
    }catch(e){report.skipped.push({id,reason:String(e)});}
   }
@@ -112,5 +113,5 @@ const records=[...bank.values()].sort((a,b)=>b.year-a.year||a.contest.localeComp
 await fs.writeFile('data/problems.json',JSON.stringify(records));
 await fs.writeFile('public/catalog.json',JSON.stringify(records.map(p=>Object.fromEntries(['id','title','contest','year','variant','number','topics','sourceUrl'].map(k=>[k,p[k as keyof RecordProblem]])))));
 await fs.writeFile('data/source-import-report.json',JSON.stringify(report,null,2));
-await fs.writeFile('data/publisher-topics.json',JSON.stringify({source:origin+'/past-contests/concepts',method:'Exact publisher concept names mapped through publisher subject groups. Arithmetic and statistical averages map to Algebra; probability maps to Combinatorics. General logic/technique-only labels do not imply a topic.',subjectMap,records:topicRecords},null,2));
+await fs.writeFile('data/publisher-topics.json',JSON.stringify({source:origin+'/past-contests/concepts',method:'Exact publisher concept names mapped through publisher subject groups. Arithmetic and statistical averages map to Algebra; probability maps to Combinatorics. General logic/technique-only labels do not imply a topic.',subjectMap,records:Object.fromEntries(Object.entries(topicRecords).filter(([id])=>bank.has(id)))},null,2));
 console.log(JSON.stringify({count:records.length,exams:report.examPages,added:report.added.length,enriched:report.enriched.length,skipped:report.skipped.length,diagrams:Object.keys(diagrams).length}));

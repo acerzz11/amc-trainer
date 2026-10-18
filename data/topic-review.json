@@ -1,0 +1,2566 @@
+{
+  "method": "Broad topic classification reviewed from the real problem statement and available published solution. These are editorial classifications, not a claim that the publisher supplied the same label. Arithmetic and averages map to Algebra; probability and discrete reasoning map to Combinatorics.",
+  "records": {
+    "2026-usajmo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2026-usajmo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2026-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2026-usajmo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2026-usajmo-5": {
+      "topics": [
+        "Number theory",
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints. Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2026-usajmo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2026_USAJMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2025-amc8-15": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_AMC_8_Problems/Problem_15",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2025-usajmo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2025-usajmo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2025-usajmo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2025-usajmo-4": {
+      "topics": [
+        "Algebra",
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities. Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2025-usajmo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2025-usajmo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2025_USAJMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2024-amc12a-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_12A_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2024-usajmo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2024_USAJMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2023-usajmo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2023_USAJMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2023-usajmo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2023_USAJMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-aimei-7": {
+      "topics": [
+        "Number theory",
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_AIME_I_Problems/Problem_7",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints. Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-amc10b-19": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_AMC_10B_Problems/Problem_19",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-amc12b-18": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_AMC_12B_Problems/Problem_18",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-amc8-11": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_AMC_8_Problems/Problem_11",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-amc8-23": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_AMC_8_Problems/Problem_23",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-usajmo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_USAJMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2022-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2022-usajmo-5": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_USAJMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2022-usajmo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2022_USAJMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2021-usajmo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2021_USAJMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2021-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2021_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2021-usajmo-5": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2021_USAJMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2021-usajmo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2021_USAJMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2020-amc12a-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2020_AMC_12A_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2020-usajmo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2020_USAJMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2020-usajmo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2020_USAJMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2020-usajmo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2020_USAJMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2019-amc8-19": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2019_AMC_8_Problems/Problem_19",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2019-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2019_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2019-usajmo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2019_USAJMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2019-usajmo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2019_USAJMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2018-usajmo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2018_USAJMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2018-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2018_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2018-usajmo-5": {
+      "topics": [
+        "Number theory",
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2018_USAJMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints. Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2017-amc12b-13": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2017_AMC_12B_Problems/Problem_13",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2017-usajmo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2017_USAJMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2017-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2017_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2017-usajmo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2017_USAJMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2017-usajmo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2017_USAJMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2016-amc10a-8": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_10A_Problems/Problem_8",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2016-amc8-8": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_8",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2016-usajmo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2016_USAJMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2016-usajmo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2016_USAJMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2015-usajmo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2015_USAJMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2015-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2015_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2015-usajmo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2015_USAJMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2014-usajmo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2014_USAJMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2014-usajmo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2014_USAJMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2014-usajmo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2014_USAJMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2013-amc8-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2013_AMC_8_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2013-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2013_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2013-usajmo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2013_USAJMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2012-usajmo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2012_USAJMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2012-usajmo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2012_USAJMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2011-amc12b-7": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2011_AMC_12B_Problems/Problem_7",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2011-usajmo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2011_USAJMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2011-usajmo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2011_USAJMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2010-usajmo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2010_USAJMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2010-usajmo-6": {
+      "topics": [
+        "Geometry",
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2010_USAJMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence. Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "2009-amc8-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2009_AMC_8_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2008-amc12b-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2008_AMC_12B_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2006-amc8-22": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2006_AMC_8_Problems/Problem_22",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2005-amc8-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2005_AMC_8_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2005-amc8-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2005_AMC_8_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2005-amc8-24": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2005_AMC_8_Problems/Problem_24",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2004-amc10a-8": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2004_AMC_10A_Problems/Problem_8",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2004-amc12a-7": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2004_AMC_12A_Problems/Problem_7",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2004-amc12b-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2004_AMC_12B_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2003-amc12b-10": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2003_AMC_12B_Problems/Problem_10",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2002-amc10a-11": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_10A_Problems/Problem_11",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2002-amc12a-9": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_12A_Problems/Problem_9",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2001-amc10-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2001_AMC_10_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "2001-amc8-22": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2001_AMC_8_Problems/Problem_22",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2000-amc8-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2000_AMC_8_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "2000-amc8-7": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2000_AMC_8_Problems/Problem_7",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "2000-amc8-12": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2000_AMC_8_Problems/Problem_12",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1999-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1999-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1999-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1999-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1999-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1999-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1999_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1998-amc8-25": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_AJHSME_Problems/Problem_25",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1998-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1998-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1998-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1998-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1998-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1998-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1998-usamo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1998_USAMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1997-amc8-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_AJHSME_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1997-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1997-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1997-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1997-imo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1997-imo-5": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1997-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1997-usamo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1997_USAMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1996-amc8-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_AJHSME_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1996-amc8-8": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_AJHSME_Problems/Problem_8",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1996-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1996-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1996-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1996-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1996-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1996-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1996_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1995-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1995-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1995-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1995-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1995-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1995-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1994-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1994-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1994-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1994-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1994-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1994-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1994-usamo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1994_USAMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1993-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1993-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1993-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1993-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1993-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1993-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1993-usamo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1993_USAMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1992-amc8-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_AJHSME_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1992-amc8-19": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_AJHSME_Problems/Problem_19",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1992-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1992-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1992-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1992-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1992-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1992-imo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1992_IMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1991-amc8-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_AJHSME_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1991-amc8-8": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_AJHSME_Problems/Problem_8",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1991-amc8-14": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_AJHSME_Problems/Problem_14",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1991-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1991-imo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1991-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1991-imo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1991-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1991-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1991-usamo-1": {
+      "topics": [
+        "Geometry",
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_USAMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence. Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1991-usamo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1991_USAMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1990-amc8-7": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_AJHSME_Problems/Problem_7",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1990-amc8-16": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_AJHSME_Problems/Problem_16",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1990-amc8-25": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_AJHSME_Problems/Problem_25",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1990-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1990-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1990-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1990-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1990-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1990-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1990_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1989-amc8-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_AJHSME_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1989-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1989-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1989-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1989-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1989-imo-5": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1989-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1989_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1988-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1988-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1988-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1988-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1988-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1988-imo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_IMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1988-usamo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1988_USAMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1987-amc8-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_AJHSME_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1987-amc8-15": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_AJHSME_Problems/Problem_15",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1987-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1987-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1987-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1987-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1987-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1987-imo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_IMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1987-usamo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_USAMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1987-usamo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_USAMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1987-usamo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1987_USAMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1986-amc8-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_AJHSME_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1986-amc8-10": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_AJHSME_Problems/Problem_10",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1986-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1986-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1986-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1986-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1986-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1986-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1986-usamo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1986_USAMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1985-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1985-imo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1985-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1985-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1985-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1985-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1985_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1984-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1984-imo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1984-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1984-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1984-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1984-imo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_IMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1984-usamo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1984_USAMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1983-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1983-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1983-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1983-imo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1983-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1983-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1983_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1982-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1982-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1982-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1982-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1982-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1982-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1982_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1981-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1981-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1981-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1981-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1981-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1981-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1981-usamo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1981_USAMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1980-usamo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1980_USAMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1980-usamo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1980_USAMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1980-usamo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1980_USAMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1979-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1979-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1979-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1979-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1979-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1979-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1979_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1978-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1978-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1978-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1978-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1978-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1978-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1978-usamo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1978_USAMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1977-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1977-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1977-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1977-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1977-imo-5": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_5",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1977-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1977-usamo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1977_USAMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1976-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1976-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1976-imo-3": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_3",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1976-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1976-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1976-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1976-usamo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_USAMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1976-usamo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1976_USAMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1975-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1975-imo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1975-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1975-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1975-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1975-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1975-usamo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_USAMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1975-usamo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1975_USAMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1974-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1974-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1974-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1974-imo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1974-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1974-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1974-usamo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1974_USAMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1973-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1973-imo-2": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_2",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1973-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1973-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1973-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1973-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1973_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1972-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1972-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1972-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1972-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1972-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1972-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1972-usamo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1972_USAMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1971-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1971-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1971-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1971-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1971-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1971-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1971_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1970-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1970_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1970-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1970_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1970-imo-4": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1970_IMO_Problems/Problem_4",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1970-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1970_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1970-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1970_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1969-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1969-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1969-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1969-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1969-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1969-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1969_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1968-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1968-imo-2": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_2",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1968-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1968-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1968-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1968-imo-6": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1968_IMO_Problems/Problem_6",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1967-imo-1": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_1",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1967-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1967-imo-3": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_3",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1967-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1967-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1967-imo-6": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1967_IMO_Problems/Problem_6",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1966-imo-1": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_1",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1966-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1966-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1966-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1966-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1966-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1966_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1965-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1965-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1965-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1965-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1965-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1965-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1965_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1964-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1964-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1964-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1964-imo-4": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_4",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1964-imo-5": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_5",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1964-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1964_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1963-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1963-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1963-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1963-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1963-imo-5": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_5",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1963-imo-6": {
+      "topics": [
+        "Combinatorics"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1963_IMO_Problems/Problem_6",
+      "rationale": "Discrete counting, arrangements, games, finite processes, tilings, or extremal configurations."
+    },
+    "1962-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1962-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1962-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1962-imo-4": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_4",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1962-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1962-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1962-imo-7": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1962_IMO_Problems/Problem_7",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1961-imo-1": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_1",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1961-imo-2": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_2",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1961-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1961-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1961-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1961-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1961_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1960-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1960-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1960-imo-3": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_3",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1960-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1960-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1960-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1960-imo-7": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1960_IMO_Problems/Problem_7",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1959-imo-1": {
+      "topics": [
+        "Number theory"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_1",
+      "rationale": "Integer arithmetic, divisibility, primes, digits, or Diophantine constraints."
+    },
+    "1959-imo-2": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_2",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1959-imo-3": {
+      "topics": [
+        "Algebra"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_3",
+      "rationale": "Algebraic expressions, equations, functions, sequences, arithmetic, or inequalities."
+    },
+    "1959-imo-4": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_4",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1959-imo-5": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_5",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    },
+    "1959-imo-6": {
+      "topics": [
+        "Geometry"
+      ],
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/1959_IMO_Problems/Problem_6",
+      "rationale": "Euclidean or solid geometry, geometric measurement, symmetry, constructions, or incidence."
+    }
+  }
+}

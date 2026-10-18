@@ -2,10 +2,14 @@ import katex from 'katex';
 import {parseHTML} from 'linkedom';
 export const escapeHTML=(s:string)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 export function math(tex:string,displayMode=false){
- const normalized=tex.replace(/\\begin\{(?:align\*?|eqnarray\*?)\}/g,'\\begin{aligned}').replace(/\\end\{(?:align\*?|eqnarray\*?)\}/g,'\\end{aligned}').replace(/\\textdollar/g,'\\$').replace(/\\overarc/g,'\\overgroup');
- return katex.renderToString(normalized,{displayMode,throwOnError:false,strict:'ignore',trust:false,output:'htmlAndMathml',maxExpand:1000,macros:{'\\NN':'\\mathbb{N}','\\ZZ':'\\mathbb{Z}','\\QQ':'\\mathbb{Q}','\\RR':'\\mathbb{R}','\\CC':'\\mathbb{C}','\\ol':'\\overline{#1}','\\abs':'\\left|#1\\right|','\\eps':'\\varepsilon'}});
+ const normalized=tex.replace(/\\begin\{(?:align\*?|eqnarray\*?)\}/g,'\\begin{aligned}').replace(/\\end\{(?:align\*?|eqnarray\*?)\}/g,'\\end{aligned}').replace(/\\textdollar/g,'\\$').replace(/\\overarc/g,'\\overgroup').replace(/\\root\{([^{}]+)\}\\of\{([^{}]+)\}/g,'\\sqrt[$1]{$2}').replace(/\\makebox\[[^\]]*\]\{\}/g,'\\phantom{x}').replace(/\\label\{[^{}]*\}/g,'');
+ return katex.renderToString(normalized,{displayMode,throwOnError:false,strict:'ignore',trust:false,output:'htmlAndMathml',maxExpand:1000,macros:{'\\NN':'\\mathbb{N}','\\ZZ':'\\mathbb{Z}','\\QQ':'\\mathbb{Q}','\\RR':'\\mathbb{R}','\\CC':'\\mathbb{C}','\\ol':'\\overline{#1}','\\abs':'\\left|#1\\right|','\\eps':'\\varepsilon','\\mbox':'\\text{#1}','\\hdots':'\\cdots','\\ensuremath':'#1','\\hfill':'\\quad','\\break':'\\allowbreak','\\linebreak':'\\allowbreak','\\indent':'\\quad','\\vspace':'\\vphantom{#1}','\\cent':'\\text{¢}','\\dg':'^{\\circ}','\\half':'\\frac{1}{2}','\\vdotswithin':'\\vphantom{#1}\\vdots'}});
 }
 export function renderText(source:string){
+ // Preserve cross-references from labeled source equations without exposing TeX control names.
+ const labels=new Map<string,string>();
+ for(const m of source.matchAll(/\\begin\{(?:aligned|align\*?|equation\*?)\}([\s\S]*?)\\end\{(?:aligned|align\*?|equation\*?)\}/g)){const label=m[1].match(/\\label\{([^{}]+)\}/),tag=m[1].match(/\\tag\{([^{}]+)\}/);if(label&&tag)labels.set(label[1],tag[1]);}
+ source=source.replace(/\\ref\{([^{}]+)\}/g,(_,key)=>labels.get(key)||key);
  const rx=/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|(?<!\\)\$((?:\\\$|[^$])*?)(?<!\\)\$/g;
  let out='',last=0; for(const m of source.matchAll(rx)){out+=escapeHTML(source.slice(last,m.index)).replace(/\n/g,'<br>');out+=math(m[1]??m[2]??m[3]??m[4],m[1]!==undefined||m[2]!==undefined);last=m.index!+m[0].length;}out+=escapeHTML(source.slice(last)).replace(/\n/g,'<br>');return out;
 }
@@ -48,6 +52,7 @@ export function cleanWikiHTML(html:string,baseURL='https://artofproblemsolving.c
  return Array.from(document.body.childNodes).map(clean).join('');
 }
 export const renderRich=(source:string,baseURL='https://live.poshenloh.com')=>cleanWikiHTML(source,baseURL,true);
+export const renderChoice=(choice:{tex:string},format?:'html')=>format==='html'?renderRich(choice.tex):math(choice.tex);
 export type ParsedSolution={title:string;html:string};
 export function splitWiki(html:string){
  const {document}=parseHTML('<html><body>'+html+'</body></html>');

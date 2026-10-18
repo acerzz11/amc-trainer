@@ -24,30 +24,29 @@ function Question({p,index,answer,onAnswer,disabled,result,reviewed}:{p:PublicPr
  </article>;
 }
 export default function ProblemSet({catalog,ready}:{catalog:CatalogEntry[];ready:boolean}){
- const [selectedContests,setContests]=useState<Contest[]>(['AMC 12']),[selectedTopics,setTopics]=useState<Topic[]>([]);
+ const [selectedContest,setContest]=useState<Contest>('AMC 12'),[selectedTopics,setTopics]=useState<Topic[]>([]);
  const [yearFrom,setYearFrom]=useState<number|null>(null),[yearTo,setYearTo]=useState<number|null>(null),[numberFrom,setNumberFrom]=useState(1),[numberTo,setNumberTo]=useState<number|null>(null),[count,setCount]=useState('10');
  const [questions,setQuestions]=useState<PublicProblem[]>([]),[answers,setAnswers]=useState<Record<string,string>>({}),[review,setReview]=useState<SetReview|null>(null),[description,setDescription]=useState('');
  const [busy,setBusy]=useState(false),[checking,setChecking]=useState(false),[loaded,setLoaded]=useState(0),[error,setError]=useState('');
  const controller=useRef<AbortController|null>(null),submitLock=useRef(false);
  useEffect(()=>()=>controller.current?.abort(),[]);
  const years=useMemo(()=>[...new Set(catalog.map(p=>p.year))].sort((a,b)=>a-b),[catalog]);
- const maxNumber=selectedContests.length?Math.max(...selectedContests.map(maxProblemNumber)):25;
+ const maxNumber=maxProblemNumber(selectedContest);
  const numbers=Array.from({length:maxNumber},(_,i)=>i+1);
- const eligible=useMemo(()=>catalog.filter(p=>matchesSetFilters(p,{contests:selectedContests,topics:selectedTopics,yearFrom,yearTo,numberFrom,numberTo})),[catalog,selectedContests,selectedTopics,yearFrom,yearTo,numberFrom,numberTo]);
- const missingContests=selectedContests.filter(c=>!eligible.some(p=>p.contest===c));
+ const eligible=useMemo(()=>catalog.filter(p=>matchesSetFilters(p,{contest:selectedContest,topics:selectedTopics,yearFrom,yearTo,numberFrom,numberTo})),[catalog,selectedContest,selectedTopics,yearFrom,yearTo,numberFrom,numberTo]);
  const quantity=Number(count),validCount=Number.isInteger(quantity)&&quantity>=1&&quantity<=MAX_SET_SIZE&&quantity<=eligible.length;
  const gradedQuestions=questions.filter(p=>!isProofContest(p.contest));
  const proofCount=questions.length-gradedQuestions.length;
  const answered=gradedQuestions.filter(p=>answers[p.id]?.trim()).length;
- function changeContest(c:Contest){const next=toggle(selectedContests,c);setContests(next);if(next.length){const max=Math.max(...next.map(maxProblemNumber));setNumberFrom(n=>Math.min(max,n));setNumberTo(n=>n===null||n>=max?null:n);}}
+ function changeContest(c:Contest){setContest(c);const max=maxProblemNumber(c);setNumberFrom(n=>Math.min(max,n));setNumberTo(n=>n===null||n>=max?null:n);}
  async function generate(){
-  if(controller.current||checking||!validCount||!selectedContests.length)return;
+  if(controller.current||checking||!validCount)return;
   const abort=new AbortController();controller.current=abort;setBusy(true);setLoaded(0);setError('');
   try{
    const selected=chooseSet(eligible,quantity,()=>{const r=new Uint32Array(1);crypto.getRandomValues(r);return r[0]/4294967296;});
    const data=await mapLimit(selected,6,async p=>{abort.signal.throwIfAborted();const r=await fetch('/api/problem?id='+encodeURIComponent(p.id),{signal:AbortSignal.any([abort.signal,AbortSignal.timeout(30000)])});if(!r.ok)throw Error('A problem could not load. Please retry.');const problem=await r.json() as PublicProblem;abort.signal.throwIfAborted();setLoaded(n=>n+1);return problem;});
    if(abort.signal.aborted)return;
-   setQuestions(data);setAnswers({});setReview(null);setDescription(`${selectedContests.join(' + ')} · ${selectedTopics.length?selectedTopics.join(', '):'All topics'} · ${yearFrom??years[0]}–${yearTo??years.at(-1)} · Problems ${numberFrom}–${numberTo??maxNumber}`);
+   setQuestions(data);setAnswers({});setReview(null);setDescription(`${selectedContest} · ${selectedTopics.length?selectedTopics.join(', '):'All topics'} · ${yearFrom??years[0]}–${yearTo??years.at(-1)} · Problems ${numberFrom}–${numberTo??maxNumber}`);
   }catch(e){if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The set could not load. Try again.');abort.abort();}finally{if(controller.current===abort){controller.current=null;setBusy(false);}}
  }
  async function submit(e:React.FormEvent){
@@ -60,13 +59,13 @@ export default function ProblemSet({catalog,ready}:{catalog:CatalogEntry[];ready
  }
  return <section aria-label="Problem set mode">
   <div className="set-builder">
-   <fieldset className="choice-filter" disabled={!ready||busy||checking}><legend>Contests <span>Choose one or mix</span></legend><div>{contests.map(c=><label key={c}><input type="checkbox" checked={selectedContests.includes(c)} onChange={()=>changeContest(c)}/>{c}</label>)}</div></fieldset>
+   <div className="filter set-contest"><label htmlFor="set-contest">Contest</label><select id="set-contest" value={selectedContest} disabled={!ready||busy||checking} onChange={e=>changeContest(e.target.value as Contest)}>{contests.map(c=><option key={c}>{c}</option>)}</select></div>
    <fieldset className="choice-filter" disabled={!ready||busy||checking}><legend>Topics <span>Choose any combination</span></legend><div><label><input type="checkbox" checked={!selectedTopics.length} onChange={()=>setTopics([])}/>All topics</label>{topics.map(t=><label key={t}><input type="checkbox" checked={selectedTopics.includes(t)} onChange={()=>setTopics(toggle(selectedTopics,t))}/>{t}</label>)}</div></fieldset>
    <div className="set-ranges"><fieldset className="filter range-filter" disabled={!ready||busy||checking}><legend>Year range</legend><div className="range-inputs"><select aria-label="Set from year" value={yearFrom??''} onChange={e=>{const n=e.target.value?+e.target.value:null;setYearFrom(n);if(n!==null&&yearTo!==null&&n>yearTo)setYearTo(n);}}><option value="">Any year</option>{years.map(y=><option key={y}>{y}</option>)}</select><span>–</span><select aria-label="Set to year" value={yearTo??''} onChange={e=>{const n=e.target.value?+e.target.value:null;setYearTo(n);if(n!==null&&yearFrom!==null&&n<yearFrom)setYearFrom(n);}}><option value="">Any year</option>{years.map(y=><option key={y}>{y}</option>)}</select></div></fieldset>
    <fieldset className="filter range-filter" disabled={!ready||busy||checking}><legend>Difficulty (problem #)</legend><div className="range-inputs"><select aria-label="Set from problem number" value={numberFrom} onChange={e=>{const n=+e.target.value;setNumberFrom(n);if(numberTo!==null&&n>numberTo)setNumberTo(n===maxNumber?null:n);}}>{numbers.map(n=><option key={n}>{n}</option>)}</select><span>–</span><select aria-label="Set to problem number" value={numberTo??''} onChange={e=>{const n=e.target.value?+e.target.value:null;setNumberTo(n);if(n!==null&&n<numberFrom)setNumberFrom(n);}}>{numbers.map(n=><option key={n} value={n===maxNumber?'':n}>{n}</option>)}</select></div></fieldset>
    <div className="filter"><label htmlFor="set-size">Number of problems</label><input id="set-size" type="number" min="1" max={MAX_SET_SIZE} step="1" value={count} onChange={e=>setCount(e.target.value)} disabled={busy||checking}/></div></div>
-   <div className="set-generate"><p className="filter-note" aria-live="polite">{!ready?'Loading problem library…':!selectedContests.length?'Choose at least one contest.':eligible.length?`${eligible.length.toLocaleString()} matching problems`:'No matching problems. Widen the filters.'}{ready&&eligible.length>0&&!validCount?` · Choose 1–${Math.min(MAX_SET_SIZE,eligible.length)} problems or widen your filters.`:''}{missingContests.length>0?` · No matches for ${missingContests.join(', ')}.`:''}</p><button type="button" className="button primary" onClick={generate} disabled={!ready||!validCount||busy||checking}>{busy?`Loading ${loaded}/${quantity}…`:questions.length?'Generate new set':'Generate set'}</button>{busy&&<button type="button" className="text-button" onClick={()=>controller.current?.abort()}>Cancel</button>}</div>
-   <p className="set-help">Mixed contests are balanced where possible. Choose at least as many problems as contests to include each. Proofs are self-reviewed with published solutions; AMC/AIME answers are checked automatically. Drafts stay on this page until you generate a new set or reload.</p>
+   <div className="set-generate"><p className="filter-note" aria-live="polite">{!ready?'Loading problem library…':eligible.length?`${eligible.length.toLocaleString()} matching problems`:'No matching problems. Widen the filters.'}{ready&&eligible.length>0&&!validCount?` · Choose 1–${Math.min(MAX_SET_SIZE,eligible.length)} problems or widen your filters.`:''}</p><button type="button" className="button primary" onClick={generate} disabled={!ready||!validCount||busy||checking}>{busy?`Loading ${loaded}/${quantity}…`:questions.length?'Generate new set':'Generate set'}</button>{busy&&<button type="button" className="text-button" onClick={()=>controller.current?.abort()}>Cancel</button>}</div>
+   <p className="set-help">Choose topics, years, and problem numbers from one contest. Proofs are self-reviewed with published solutions; AMC/AIME answers are checked automatically. Drafts stay on this page until you generate a new set or reload.</p>
   </div>
   {error&&<p className="error" role="alert">{error}</p>}
   {!!questions.length&&<form onSubmit={submit} aria-label="Answer problem set"><div className="set-heading"><h1>Your set · {questions.length} problems</h1><p>{description}</p></div>

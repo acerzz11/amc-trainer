@@ -1,9 +1,9 @@
 import fs from 'node:fs';
-import {renderText,renderRich,math} from '../lib/render';
+import {renderText,renderRich,renderChoice} from '../lib/render';
 const data=JSON.parse(fs.readFileSync('data/problems.json','utf8'));
 const omitted:any[]=[],fixed:any[]=[];
 const out=data.filter((p:any)=>{
- if(p.choices.some((c:any)=>math(c.tex).includes('katex-error'))){p.problem=p.originalProblem;p.choices=[];fixed.push(p.id);}
+ if(p.choices.some((c:any)=>renderChoice(c,p.choiceFormat).includes('katex-error'))){p.problem=p.originalProblem;p.choices=[];fixed.push(p.id);}
  delete p.originalProblem;
  // Remove a leaked section heading, not any mathematical content.
  p.problem=p.problem.replace(/\nSolution\s*$/,'').trim();

@@ -1,12 +1,12 @@
 """Prepare HARP's published AoPS proofs and exact pages from Evan Chen's IMO notes.
 Requires pymupdf and pypdf. Inputs are cached upstream files, never generated proofs.
 """
-import json,re,hashlib,sys,zipfile
+import json,re,hashlib,sys,zipfile,base64,html
 from pathlib import Path
 sys.path.insert(0,str(Path('.cache/pdf-runtime').resolve()))
 import pymupdf as fitz
 from pypdf import PdfReader
-root=Path.cwd();out=[];skipped=[];assets={}
+root=Path.cwd();out=[];skipped=[];assets={};statementAssets={}
 subject={'algebra':'Algebra','precalculus':'Algebra','number_theory':'Number theory','geometry':'Geometry','counting_and_probability':'Combinatorics'}
 def normalize(source):
  source=re.sub(r'(?m)^\s*%.*$','',source)
@@ -46,42 +46,57 @@ for p in rows:
  out.append(dict(id=id,title=title,contest=p['contest'],year=year,variant='',number=number,topics=[subject[p['subject']]] if p['subject'] in subject else [],problem=normalize(p['problem']),solution=sols[0]['content'],extraSolutions=sols[1:],answer='',sourceUrl=p['url'],archiveSource='HARP',archiveName='AoPS archive (HARP)',archiveUrl=p['url'],topicSource='https://github.com/aadityasingh/HARP',choices=[]))
 # Exact subject labels from the author's MOHS table, not keyword inference.
 labels={};text='\n'.join(page.extract_text() for page in PdfReader('.cache/mohs-official.pdf').pages)
-for m in re.finditer(r'\bIMO\s+(20\d\d)((?:\s+[ACGN]\s+\d+){6})',text):
- labels[int(m[1])]=re.findall(r'([ACGN])\s+\d+',m[2])
+for m in re.finditer(r'\b(IMO|USAMO)\s+(20\d\d)((?:\s+[ACGN]\s+\d+){6})',text):
+ labels[(m[1],int(m[2]))]=re.findall(r'([ACGN])\s+\d+',m[3])
 topic={'A':'Algebra','C':'Combinatorics','G':'Geometry','N':'Number theory'}
 Path('public/proof-pages').mkdir(exist_ok=True)
 def flatten(items):
  for item in items:
   if isinstance(item,list):yield from flatten(item)
   else:yield item
-for year in range(2020,2027):
- if not Path(f'.cache/olympiads/IMO-{year}.tex').exists() or not Path(f'.cache/olympiads/IMO-{year}.pdf').exists():continue
- tex=Path(f'.cache/olympiads/IMO-{year}.tex').read_text()
- sections=list(re.finditer(r'\\subsection\{IMO\s+'+str(year)+r'/(\d)[^\n]*',tex))
- assert len(sections)==6,(year,'section identity')
- reader=PdfReader(f'.cache/olympiads/IMO-{year}.pdf');doc=fitz.open(f'.cache/olympiads/IMO-{year}.pdf')
+exams=json.loads(Path('.cache/olympiads/exams.json').read_text())['available']
+for exam in sorted(exams,key=lambda e:(e['kind'],e['year'])):
+ kind=exam['kind'];year=exam['year'];contest='USAJMO' if kind=='JMO' else kind
+ tex=Path(f'.cache/olympiads/{kind}-{year}.tex').read_text()
+ pattern=r'(?:USAJMO|JMO)' if kind=='JMO' else kind
+ sections=list(re.finditer(r'\\subsection\{'+pattern+r'\s+'+str(year)+r'/(\d)[^\n]*',tex))
+ if len(sections)!=6:skipped.append({'id':f'{kind}-{year}','reason':'Publisher section identities are not six problems'});continue
+ reader=PdfReader(f'.cache/olympiads/{kind}-{year}.pdf');doc=fitz.open(f'.cache/olympiads/{kind}-{year}.pdf')
  bookmarks=[]
  for item in flatten(reader.outline):
-  m=re.match(r'IMO\s+'+str(year)+r'/(\d)',item.title)
+  m=re.match(pattern+r'\s+'+str(year)+r'/(\d)',item.title)
   if m:bookmarks.append((int(m[1]),reader.get_destination_page_number(item)))
- assert [n for n,_ in bookmarks]==list(range(1,7)),(year,bookmarks)
+ if [n for n,_ in bookmarks]!=list(range(1,7)):skipped.append({'id':f'{kind}-{year}','reason':'Publisher PDF bookmarks could not be verified'});continue
  for index,section in enumerate(sections):
-  number=int(section[1]);content=tex[section.end():sections[index+1].start() if index+1<6 else len(tex)]
+  number=int(section[1]);id=f'{year}-{contest.lower()}-{number}'
+  content=tex[section.end():sections[index+1].start() if index+1<6 else len(tex)]
   statement=re.search(r'\\begin\{mdframed\}(?:\[[^\n]*\])?\s*([\s\S]*?)\\end\{mdframed\}',content)
-  assert statement,(year,number,'No statement')
+  if not statement:skipped.append({'id':id,'reason':'No explicit published problem statement box'});continue
   start=bookmarks[index][1];end=bookmarks[index+1][1] if index+1<6 else len(doc)
-  assert end>start and str(year) in doc[start].get_text(),(year,number,'Page boundaries')
-  images=[];source=f'https://web.evanchen.cc/exams/IMO-{year}-notes.pdf'
+  if end<=start or str(year) not in doc[start].get_text():skipped.append({'id':id,'reason':'Publisher page boundaries could not be verified'});continue
+  images=[];source=f'https://web.evanchen.cc/exams/{kind}-{year}-notes.pdf'
   for page in range(start,end):
    name=hashlib.sha256(f'{source}#page={page+1}'.encode()).hexdigest()[:24]+'.svg';path='/proof-pages/'+name
    svg=doc[page].get_svg_image(text_as_path=True)
-   # MuPDF emits self-contained paths and internal glyph references only.
    assert '<script' not in svg.lower() and '<foreignobject' not in svg.lower()
-   Path('public'+path).write_text(svg);assets[path]={'sourceUrl':source,'page':page+1,'problem':f'{year}-imo-{number}'}
-   images.append(f'<img src="{path}" alt="Published solution page {page+1} for IMO {year}, problem {number}">')
-  assert year in labels,(year,'Missing published subject labels')
-  title=f'{year} IMO Problems/Problem {number}';url='https://artofproblemsolving.com/wiki/index.php/'+title.replace(' ','_')
-  out.append(dict(id=f'{year}-imo-{number}',title=title,contest='IMO',year=year,variant='',number=number,topics=[topic[labels[year][number-1]]],problem=re.sub(r'(?<!\n)\n(?!\n)',' ',normalize(statement[1])),solution=''.join(images),solutionFormat='html',answer='',sourceUrl=url,archiveSource='Evan Chen solution notes',archiveName='Evan Chen',archiveUrl=source+'#page='+str(start+1),topicSource='https://web.evanchen.cc/upload/MOHS-hardness.pdf',choices=[]))
+   Path('public'+path).write_text(svg);assets[path]={'sourceUrl':source,'page':page+1,'problem':id}
+   images.append(f'<img src="{path}" alt="Published solution page {page+1} for {contest} {year}, problem {number}">')
+  title=f'{year} {contest} Problems/Problem {number}';url='https://artofproblemsolving.com/wiki/index.php/'+title.replace(' ','_')
+  problem=re.sub(r'(?<!\n)\n(?!\n)',' ',normalize(statement[1]));problemFormat=None
+  if r'\begin{tikzpicture}' in problem:
+   # Exact original array from the framed statement, never the proof diagram below it.
+   if id!='2018-imo-3':raise ValueError('Unreviewed source drawing: '+id)
+   clip=fitz.Rect(256,211,340,289)
+   words=doc[start].get_text('text',clip=clip).split()
+   assert words==['4','2','6','5','7','1','8','3','10','9'],words
+   pix=doc[start].get_pixmap(matrix=fitz.Matrix(3,3),clip=clip,alpha=False)
+   name=hashlib.sha256((source+'#statement-array').encode()).hexdigest()[:24]+'.svg';path='/diagrams/'+name
+   encoded=base64.b64encode(pix.tobytes('png')).decode()
+   Path('public'+path).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="168" height="156" viewBox="0 0 {pix.width} {pix.height}"><image width="{pix.width}" height="{pix.height}" href="data:image/png;base64,{encoded}"/></svg>')
+   problem=re.sub(r'\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}',f'<img src="{path}" alt="Original anti-Pascal triangle: rows 4; 2, 6; 5, 7, 1; 8, 3, 10, 9">',html.escape(problem,quote=False))
+   problemFormat='html';statementAssets[path]={'sourceUrl':source,'page':start+1,'problem':id,'clip':[256,211,340,289],'method':'Exact raster crop of the published statement diagram at 3x resolution.'}
+  assigned=[topic[labels[(contest,year)][number-1]]] if (contest,year) in labels else []
+  out.append(dict(id=id,title=title,contest=contest,year=year,variant='',number=number,topics=assigned,problem=problem,**({'problemFormat':problemFormat} if problemFormat else {}),solution=''.join(images),solutionFormat='html',answer='',sourceUrl=url,archiveSource='Evan Chen solution notes',archiveName='Evan Chen',archiveUrl=source+'#page='+str(start+1),topicSource='https://web.evanchen.cc/upload/MOHS-hardness.pdf' if assigned else '',choices=[]))
 Path('.cache/olympiad-candidates.json').write_text(json.dumps(out))
-Path('.cache/olympiad-import-report.json').write_text(json.dumps({'sources':['https://github.com/aadityasingh/HARP','https://web.evanchen.cc/problems.html'],'topicSources':['https://github.com/aadityasingh/HARP','https://web.evanchen.cc/upload/MOHS-hardness.pdf'],'method':'Real exam identity and source-number checks. HARP supplies human-authored AoPS proofs. IMO solution pages are exact, self-contained SVG exports of the published PDF; page ranges come from source bookmarks. No generated solutions. Unsupported individual approaches are omitted rather than deleting diagrams.','assets':assets,'skipped':skipped},indent=2))
-print('Prepared',len(out),'proof problems;',len(assets),'published solution pages')
+Path('.cache/olympiad-import-report.json').write_text(json.dumps({'sources':['https://github.com/aadityasingh/HARP','https://web.evanchen.cc/problems.html'],'topicSources':['https://github.com/aadityasingh/HARP','https://web.evanchen.cc/upload/MOHS-hardness.pdf'],'method':'Real exam identity and source-number checks. HARP supplies human-authored AoPS proofs. Publisher solution pages are exact, self-contained SVG exports of the published PDF; page ranges come from source bookmarks. No generated solutions. Unsupported individual approaches are omitted rather than deleting diagrams.','assets':assets,'statementAssets':statementAssets,'skipped':skipped},indent=2))
+print('Prepared',len(out),'proof records;',len(assets),'published solution pages')
