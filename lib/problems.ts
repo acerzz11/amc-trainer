@@ -12,7 +12,7 @@ export async function getProblem(p:RecordProblem):Promise<PublicProblem>{
  try{const live=isProofContest(p.contest)?splitWiki(await wikiPage(p.title)):await liveProblem(p.title,p.number,p.contest==='AIME');if(live.problemHtml.length<25)throw Error('Incomplete problem');problemHtml=live.problemHtml;delivery='live';sourceName='AoPS Wiki';sourceUrl=p.sourceUrl;}catch{}
  // Explicit allowlist: supplemental solutions and publisher keys must never reach question responses.
  const {id,title,contest,year,variant,number,topics}=p;
- return {id,title,contest,year,variant,number,topics,sourceUrl,sourceName,problemHtml,choicesHtml:delivery==='archive'?p.choices.map(c=>({letter:c.letter,html:renderChoice(c,p.choiceFormat)})):[],delivery,sourceNote:delivery==='live'?'Fetched directly from AoPS.':`AoPS is unavailable. Showing saved content from ${sourceName}.`};
+ return {id,title,contest,year,variant,number,topics,sourceUrl,sourceName,problemHtml,choicesHtml:delivery==='archive'?p.choices.map(c=>({letter:c.letter,html:renderChoice(c,p.choiceFormat)})):[],delivery};
 }
 export async function getSolution(p:RecordProblem):Promise<SolutionResponse>{
  const items:SolutionItem[]=[];

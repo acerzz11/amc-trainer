@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {parseHTML} from 'linkedom';
-import {renderRich} from '../lib/render';
+import {renderRich,protectMathHTML} from '../lib/render';
 import type {RecordProblem,Topic} from '../lib/types';
 const origin='https://live.poshenloh.com';
 await fs.mkdir('.cache/sources',{recursive:true});await fs.mkdir('public/diagrams',{recursive:true});
@@ -36,7 +36,7 @@ async function diagram(src:string){
  })();downloads.set(url.href,download);return download;
 }
 async function importImages(html:string){
- const{document}=parseHTML('<html><body>'+html+'</body></html>');
+ const{document}=parseHTML('<html><body>'+protectMathHTML(html)+'</body></html>');
  for(const img of Array.from(document.querySelectorAll('img'))){img.setAttribute('src',await diagram(img.getAttribute('src')||''));img.setAttribute('alt','Contest problem diagram');img.removeAttribute('style');}
  return document.body.innerHTML;
 }

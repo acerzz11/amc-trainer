@@ -1,8 +1,11 @@
 import katex from 'katex';
 import {parseHTML} from 'linkedom';
 export const escapeHTML=(s:string)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+const mathPattern=/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|(?<!\\)\$((?:\\\$|[^$])*?)(?<!\\)\$|\\begin\{(align\*?|aligned|alignat\*?|alignedat|gather\*?|gathered|equation\*?|eqnarray\*?)\}([\s\S]*?)\\end\{\5\}/g;
+// Raw source inequalities must not become HTML tags while importing or rendering.
+export const protectMathHTML=(source:string)=>source.replace(mathPattern,whole=>whole.replace(/&(?!(?:#\d+|#x[a-f\d]+|[a-z]+);)/gi,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
 export function math(tex:string,displayMode=false){
- const normalized=tex.replace(/\\begin\{(?:align\*?|eqnarray\*?)\}/g,'\\begin{aligned}').replace(/\\end\{(?:align\*?|eqnarray\*?)\}/g,'\\end{aligned}').replace(/\\textdollar/g,'\\$').replace(/\\overarc/g,'\\overgroup').replace(/\\root\{([^{}]+)\}\\of\{([^{}]+)\}/g,'\\sqrt[$1]{$2}').replace(/\\makebox\[[^\]]*\]\{\}/g,'\\phantom{x}').replace(/\\label\{[^{}]*\}/g,'');
+ const normalized=tex.replace(/\\(begin|end)\{(?:align\*?|eqnarray\*?|equation\*?)\}/g,'\\$1{aligned}').replace(/\\(begin|end)\{alignat\*?\}/g,'\\$1{alignedat}').replace(/\\(begin|end)\{gather\*?\}/g,'\\$1{gathered}').replace(/\\textdollar/g,'\\$').replace(/\\overarc/g,'\\overgroup').replace(/\\root\{([^{}]+)\}\\of\{([^{}]+)\}/g,'\\sqrt[$1]{$2}').replace(/\\makebox\[[^\]]*\]\{\}/g,'\\phantom{x}').replace(/\\label\{[^{}]*\}/g,'');
  return katex.renderToString(normalized,{displayMode,throwOnError:false,strict:'ignore',trust:false,output:'htmlAndMathml',maxExpand:1000,macros:{'\\NN':'\\mathbb{N}','\\ZZ':'\\mathbb{Z}','\\QQ':'\\mathbb{Q}','\\RR':'\\mathbb{R}','\\CC':'\\mathbb{C}','\\ol':'\\overline{#1}','\\abs':'\\left|#1\\right|','\\eps':'\\varepsilon','\\mbox':'\\text{#1}','\\hdots':'\\cdots','\\ensuremath':'#1','\\hfill':'\\quad','\\break':'\\allowbreak','\\linebreak':'\\allowbreak','\\indent':'\\quad','\\vspace':'\\vphantom{#1}','\\cent':'\\text{¢}','\\dg':'^{\\circ}','\\half':'\\frac{1}{2}','\\vdotswithin':'\\vphantom{#1}\\vdots'}});
 }
 export function renderText(source:string){
@@ -10,8 +13,8 @@ export function renderText(source:string){
  const labels=new Map<string,string>();
  for(const m of source.matchAll(/\\begin\{(?:aligned|align\*?|equation\*?)\}([\s\S]*?)\\end\{(?:aligned|align\*?|equation\*?)\}/g)){const label=m[1].match(/\\label\{([^{}]+)\}/),tag=m[1].match(/\\tag\{([^{}]+)\}/);if(label&&tag)labels.set(label[1],tag[1]);}
  source=source.replace(/\\ref\{([^{}]+)\}/g,(_,key)=>labels.get(key)||key);
- const rx=/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|(?<!\\)\$((?:\\\$|[^$])*?)(?<!\\)\$/g;
- let out='',last=0; for(const m of source.matchAll(rx)){out+=escapeHTML(source.slice(last,m.index)).replace(/\n/g,'<br>');out+=math(m[1]??m[2]??m[3]??m[4],m[1]!==undefined||m[2]!==undefined);last=m.index!+m[0].length;}out+=escapeHTML(source.slice(last)).replace(/\n/g,'<br>');return out;
+ source=source.replace(/\\(?:begin|end)\{quote\}/g,'\n');
+ let out='',last=0; for(const m of source.matchAll(mathPattern)){out+=escapeHTML(source.slice(last,m.index)).replace(/\n/g,'<br>');out+=math(m[1]??m[2]??m[3]??m[4]??m[0],m[1]!==undefined||m[2]!==undefined||m[5]!==undefined);last=m.index!+m[0].length;}out+=escapeHTML(source.slice(last)).replace(/\n/g,'<br>');return out;
 }
 const allowed=new Set(['P','DIV','SPAN','B','I','EM','STRONG','UL','OL','LI','BR','HR','H2','H3','H4','H5','DL','DT','DD','BLOCKQUOTE','TABLE','THEAD','TBODY','TR','TH','TD','SUP','SUB','A','IMG','FIGURE','FIGCAPTION']);
 const imageHosts=['artofproblemsolving.com','wiki.randommath.com','live.poshenloh.com'];
@@ -20,8 +23,11 @@ export function safeImageURL(src:string,baseURL='https://artofproblemsolving.com
  try{const url=new URL(src,baseURL);if(url.protocol==='https:'&&imageHosts.some(h=>url.hostname===h||h==='artofproblemsolving.com'&&url.hostname.endsWith('.'+h)))return url.href;}catch{}
  return null;
 }
-export function cleanWikiHTML(html:string,baseURL='https://artofproblemsolving.com',renderLatex=false){
- const {document}=parseHTML('<html><body>'+html+'</body></html>');
+export function cleanWikiHTML(html:string,baseURL='https://artofproblemsolving.com',renderLatex=true){
+ const {document}=parseHTML('<html><body>'+protectMathHTML(html)+'</body></html>');
+ // Entity decoding can create adjacent text nodes inside one equation.
+ // Merge them before matching delimiters so fractions and inequalities stay intact.
+ document.body.normalize();
  function clean(node:any):string {
   if(node.nodeType===3)return renderLatex?renderText(node.textContent||''):escapeHTML(node.textContent||'');
   if(node.nodeType!==1)return '';
@@ -55,7 +61,7 @@ export const renderRich=(source:string,baseURL='https://live.poshenloh.com')=>cl
 export const renderChoice=(choice:{tex:string},format?:'html')=>format==='html'?renderRich(choice.tex):math(choice.tex);
 export type ParsedSolution={title:string;html:string};
 export function splitWiki(html:string){
- const {document}=parseHTML('<html><body>'+html+'</body></html>');
+ const {document}=parseHTML('<html><body>'+protectMathHTML(html)+'</body></html>');
  const root=document.querySelector('.mw-parser-output')||document.body;
  let mode:'ignore'|'problem'|'solution'='ignore',problem='',current:{title:string;raw:string}|null=null;
  const rawSolutions:{title:string;raw:string}[]=[];
@@ -82,7 +88,7 @@ export function splitWiki(html:string){
  return {problemHtml:cleanWikiHTML(problem),solutions,solutionHtml:solutions.map(s=>`<h3>${escapeHTML(s.title)}</h3>${s.html}`).join('')};
 }
 export function extractKey(html:string,number:number,aime:boolean):string|null{
- const {document}=parseHTML('<html><body>'+html+'</body></html>');
+ const {document}=parseHTML('<html><body>'+protectMathHTML(html)+'</body></html>');
  for(const list of Array.from(document.querySelectorAll('ol'))){const items=Array.from(list.children).filter(el=>el.tagName==='LI');const text=items[number-1]?.textContent?.trim();if(!text)continue;
   if(aime&&/^\d{1,3}$/.test(text))return String(Number(text));
   if(!aime&&/^[A-E]$/.test(text))return text;

@@ -147,3 +147,31 @@ test('mixed prose, math, and diagram answer choices retain their original conten
  for(const id of ['2018-imo-3']){const p=problems.find(p=>p.id===id)!;assert.equal(p.problemFormat,'html');assert.match(p.problem,/<img/);assert.doesNotMatch(p.problem,/tikzpicture|\\node/);}
  assert.doesNotMatch(math('90\\dg + \\half'),/katex-error|color:#cc0000/);
 });
+
+test('entity-encoded inequalities and exponents stay in the same math expression',()=>{
+ const p=problems.find(p=>p.id==='1991-aime-5')!;
+ const html=renderRich(p.solution),document=parseHTML('<html><body>'+html+'</body></html>').document;
+ const annotations=Array.from(document.querySelectorAll('annotation')).map(n=>n.textContent);
+ assert.ok(annotations.includes('0<\\frac{a}{b}<1.'));
+ assert.ok(annotations.includes('2^7=128.'));
+ assert.ok(document.querySelector('msup'));
+ for(const el of document.querySelectorAll('.katex'))el.remove();
+ assert.doesNotMatch(document.body.textContent||'',/\\[()]|\\frac|2\^7/);
+ const raw=renderRich('<p>Exactly \\(0<x<1\\), and \\(x\\le y\\).</p>');
+ assert.equal(parseHTML(raw).document.querySelectorAll('.katex').length,2);
+ assert.doesNotMatch(raw,/katex-error/);
+});
+test('standalone equation environments render in archive, AoPS, and rich content',()=>{
+ for(const source of [String.raw`\begin{align*}a&=\frac12,\\ b&=2^7.\end{align*}`,String.raw`\begin{alignat*}{2}a&=1,& b&=2.\end{alignat*}`]){
+  for(const html of [renderText(source),renderRich('<p>'+source+'</p>'),cleanWikiHTML('<p>'+source+'</p>')]){assert.match(html,/katex-display/);assert.doesNotMatch(html,/katex-error|color:#cc0000/);}
+ }
+});
+test('all archived math renders without exposed delimiters, commands, or drawing code',()=>{
+ const bad:string[]=[];
+ for(const p of problems)for(const [kind,source,format] of [['problem',p.problem,p.problemFormat],['solution',p.solution,p.solutionFormat],...(p.extraSolutions||[]).map(s=>[s.title,s.content,s.format])]){
+  const html=format==='html'?renderRich(source!):renderText(source!);
+  const text=html.replace(/<annotation\b[^>]*>[\s\S]*?<\/annotation>/g,'').replace(/<[^>]*>/g,'');
+  if(/\\[()[\]]|\\(?:d?frac|begin|end|sqrt|cdot|boxed)\b/.test(text))bad.push(p.id+' '+kind);
+ }
+ assert.deepEqual(bad,[]);
+});

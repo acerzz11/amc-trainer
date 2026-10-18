@@ -4885,6 +4885,78 @@
         289
       ],
       "method": "Exact raster crop of the published statement diagram at 3x resolution."
+    },
+    "/diagrams/eb39726e13bb518e891224f9.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+      "page": 11,
+      "problem": "2023-imo-5",
+      "clip": [
+        240.7169952392578,
+        238.9459991455078,
+        354.5579833984375,
+        358.9625244140625
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
+    },
+    "/diagrams/752d7fc18dc4da944a4ceaa7.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/JMO-2022-notes.pdf",
+      "page": 5,
+      "problem": "2022-usajmo-3",
+      "clip": [
+        153.156005859375,
+        238.82302856445312,
+        442.3699951171875,
+        414.4220275878906
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
+    },
+    "/diagrams/785cb6f168991d618a790bf0.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2022-notes.pdf",
+      "page": 4,
+      "problem": "2022-usamo-2",
+      "clip": [
+        153.156005859375,
+        238.82302856445312,
+        442.3699951171875,
+        414.4220275878906
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
+    },
+    "/diagrams/a6e03e8a4f431b28fbeee050.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2021-notes.pdf",
+      "page": 7,
+      "problem": "2021-usamo-3",
+      "clip": [
+        289.36517333984375,
+        229.85025024414062,
+        333.18280029296875,
+        273.6678771972656
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
+    },
+    "/diagrams/c2d32193d803001af8e90be5.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/USAMO-2009-notes.pdf",
+      "page": 5,
+      "problem": "2009-usamo-3",
+      "clip": [
+        145.88800048828125,
+        256.36102294921875,
+        449.38800048828125,
+        321.86102294921875
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
+    },
+    "/diagrams/ba94853e454e58249a042a0b.svg": {
+      "sourceUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+      "page": 5,
+      "problem": "2004-imo-3",
+      "clip": [
+        273.37799072265625,
+        184.62649536132812,
+        321.8974914550781,
+        233.14599609375
+      ],
+      "method": "Exact original statement figure rendered from the published PDF at 3x resolution."
     }
   }
 }

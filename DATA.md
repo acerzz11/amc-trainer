@@ -54,6 +54,7 @@ node scripts/download-olympiads.mjs
 python3 scripts/prepare-olympiads.py
 node scripts/import-kalva.mjs
 node scripts/import-olympiads.mjs
+python3 scripts/repair-proof-diagrams.py
 node scripts/apply-topic-review.mjs
 npm run data:validate
 npm test

@@ -30,3 +30,7 @@ for(const contest of ['USAJMO','USAMO','IMO']){
  const denied=await fetch(base+'/api/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:p.id,answer:'A'})});assert.equal(denied.status,400);
 }
 console.log('PASS: all 12 olympiad/topic combinations, published proofs, original IMO page assets, and explicit automatic-grading rejection.');
+
+const repaired=await fetch(base+'/api/solution?id=1991-aime-5');assert.equal(repaired.status,200);const approaches=(await repaired.json()).items;assert.ok(approaches.some(s=>s.html.includes('0&lt;\\frac{a}{b}&lt;1.')&&s.html.includes('<msup>')));
+for(const id of ['2023-imo-5','2022-usajmo-3','2022-usamo-2','2021-usamo-3','2009-usamo-3','2004-imo-3']){const r=await fetch(base+'/api/problem?id='+id);assert.equal(r.status,200);const q=await r.json();assert.doesNotMatch(q.problemHtml,/\\begin\{asy\}/);for(const [,src] of q.problemHtml.matchAll(/src="(\/diagrams\/[^" ]+)"/g))assert.equal((await fetch(base+src)).status,200);}
+console.log('PASS: repaired AIME inequality/exponent and six original olympiad statement figures.');

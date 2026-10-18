@@ -15,7 +15,7 @@ for(const p of candidates){
    if(renders(s.content,s.format).includes('katex-error')){report.skipped.push({id:p.id,solution:s.title,reason:'Unsupported source solution TeX'});return false;}return true;
   });
   if(!incoming.length)throw Error('No supported complete published solution');
-  if(renders(p.problem,p.problemFormat).includes('katex-error')||p.problem.includes('[asy]')){
+  if(renders(p.problem,p.problemFormat).includes('katex-error')||p.problem.includes('[asy]')||/\\begin\{(?:asy|tikzpicture)\}/.test(p.problem)){
    if(!old)throw Error('Unsupported source statement TeX');
    old.extraSolutions=[...(old.extraSolutions||[]),...incoming];report.skipped.push({id:p.id,reason:'Retained the existing verified statement and added published solution alternatives'});continue;
   }

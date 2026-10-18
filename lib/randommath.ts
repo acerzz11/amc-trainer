@@ -1,5 +1,5 @@
 import {parseHTML} from 'linkedom';
-import {renderRich,type ParsedSolution} from './render';
+import {renderRich,protectMathHTML,type ParsedSolution} from './render';
 import type {RecordProblem} from './types';
 const origin='https://wiki.randommath.com';
 const cache=new Map<string,{at:number;items:ParsedSolution[]}>();
@@ -11,7 +11,7 @@ export function randomMathURL(p:RecordProblem){
 }
 const identity=(s:string)=>s.replace(/Spring/gi,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
 export function parseRandomMath(html:string,p:RecordProblem):ParsedSolution[]{
- const outer=parseHTML(html).document;
+ const outer=parseHTML(protectMathHTML(html)).document;
  const template=outer.querySelector('template[slot="contents"]');if(!template)throw Error('Random Math content unavailable');
  const{document}=parseHTML('<html><body>'+template.innerHTML+'</body></html>');
  const root=document.body.firstElementChild;if(!root)throw Error('Empty source page');

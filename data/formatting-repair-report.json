@@ -1,0 +1,222 @@
+{
+  "method": "Existing publisher records re-imported from the original cached exam JSON. Source inequalities are escaped before parsing HTML, preserving the original math and original image files. Exam identities and answers are checked before replacing text.",
+  "changed": [
+    {
+      "id": "2024-amc10b-15",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2022-amc10b-14",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2022B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2022-amc10b-22",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2022B/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "2021-fall-amc10b-22",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2021D/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "2020-amc10a-21",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2020A/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "2020-amc10a-22",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2020A/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2020-amc10b-24",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2020B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2019-amc10a-9",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2019-amc10a-25",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2019-amc10b-9",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2019-amc10b-24",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2016-amc10b-24",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2014-amc10b-20",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2014B/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "2013-amc10a-23",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2013A/solutions",
+      "fields": [
+        "extraSolutions"
+      ]
+    },
+    {
+      "id": "1997-amc8-23",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1997/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1996-aime-8",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1996/solutions",
+      "fields": [
+        "problem",
+        "solution"
+      ]
+    },
+    {
+      "id": "1995-aime-8",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1995/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "1995-aime-11",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1995/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1993-aime-4",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1993/solutions",
+      "fields": [
+        "problem",
+        "solution"
+      ]
+    },
+    {
+      "id": "1993-aime-12",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1993/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1991-aime-4",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1991/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1989-aime-4",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1989/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "1989-aime-11",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1989/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1987-aime-8",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1987/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1987-aime-12",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1987/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "1984-aime-6",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1984/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1983-aime-2",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1983/solutions",
+      "fields": [
+        "problem"
+      ]
+    },
+    {
+      "id": "1983-aime-8",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1983/solutions",
+      "fields": [
+        "solution"
+      ]
+    },
+    {
+      "id": "1983-aime-9",
+      "sourceUrl": "https://live.poshenloh.com/past-contests/aime/1983/solutions",
+      "fields": [
+        "problem"
+      ]
+    }
+  ],
+  "currencyDelimiters": [
+    {
+      "id": "2005-amc10b-15",
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2005_AMC_10B_Problems/Problem_15",
+      "reason": "Escape the currency dollar sign inside the original math delimiters."
+    },
+    {
+      "id": "2006-amc10b-22",
+      "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/2006_AMC_10B_Problems/Problem_22",
+      "reason": "Escape the currency dollar sign so the answer remains in one equation."
+    }
+  ]
+}
